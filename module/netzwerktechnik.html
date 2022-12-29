@@ -20,7 +20,7 @@
         <a href="sql.html">SQL</a>
     </div>
     <!---->
-    <h1 style="text-decoration: underline;">Netzwerktechnik</h1>
+    <h1 style="text-decoration: underline; color:red">Allgemeines zu Netzwerktechnik</h1>
     <!---->
     <h2 style="text-decoration: underline;">Grundbegriffe Netzwerktechnik</h2>
     <a href="netzBegriff.html">Hier stehen die Begriffe erklärt.</a>
@@ -593,25 +593,73 @@
     unterschiedlichsten Protokolle und Übertragungsverfahren miteinander.
     Dabei können Sie auf allen Schichten des OSI-Schichtenmodells arbeiten.
     Grundsätzlich geht man von zwei verschiedene Ansätzen aus. Einmal von
-Medien-konvertierenden Gateways, die bei gleichen
-Übertragungsverfahren zwischen zwei verschiedenen Protokollen der
-OSI-Schichten 1 und 2 verbinden. Dann gibt es noch die Protokoll-
-konvertierenden Gateways, die unterschiedliche Protokolle auf den OSI-
-Schichten 3 und 4 miteinander verbinden.
-Und dann gibt es noch Anwendungs-konvertierende Gateways, wobei es
-hier eher darum geht, Dateiformate zu konvertieren.
-Gateways haben die Aufgabe eine logische Verbindung herzustellen und
-einen Datenstrom zwischen Quelle und Ziel zu übermitteln. Beim
-Übergang zwischen zwei Netzen berücksichtigt das Gateway die
-spezifischen Bedingungen beider Übertragungssysteme und den
-<b>Übertragungsmedien:</b>
-<ul>
-<li>Protokolle</li>
-<li>Adressierung</li>
-<li>Übertragungsgeschwindigkeit</li>
-<li>physikalische Bedingungen</li>
-<li>Datenformate</li>
-</ul>
+    Medien-konvertierenden Gateways, die bei gleichen
+    Übertragungsverfahren zwischen zwei verschiedenen Protokollen der
+    OSI-Schichten 1 und 2 verbinden. Dann gibt es noch die Protokoll-
+    konvertierenden Gateways, die unterschiedliche Protokolle auf den OSI-
+    Schichten 3 und 4 miteinander verbinden.
+    Und dann gibt es noch Anwendungs-konvertierende Gateways, wobei es
+    hier eher darum geht, Dateiformate zu konvertieren.
+    Gateways haben die Aufgabe eine logische Verbindung herzustellen und
+    einen Datenstrom zwischen Quelle und Ziel zu übermitteln. Beim
+    Übergang zwischen zwei Netzen berücksichtigt das Gateway die
+    spezifischen Bedingungen beider Übertragungssysteme und den
+    <b>Übertragungsmedien:</b>
+    <ul>
+        <li>Protokolle</li>
+        <li>Adressierung</li>
+        <li>Übertragungsgeschwindigkeit</li>
+        <li>physikalische Bedingungen</li>
+        <li>Datenformate</li>
+    </ul>
+    <!---->
+    <h1 style="text-decoration: underline; color:red">Übertragungstechnik</h1>
+    <!---->
+    <h2 style="text-decoration: underline;">IEEE 802</h2>
+    802 ist die Nummer für eine Projektgruppe des IEEE (Institute of
+    Electrical and Electronics Engineers), welches standardisierte Protokolle-
+    und Übertragungstechniken für Local und Metropolitan Area Networks
+    (LAN und MAN) umfasst. Der Name der Projektgruppe 802 ist aus dem
+    Startdatum Februar 1980 abgeleitet. Vom IEEE werden Standards
+    entworfen, Techniken und Themen vorgeschlagen und in Arbeitsgruppen
+    diskutiert.<br>
+    Das Projekt 802 dominiert die Standardisierung von lokalen Netzen, in
+    denen hauptsächlich Ethernet zum Einsatz kommt. Ohne Ethernet und
+    seine vielen Erweiterungen geht es praktisch nicht mehr. Andere
+    Netzwerkstandards spielen nur in Randbereichen eine Rolle.
+    Neben der Standardisierung neuer Übertragungstechniken hat das IEEE
+    802 die Aufgabe bestehende Techniken weiter zu entwickeln und für neue
+    Anwendungen zu optimieren. Einige Standards bauen deshalb aufeinander
+    auf oder hängen voneinander ab. <br>
+    <img src="../bilder/iee.png">
+    <figcaption>Die Standards der 802-Familie umfassen die physikalische
+        Übertragungsschicht (Physical Layer) bzw. Bitübertragungsschicht (OSI-
+        Schicht 1) und die Verbindungsschicht (Data Link Layer) bzw. die
+        Sicherungsschicht (OSI-Schicht 2).</figcaption>
+    <!---->
+    <h2 style="text-decoration: underline;">CSMA/CD</h2>
+    CSMA/CD (Carrier Sense Multiple Access with Collision Detection) ist
+    ein Zugriffsverfahren von Ethernet, bei dem mehrere Netzwerk-
+    Teilnehmer auf das Übertragungsmedium zugreifen zu können. Dabei
+    spielt die Behandlung von Kollisionen bei der Signalübertragung ein
+    große Rolle.
+    <br>
+    <br>
+    <b style="text-decoration: underline;">CSMA/CD - Carrier Sense Multiple Access with Collision
+        Detection:</b>
+    <ul>
+        <li>Carrier Sense (Träger-Zustandserkennung): Jede Station prüft, ob
+            das Übertragungsmedium frei ist.
+        </li>
+        <li>
+            Multiple Access (Mehrfachzugriff): Mehrere Stationen teilen sich
+            das Übertragungsmedium.
+        </li>
+        <li>
+            Collision Detection (Kollisionserkennung): Wenn mehrere
+            Stationen gleichzeitig senden, erkennen sie die Kollision.</li>
+    </ul>
+    <b style="text-decoration: underline;">Ablauf von CSMA/CD:</b>
 </body>
 
 </html>
