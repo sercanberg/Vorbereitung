@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semester 4</title>
+
+    <link rel="stylesheet" href="../css/navbar.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="betriebsys.html">Betriebsysteme</a>
+        <a href="compilerbau.html">Compilerbau</a>
+        <a href="mathe.html">Mathe</a>
+        <a href="netzwerktechnik.html">Netzwerktechnik</a>
+        <a href="sociale.html">Social Engineering</a>
+        <a href="sql.html">SQL</a>
+    </div>
+    <!---->
+    <h2 style="text-decoration: underline;">Grundbegriffe Netzwerktechnik</h2>
+    <dl>
+        <dt><b>Node</b></dt>
+        <dd>&#8594 Ein Node ist ein Gerät, das über ein oder mehrere Schnittstellen
+            (Interfaces) an ein oder mehrere Netzwerke angeschlossen ist. </dd>
+        <dt><b>Host</b></dt>
+        <dd>&#8594 Ein Host ist ein Node ohne Router-Eigenschaft, die damit eine Endstelle
+            in einem Netzwerk darstellt. Typischerweise wird ein Client oder Server
+            als Host bezeichnet.</dd>
+        <dt><b>Knoten</b></dt>
+        <dd>&#8594 Allgemein formuliert ist ein Netzknoten ein Verzweigungspunkt in einem
+            Kommunikationsnetzwerk. In einem IP-Netzwerk sind
+            Router und in einem Ethernet-Netzwerk sind Switche die Netzknoten.
+            Zugangspunkte zu einem Netzwerk werden häufig auch als Knoten
+            bezeichnet.</dd>
+        <dt><b>Client</b></dt>
+        <dd>&#8594 Der Client ist als Teil der Client-Server-Architektur in größere Zahl in
+            allen Netzwerken zu finden. Ein Client ist ein Endgerät oder auch nur eine
+            Software-Komponente, die von einer zentralen Stelle Dienste oder Daten
+            anfordert oder über einen zentralen Zugang am Netzwerk teilnimmt.
+            Typische Hardware-Clients sind PCs, Smartphones, Tablets und
+            Notebooks. Auf diesen laufen dann mehrere Software-Clients für
+            unterschiedliche Dienste. WWW, E-Mail, Messaging, usw.</dd>
+        <dt><b>Server</b></dt>
+        <dd>&#8594 Ein Server ist ein Computer, der Rechenleistung, Speicher, Daten und
+            Dienste in einem Netzwerk bereitstellt und Zugriffsrechte verwaltet. Auf
+            dem Server laufen mehrere Dienste und Anwendungen, die von anderen
+            Netzwerk-Teilnehmern mit einem Software-Client über das Netzwerk
+            anfordern werden.</dd>
+        <dt><b>Router</b></dt>
+        <dd>&#8594 Ein Router ist ein Node, der Pakete weiterleitet, die nicht an ihn selbst
+            gerichtet sind. In einem dezentralen Netzwerk ist der Übertragungsweg
+            der Datenpakete nicht fest vorgegeben. Genau genommen weiß niemand
+            in einem dezentralen Netzwerk über alle Verbindungen Bescheid. Deshalb
+            entscheiden sogenannte Router bei jedem Datenpaket aufs Neue, welchen
+            Weg das Datenpaket geht.</dd>
+        <dt><b>Routing</b></dt>
+        <dd>&#8594 Die Art und Weise, wie Datenpakete in einem dezentralen Netzwerk oder
+            IP-Netzwerk verarbeitet werden, bezeichnet man als Routing. Man könnte
+            das als Wegfindung bezeichnen. Dabei wird der Weg zum Ziel anhand
+            mehrerer Kriterien (metric) ermittelt. Je mehr Kriterien berücksichtigt
+            werden müssen, desto genauer und gezielter ist der Weg zum Ziel. Aber
+            desto (zeit-)aufwendiger ist die Bestimmung oder Berechnung des Wegs. </dd>
+        <dt><b>Gateway</b></dt>
+        <dd>&#8594 Ein Gateway ist eine Hardware oder Software oder eine Kombination
+            daraus, die eine Schnittstelle zwischen zwei inkompatiblen Netzwerken
+            darstellt. Das Gateway kümmert sich darum, dass die Form und
+            Adressierung der Daten in das jeweilige andere Format oder Protokoll des
+            anderen Netzes konvertiert werden.</dd>
+        <dt><b>Bridge</b></dt>
+        <dd>&#8594 In den Anfangszeiten von Ethernet stand der Begriff "Bridge" (Brücke)
+            für ein Gerät zur Kopplung zweier Ethernet-Segmente. Heute hat der Name Bridge eine zweite Bedeutung. Eine
+            Bridge verbindet
+            zwei Teilnetze, die auf der Schicht 1 und 2 des OSI-Schichtenmodells
+            arbeiten. Für die Stationen im Netzwerk ist die Bridge transparent, sie
+            können sie nicht sehen.</dd>
+        <dt><b>Switching</b></dt>
+        <dd>&#8594 In einem geswitchten Netzwerk bestimmt ein konstanter Pfad mit einer
+            definierten Bandbreite, welchen Weg die Datenpakete gehen. Wenn ein
+            Datenpaket abgeschickt wird, steht der Weg durch das Netzwerk praktisch
+            schon fest. Switching eignet sich für Anwendungen, die eine definierte
+            Bandbreite benötigen.</dd>
+        <dt><b>Protokoll</b></dt>
+        <dd>&#8594 In der Netzwerktechnik ist ein Protokoll der Ablauf einer Kommunikation
+            zwischen zwei Systemen. In der Netzwerktechnik sind die Protokolle
+            meist einer bestimmten Schicht des OSI-Schichtenmodells zugeordnet.</dd>
+        <dt><b>Domäne</b></dt>
+        <dd>&#8594 Ein Domäne bezeichnet in der Netzwerktechnik ein logisches Subnetz,
+            einen Namensbereich oder ein Objekt, das an der Spitze eines
+            Verwaltungsbereichs steht</dd>
+        <dt><b>Datenpaket / Paket</b></dt>
+        <dd>&#8594 In der Netzwerktechnik werden einzelne Übertragungseinheiten als Paket
+            oder Datenpaket bezeichnet. Datenpakte werden neben den Daten mit eine
+            Sender- und Empfänger-Adresse ausgestattet. Fehlerkorrektur und
+            Verschlüsselung sind zusätzliche Merkmale.</dd>
+        <dt><b>Frame</b></dt>
+        <dd>&#8594 Ein Frame ist ein logischer Rahmen, in dem sich ein Bit-Strom befinden.
+            Frames werden von einer Netzwerkkarte oder einem Netzwerk-Interface
+            über ein Übertragungsmedium gesendet und empfangen. Das Frame ist
+            jeweils mit Daten und einem Protokoll-Header und einem Ethernet-
+            Header versehen. Darin sind Start- und Endsequenzen, Kontrollzeichen,
+            Adressen und Prüfsummen enthalten.</dd>
+        <dt><b>Datagramm</b></dt>
+        <dd>&#8594 Ein Datagramm ist eine in sich geschlossene Einheit. Ein IP-Paket, das an
+            den Netzwerk-Adapter (NIC, Network Interface Card) übergeben wird,
+            wird als Datagramm bezeichnet.</dd>
+        <dt><b>Datenstrom / Datastream / Stream</b></dt>
+        <dd>&#8594 Datastream oder Stream ist ein Datenstrom aus logisch
+            zusammenhängenden Datenpaketen, die über ein Netzwerk übertragen
+            werden. Die logische Verbindung der Datenpakete ist üblicherweise die
+            Empfänger-Adresse.</dd>
+        <dt><b>Port</b></dt>
+        <dd>&#8594 In der Netzwerktechnik kann ein Port eine Steckverbindung an einem
+            Switch, Router, etc. oder eine logische Assoziation sein. Zum Beispiel der
+            Zugang zum Netzwerk für einen WLAN-Client an einem WLAN-Access-
+            Point.
+            Der Port bei den Protokollen TCP und UDP ist eine Art Adresse, die die
+            Zuordnung zwischen einem Protokoll und einer Anwendung oder
+            zwischen einem Datenstrom und einer Anwendung definiert.</dd>
+        <dt><b>Unidirektionale Kommunikation</b></dt>
+        <dd>&#8594 Unidirektional bedeutet "in eine Richtung". Bei der unidirektionalen
+            Kommunikation oder Übertragung steht nur ein Kanal zur Verfügung, der
+            nur in eine Richtung genutzt werden kann. Einen Rückkanal gibt es nicht.</dd>
+        <dt><b>Bidirektionale Kommunikation</b></dt>
+        <dd>&#8594 Bidirektional bedeutet "in beide Richtungen". Bei der bidirektionalen
+            Kommunikation oder Übertragung können Signale, Daten oder
+            Informationen in beide Richtungen fließen.</dd>
+        <dt><b>Anycast / Anycasting</b></dt>
+        <dd>&#8594 Bei Anycast geht die Nachricht an einen Empfänger aus einer Gruppe von
+            Empfängern. An wen aus der Gruppe ist hierbei egal.</dd>
+        <dt><b>Unicast / Unicasting</b></dt>
+        <dd>&#8594 Bei Unicast sind zwei Stationen miteinander verbunden. Sie können direkt
+            oder über ein Netzwerk miteinander kommunizieren.</dd>
+        <dt><b>Broadcast / Broadcasting</b></dt>
+        <dd>&#8594 Der Broadcast ist ein Datenpaket, dass an einem Punkt ins Netzwerk
+            eingespeist und von dort an alle Hosts übertragen wird. Dabei empfängt
+            jeder Host die Daten, ob er will oder nicht.</dd>
+        <dt><b>Multicast / Multicasting</b></dt>
+        <dd>&#8594 Bei Multicast gibt es einen Sender, der zu einer definierten Gruppe von
+            Empfängern Signale, Daten und Informationen überträgt. Hier spielt es
+            keine Rolle, wie viele Empfänger die Daten empfangen.</dd>
+        <dt><b>Tunneling</b></dt>
+        <dd>&#8594 Tunneling bezeichnet ein Verfahren, wenn ein Protokoll-Frame mit allen
+            seinen Eigenschaften als Nutzdaten innerhalb eines anderen Protokolls
+            eingebettet ist.</dd>
+        <dt><b>Topologie</b></dt>
+        <dd>&#8594 Die Struktur des Netzwerks wird als Topologie bezeichnet. Bus, Ring und
+            Stern sind typische Netzwerk-Topologien. Die Verbindungen innerhalb
+            der Topologie erfolgt über Funk, Kupfer- oder Glasfaserkabel.</dd>
+    </dl>
+</body>
+
+</html>

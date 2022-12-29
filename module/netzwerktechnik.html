@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semester 4</title>
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/img.css">
+    <link rel="stylesheet" href="../css/table.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="betriebsys.html">Betriebsysteme</a>
+        <a href="compilerbau.html">Compilerbau</a>
+        <a href="mathe.html">Mathe</a>
+        <a class="active" href="netzwerktechnik.html">Netzwerktechnik</a>
+        <a href="sociale.html">Social Engineering</a>
+        <a href="sql.html">SQL</a>
+    </div>
+    <!---->
+    <h1 style="text-decoration: underline;">Netzwerktechnik</h1>
+    <!---->
+    <h2 style="text-decoration: underline;">Grundbegriffe Netzwerktechnik</h2>
+    <a href="netzBegriff.html">Hier stehen die Begriffe erklärt.</a>
+    <!---->
+    <h2 style="text-decoration: underline;">Grundlagen der Netzwerktechnik</h2>
+    <ul>
+        <li>Ein Netzwerk ist die physikalische und logische Verbindung von
+            Computersystemen.</li>
+        <li><b>Netzwerk-Dimensionen:</b>
+            <ol>
+                <li><i>PAN</i> - Personal Area Netzwerk: personenbezogenes Netz, z. B.
+                    Bluetooth</li>
+                <li><i>LAN</i> - Local Area Network: lokales Netz, z. B. Ethernet</li>
+                <li><i>MAN</i> - Metropolitan Area Network: regionales Netz</li>
+                <li><i>WAN</i> - Wide Area Network: öffentliches Netz, z. B. ISDN</li>
+                <li><i>GAN</i> - Global Area Network: globales Netz, z. B. das Internet</li>
+            </ol>
+        </li>
+        <li>In der Regel findet ein Austausch zwischen den Netzen statt. Das heißt,
+            dass Netzwerk-Teilnehmer eines LANs auch ein Teilnehmer eines WANs
+            oder eines GANs ist.</li>
+        <li><b>Protokolle:</b>
+            <br>
+            In der Netzwerktechnik bestimmen Protokolle den Ablauf der
+            Kommunikation zwischen den Systemen. Netzwerk-Protokolle sind eine
+            Sammlung von Regeln, die den Ablauf einer Kommunikation zwischen
+            zwei oder mehr Systemen festlegen. Ein Netzwerk-Protokoll definiert, wie
+            die Kommunikation aufgebaut wird, wie und über was sich die Systeme
+            austauschen und wie die Kommunikation wieder beendet wird.
+        </li>
+        <li><b>Schichtenmodelle:</b>
+            <br>
+            Weil ein Netzwerk möglichst universell sein soll, also von mehreren
+            Teilnehmern und mehreren Anwendungen gleichzeitig genutzt werden
+            soll, ist die Netzwerk-Kommunikation in Schichten aufgeteilt. Jede
+            Schicht hat ihre Aufgabe und löst dabei ein bestimmtes Teilproblem einer
+            Kommunikation. Sender und Empfänger müssen dabei mit dem gleichen
+            Schichtenmodelle arbeiten.
+        </li>
+        <li><b>Datenübertragung im Netzwerk:</b>
+            <br>
+            Die Kommunikation kann grundsätzlich auf zwei Arten erfolgen.
+            Entweder verbindungsorientiert oder verbindungslos.
+            <ol>
+                <li>Bei der <b>verbindungsorientierten</b> Datenübertragung wird vor dem
+                    Austausch der Daten erst eine logische Verbindung hergestellt. Während
+                    der Übertragung bleibt die Verbindung zwischen den
+                    Kommunikationspartnern aufrechterhalten. Die logische Verbindung
+                    bleibt so lange bestehen, bis sie durch einen Verbindungsabbau beendet
+                    wird.</li>
+                <li>Bei der <b>verbindungslosen Kommunikation</b> wird keine logische
+                    Verbindung und damit auch keine dauerhafte Verbindung aufgebaut. Die
+                    Daten werden in kleine Einheiten geteilt. Die Übertragung jeder Einheit
+                    wird auf den meisten Protokoll-Schichten als abgeschlossener Vorgang
+                    behandelt.</li>
+            </ol>
+        </li>
+        <li><b>Netzwerk-Adressen:</b>
+            <br>
+            Innerhalb eines Netzwerks werden spezielle Netzwerk-Adressen
+            verwendet, um Sender und Empfänger eines Datenpakets oder einer
+            Nachricht zu adressieren.
+            <br>
+            <br>
+            <img src="../bilder/netzwerkAdressen.png">
+        </li>
+        <li><b>Architekturen:</b>
+            <ol>
+                <li><i>Peer-to-Peer-Architektur</i>
+                    <br>
+                    <br>
+                    <img src="../bilder/peer2peer.png">
+                    <br>
+                    In einem Peer-to-Peer-Netzwerk ist jeder angeschlossene Computer zu
+                    den anderen gleichberechtigt. Jeder Computer stellt den anderen
+                    Computern seine Ressourcen zur Verfügung. Ein Peer-to-Peer-Netzwerk
+                    eignet sich für bis zu 10 Stationen. Bei mehr Stationen wird es schnell
+                    unübersichtlich. Diese Art von Netzwerk ist relativ schnell und
+                    kostengünstig aufgebaut. Die Teilnehmer sollten möglichst dicht
+                    beieinander stehen.
+                    Einen Netzwerk-Verwalter gibt es nicht. Jeder Netzwerk-Teilnehmer ist
+                    für seinen Computer selber verantwortlich. Deshalb muss jeder Netzwerk-
+                    Teilnehmer selber bestimmen, welche Ressourcen er freigeben will. Auch
+                    die Datensicherung muss von jedem Netzwerk-Teilnehmer selber
+                    vorgenommen werden.
+                </li>
+                <br>
+                <li><i>Client-Server-Architektur</i>
+                    <br>
+                    <br>
+                    <img src="../bilder/clientserver.png">
+                    <br>
+                    In einem serverbasierten Netzwerk werden die Daten auf einem zentralen
+                    Computer gespeichert und verwaltet. Man spricht von einem dedizierten
+                    Server, auf dem keine Anwendungsprogramme ausgeführt werden,
+                    sondern nur eine Server-Software und Dienste ausgeführt werden.
+                    Diese Architektur unterscheidet zwischen der Anwender- bzw.
+                    Benutzerseite und der Anbieter- bzw. Dienstleisterseite. Der Anwender
+                    betreibt auf seinem Computer Anwendungsprogramme (Client), die die
+                    Ressourcen des Servers auf der Anbieterseite zugreifen. Hier werden die
+                    Ressourcen zentral verwaltet, aufgeteilt und zur Verfügung gestellt.
+                </li>
+                <br>
+                <li><i>Mainframe-Architektur</i>
+                    <br>
+                    <br>
+                    <img src="../bilder/mainframe.png">
+                    <br>
+                    Die Mainframe-Architektur sieht wie die Client-Server-Architektur eine
+                    Aufteilung des Netzwerks in Terminals und den Großrechner vor, der
+                    auch als Mainframe bezeichnet wird. Der Mainframe ist ein sehr
+                    leistungsfähiger Computer. Dort sind meist speziell entwickelte
+                    Applikationen installiert, die über die Terminals bedient werden. Über
+                    serielle Leitungen sind die Terminals mit dem Mainframe verbunden.
+                    Wobei das Terminals nur aus einem Bildschirm und einer Tastatur
+                    besteht.
+                </li>
+            </ol>
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Schichtenmodell</h2>
+    <img src="../bilder/dodosi.png">
+    <br>
+    <ol>
+        <li><b>DoD-Schichtenmodell</b>
+            <br>
+            Das DoD-Schichtenmodell ist das Schichtenmodell auf dem das Internet
+            basiert. Da das Internet eine Entwicklung des amerikanischen
+            Verteidigungsministeriums ist, wurde die Bezeichnung des
+            Schichtenmodells von der englischen Bezeichnung Department-of-
+            Defense (DoD) abgeleitet.
+            <ul>
+                <li><i style="text-decoration: underline;">Anwendungsschicht - Application Layer</i>
+                    <br>
+                    In der Anwendungsschicht sind die Anwendungen und Protokolle
+                    definiert, die über das Internet miteinander kommunizieren. Hierzu zählen
+                    HTTP, FTP, SMTP, NNTP und viele mehr.
+                </li>
+                <li><i style="text-decoration: underline;">Transportschicht - Transport Layer</i>
+                    <br>
+                    Die Transportschicht dient als Kontrollprotokoll des Datenflusses
+                    zwischen der Anwendung und der Internetschicht. Hier arbeiten die
+                    Protokolle TCP und UDP.
+                </li>
+                <li><i style="text-decoration: underline;">Internetschicht - Internet Layer</i>
+                    <br>
+                    Auf der Internetschicht werden die einzelnen Datenpakete mit einer
+                    Adresse versehen und ihre Größe an das Übertragungssystem angepasst
+                    (Fragmentierung). Die Datenpakete werden in der Regel mit IP
+                    übertragen. Auf dieser Schicht sind mehrere Steuerungsprotokolle aktiv,
+                    die mit IP stark verknüpft sind.
+                </li>
+                <li><i style="text-decoration: underline;">Internetschicht - Internet Layer</i>
+                    <br>
+                    uf der Internetschicht werden die einzelnen Datenpakete mit einer
+                    Adresse versehen und ihre Größe an das Übertragungssystem angepasst
+                    (Fragmentierung). Die Datenpakete werden in der Regel mit IP
+                    übertragen. Auf dieser Schicht sind mehrere Steuerungsprotokolle aktiv,
+                    die mit IP stark verknüpft sind.
+                </li>
+            </ul>
+        </li>
+        <li><b>ISO/OSI-7-Schichtenmodell</b>
+            <br>
+            Das OSI-7-Schichtenmodell ist ein Referenzmodell für
+            herstellerunabhängige Kommunikationssysteme bzw. eine Design-
+            Grundlage für Kommunikationsprotokolle und Computernetze.
+            <ul>
+                <li><i style="text-decoration: underline;">7: Anwendungsschicht</i>
+                    <br>
+                    Die Anwendungsschicht stellt Funktionen für die
+                    Anwendungen zur Verfügung. Diese Schicht stellt die
+                    Verbindung zu den unteren Schichten her. Auf dieser Ebene
+                    findet auch die Dateneingabe und -ausgabe statt.
+                </li>
+                <li><i style="text-decoration: underline;">6: Darstellungsschicht</i>
+                    <br>
+                    Die Darstellungsschicht wandelt die Daten in verschiedene
+                    Codecs und Formate. Hier werden die Daten zu oder von
+                    der Anwendungsschicht in ein geeignetes Format
+                    umgewandelt.
+                </li>
+                <li><i style="text-decoration: underline;">5: Kommunikationsschicht</i>
+                    <br>
+                    Die Kommunikationsschicht organisiert die Verbindungen
+                    zwischen den Endsystemen. Dazu sind Steuerungs- und
+                    Kontrollmechanismen für die Verbindung und dem
+                    Datenaustausch implementiert.
+                </li>
+                <li><i style="text-decoration: underline;">4: Transportschicht</i>
+                    <br>
+                    Die Transportschicht ist das Bindeglied zwischen den
+                    transportorientierten und anwendungsorientierten
+                    Schichten. Hier werden die Datenpakete einer Anwendung
+                    zugeordnet.
+                </li>
+                <li><i style="text-decoration: underline;">3: Vermittlungsschicht</i>
+                    <br>
+                    Die Vermittlungsschicht steuert die zeitliche und logische
+                    getrennte Kommunikation zwischen den Endgeräten,
+                    unabhängig vom Übertragungsmedium und der Topologie.
+                    Auf dieser Schicht erfolgt erstmals die logische
+                    Adressierung der Endgeräte. Die Adressierung ist eng mit
+                    dem Routing (Wegfindung vom Sender zum Empfänger)
+                    verbunden.
+                </li>
+                <li><i style="text-decoration: underline;">2: Sicherungsschicht</i>
+                    <br>
+                    Die Sicherungsschicht sorgt für eine zuverlässige und
+                    funktionierende Verbindung zwischen Endgerät und
+                    Übertragungsmedium. Zur Vermeidung von
+                    Übertragungsfehlern und Datenverlust enthält diese Schicht
+                    Funktionen zur Fehlererkennung, Fehlerbehebung und
+                    Datenflusskontrolle.
+                    Auf dieser Schicht findet auch die physikalische
+                    Adressierung von Datenpaketen statt.
+                </li>
+                <li><i style="text-decoration: underline;">1: Bitübertragungsschicht</i>
+                    <br>
+                    Die Bitübertragungsschicht definiert die elektrische,
+                    mechanische und funktionale Schnittstelle zum
+                    Übertragungsmedium. Die Protokolle dieser Schicht
+                    unterscheiden sich nur nach dem eingesetzten
+                    Übertragungsmedium und -verfahren. Das
+                    Übertragungsmedium ist jedoch kein Bestandteil der
+                    Schicht 1.
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <img src="../bilder/seven-layers-of-OSI-model.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">Netzwerk-Topologie</h2>
+    Unter einer Netzwerk-Topologie versteht man die physikalische
+    Anordnung von Netzwerk-Stationen, die über ein Übertragungsmedium
+    miteinander verbunden sind. Die Netzwerk-Topologie bestimmt die
+    einzusetzende Hardware, sowie die Zugriffsmethoden auf das
+    Übertragungsmedium.
+    <ul>
+        <li><b>Bus / Chain / Bus-Topologie</b>
+            <br>
+            <img src="../bilder/bus-topo.png">
+            <br>
+            Die Bus-Topologie, manchmal auch Ketten-Topologie genannt, besteht
+            aus mehreren Stationen, die hintereinander geschaltet sind. Die Stationen
+            sind über eine gemeinsame Leitung miteinander verbunden. Alle
+            Stationen, die an dem Bus angeschlossen sind, haben Zugriff auf das
+            Übertragungsmedium und die Daten, die darüber übertragen werden. Um
+            Störungen auf der Leitung zu verhindern und die physikalischen
+            Bedingungen zu verbessern, werden die beiden Kabelenden mit einem
+            Abschlusswiderstand versehen.
+        </li>
+        <br>
+        <li><b>Ring / Ring-Topologie</b>
+            <br>
+            <img src="../bilder/ring-topo.png">
+            <br>
+            Die Ring-Topologie ist eine geschlossene Kabelstrecke in der die
+            Netzwerk-Stationen mit einem durchgehenden Kabelring miteinander
+            verbunden sind. Das bedeutet, dass an jeder Station ein Kabel ankommt
+            und ein Kabel abgeht.
+            In der Ring-Topologie muss sich typischerweise keine aktive Netzwerk-
+            Komponente befinden. Die Steuerung und der Zugriff auf das
+            Übertragungsmedium regelt ein Protokoll, an das sich alle Stationen
+            halten.
+        </li>
+        <br>
+        <li><b>Star / Stern-Topologie</b>
+            <br>
+            <img src="../bilder/stern-topo.png">
+            <br>
+            In der Stern-Topologie befindet sich eine zentrale Station, die eine
+            Verbindung zu allen anderen Stationen unterhält. Jede Station ist über
+            eine eigene Leitung mit der zentralen Station verbunden. Es handelt sich
+            im Regelfall um einen Hub oder einen Switch. Der Hub oder Switch
+            übernimmt die Verteilfunktion für die Datenpakete. Dazu werden die
+            Datenpakete entgegen genommen und an das Ziel weitergeleitet.
+            Die Datenbelastung der zentralen Station ist sehr hoch, da alle Daten und
+            Verbindungen darüber laufen. Das Netzwerk funktioniert nur so lange, bis
+            die Zentralstation ausfällt. Die anderen Netzwerkstationen können
+            jederzeit hinzugefügt oder entfernt werden. Sie haben keinen Einfluss auf
+            den Betrieb des Netzwerks.
+        </li>
+        <br>
+        <li><b>Mesh / Maschen-Topologie</b>
+            <br>
+            <img src="../bilder/maschen-topo.png">
+            <br>
+            Die Maschen-Topologie bzw. vermaschte Topologie ist ein dezentrales
+            Netzwerk, das keinen verbindlichen Strukturen unterliegen muss und in
+            dem alle Netzwerkknoten irgendwie miteinander verbunden sind.
+            Die Maschen-Topologie ist meist ein Wildwuchs mehrerer Topologien,
+            die einem Chaos an verschiedenen Systemen und Übertragungsstrecken
+            und damit von der Struktur her einem dezentralen Netzwerke entsprechen.
+            Das Internet stellt ein solches Netzwerk dar, in dem aktive Netzwerk-
+            Komponenten das Routing der Datenpakete übernehmen. Das erhöht die
+            Reichweite insbesondere am Rand liegender Knoten und ermöglicht
+            blockierte oder ausfallende Verbindungen zu umgehen.
+        </li>
+    </ul>
+    <br>
+    <table>
+        <tr>
+            <th>Topologie</th>
+            <th>Vorteil</th>
+            <th>Nachteil</th>
+        </tr>
+        <tr>
+            <td>Bus</td>
+            <td>
+                <ul>
+                    <li>
+                        einfach installierbar
+                    </li>
+                    <li>
+                        kurze Leitungen
+                    </li>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        Netzausdehnung begrenzt
+                    </li>
+                    <li>
+                        bei Kabelbruch fällt Netz aus
+                    </li>
+                    <li>
+                        aufwändige Zugriffsmethoden
+                    </li>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Ring</td>
+            <td>
+                <ul>
+                    <li>
+                        verteilte Steuerung
+                    </li>
+                    <li>
+                        große Netzausdehnung
+
+                    </li>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        aufwendige Fehlersuche
+                    </li>
+                    <li>
+                        bei Störungen Netzausfall
+                    </li>
+                    <li>
+                        hoher Verkabelungsaufwand
+                    </li>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Stern</td>
+            <td>
+                <ul>
+                    <li>
+                        einfache Vernetzung
+                    </li>
+                    <li>
+                        einfache Erweiterung
+                    </li>
+                    <li>
+                        hohe Ausfallsicherheit
+                    </li>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        hoher Verkabelungsaufwand
+                    </li>
+                    <li>
+                        Netzausfall bei Ausfall oder Überlastung des Hubs
+                    </li>
+            </td>
+        </tr>
+        <tr>
+            <td>Maschen</td>
+            <td>
+                <ul>
+                    <li>
+                        dezentrale Steuerung
+                    </li>
+                    <li>
+                        unendliche Netzausdehnung
+
+                    </li>
+                    <li>
+                        hohe Ausfallsicherheit
+                    </li>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        aufwendige Administration
+                    </li>
+                    <li>
+                        teure und hochwertige Vernetzung
+                    </li>
+            </td>
+        </tr>
+    </table>
+    <!---->
+    <h2 style="text-decoration: underline;">Netzwerkkarte / Netzwerkadapter (NIC)</h2>
+    Eine Netzwerkkarte wird auch als Netzwerkadapter bezeichnet.
+    Eine Netzwerkkarte ermöglicht es, auf ein Netzwerk zuzugreifen und
+    arbeitet auf der Bitübertragungsschicht (Schicht 1) des OSI-
+    Schichtenmodells. Jede Netzwerkkarte hat eine Hardware-Adresse
+    (Format: XX-XX-XX-XX-XX-XX), die es auf der Welt nur einmal gibt.
+    Anhand dieser Adresse lässt sich eine Station auf der
+    Bitübertragungsschicht adressieren.
+    <br>
+    <!---->
+    <h2 style="text-decoration: underline;">Hub</h2>
+    Ein Hub ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk
+    miteinander verbindet. In einem Ethernet-Netzwerk, das auf der Stern-
+    Topologie basiert dient ein Hub als Verteiler für die Datenpakete. Hubs
+    arbeiten auf der Bitübertragungsschicht (Schicht 1) des OSI-
+    Schichtenmodells und sind damit auf die reine Verteilfunktion beschränkt.
+    Ein Hub nimmt ein Datenpaket entgegen und sendet es an alle anderen
+    Ports weiter. Das bedeutet, er broadcastet. Dadurch sind nicht nur alle
+    Ports belegt, sondern auch alle Hosts. Sie bekommen alle Datenpakete
+    zugeschickt, auch wenn sie nicht die Empfänger sind. Für die Hosts
+    bedeutet das auch, dass sie nur dann senden können, wenn der Hub gerade
+    keine Datenpakete sendet. Sonst kommt es zu Kollisionen.
+    <br>
+    <img src="../bilder/hub.png" class="center" width="500" height="500">
+    <!---->
+    <h2 style="text-decoration: underline;">Switch</h2>
+    Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem
+    Netzwerk miteinander verbindet. In einem Ethernet-Netzwerk, das auf der
+    Stern-Topologie basiert dient ein Switch als Verteiler für die Datenpakete.
+    Die Funktion ist ähnlich einem Hub, mit dem Unterschied, das ein Switch
+    direkte Verbindungen zwischen den angeschlossenen Geräten schalten
+    kann, sofern ihm die Ports der Datenpaket-Empfänger bekannt sind. Wenn
+    nicht, dann broadcastet der Switch die Datenpakete an alle Ports. Wenn
+    die Antwortpakete von den Empfängern zurück kommen, dann merkt sich
+    der Switch die MAC-Adressen der Datenpakete und den dazugehörigen
+    Port und sendet die Datenpakete dann nur noch dorthin.
+    Während ein Hub die Bandbreite des Netzwerks limitiert, steht der
+    Verbindung zwischen zwei Hosts, die volle Bandbreite der Ende-zu-Ende-
+    Netzwerk-Verbindung zur Verfügung.
+    Ein Switch arbeitet auf der Sicherungsschicht (Schicht 2) des OSI-
+    Modells und arbeitet ähnlich wie eine Bridge.
+    <ul>
+        <li><i style="text-decoration: underline;">Switches unterscheidet man hinsichtlich ihrer
+                Leistungsfähigkeit mit folgenden Eigenschaften:</i>
+            <ol>
+                <li>Anzahl der speicherbaren MAC-Adressen für die Quell- und
+                    Zielports
+                </li>
+                <li>
+                    Verfahren, wann ein empfangenes Datenpaket weitervermittelt
+                    wird (Switching-Verfahren)
+                </li>
+                <li>
+                    Latenz (Verzögerungszeit) der vermittelten Datenpakete</li>
+            </ol>
+        </li>
+        <li><i style="text-decoration: underline;">MAC-Adressen-Verwaltung / MAC-Tabelle</i>
+            <ul>
+                <li>Switche haben den Vorteil, im Gegensatz zu Hubs, dass sie Datenpakete
+                    nur an den Port weiterleiten, an dem der Host mit der Ziel-Adresse
+                    angeschlossen ist. Als Zuordnung dient die MAC-Adresse, also die
+                    Hardware-Adresse einer Netzwerkkarte. Diese Adresse speichert der
+                    Switch in einer internen Tabelle. Empfängt ein Switch ein Datenpaket, so
+                    sucht er in seinem Speicher unter der Zieladresse (MAC) nach dem Port
+                    und schickt dann das Datenpaket nur an diesen Port. Die Zuteilung der
+                    MAC-Adressen lernt ein Switch mit der Zeit kennen. Die Anzahl der
+                    Adressen, die ein Switch aufnehmen kann, hängt von seinem internen
+                    Speicher ab.</li>
+            </ul>
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Router</h2>
+    <ul>
+        <li>Ein Router verbindet mehrere Netzwerke mit unterschiedlichen
+            Protokollen und Architekturen. Ein Router befindet sich häufig an den
+            Außengrenzen eines Netzwerks, um es mit dem Internet oder einem
+            anderen, größeren Netzwerk zu verbinden.
+            Über die Routing-Tabelle entscheidet ein Router, welchen Weg ein
+            Datenpaket nimmt. Es handelt sich dabei um ein dynamisches Verfahren,
+            das Ausfälle und Engpässe ohne den Eingriff eines Administrators
+            berücksichtigen kann.
+            Ein Router hat mindestens zwei Netzwerkanschlüssen. Er arbeitet auf der
+            Vermittlungsschicht (Schicht 3) des OSI-Schichtenmodells.</li>
+        <li>Die Aufgabe eines Routers ist ein komplexer Vorgang, der sich in 4
+            Schritte einteilen lässt:
+            <ol>
+                <li>Ermittlung der verfügbaren Routen</li>
+                <li>Auswahl der geeignetsten Route unter Berücksichtigung
+                    verschiedener Kriterien
+                </li>
+                <li>
+                    Herstellen einer physikalischen Verbindung zu anderen
+                    Netzwerken
+                </li>
+                <li>
+                    Anpassen der Datenpakete an die Übertragungstechnik
+                    (Fragmentierung)</li>
+            </ol>
+        </li>
+        <li>Router-Anschlüsse: LAN und WAN:
+            <br>
+            <img src="../bilder/routerWanLan.png">
+            <br>
+            Ein Router hat in der Regel zwei Anschlüsse. Einen für die LAN-Seite
+            und einen für die WAN-Seite. Häufig sind die Ports mit der Bezeichnung
+            LAN und WAN gekennzeichnet. Manchmal gibt es Port-Beschriftungen,
+            bei denen nicht immer eindeutig ist, um was es sich handelt.
+            Mit LAN ist immer das lokale Netzwerk mit privaten IP-Adressen
+            gemeint, während die WAN-Seite das öffentliche Netzwerk kennzeichnet.
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Layer-3-Switch</h2>
+    Ein Layer-3-Switch ist eine Kombination aus Router und Switch. Er
+    beherrscht nicht nur Switching, sondern auch Routing. Da Router und
+    Switche sehr ähnlich funktionieren - sie empfangen, speichern und leiten
+    67Datenpakete weiter - ist es nur logisch beide Geräte miteinander zu
+    kombinieren, um daraus ein Multifunktionsgerät zu machen. Vereinfacht kann man sagen, dass ein Layer-3-Switch ein
+    Router mit
+    Switching-Funktion oder umgekehrt ein Switch mit Routing-Funktion ist.
+    Von der Funktionsweise ist es so, dass Daten ins Internet geroutet werden
+    und Daten im lokalen Netzwerk geswitcht.
+    <br>
+    <br>
+    <b style="text-decoration: underline;">Pro/Con Layer-3-Switch (gegenüber Router):</b>
+    <ul>
+        <li><i>Vorteil</i>
+            <ol>
+                <li>geringere Gerätekosten
+                </li>
+                <li>
+                    geringere Verzögerungszeit
+                </li>
+                <li>
+                    höherer Durchsatz
+                </li>
+                <li>
+                    einfachere Administration
+                </li>
+                <li>
+                    hohe Flexibilität
+                </li>
+                <li>
+                    mehr Ports</li>
+            </ol>
+        </li>
+        <li><i>Nachteil:</i>
+            <br>
+            Ein Layer-3-Switch hat weniger Features. Aber auf IP-Ebene lassen sich
+            durch Routing-Funktionen deutlich mehr Möglichkeiten zur Steuerung
+            von Netzwerkverkehr realisieren.
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Gateway</h2>
+    Ein Gateway ist ein aktiver Netzknoten, der zwei Netze miteinander
+    verbinden kann, die physikalisch zueinander inkompatibel sind und/oder
+    eine unterschiedliche Adressierung verwenden. Gateways koppeln die
+    unterschiedlichsten Protokolle und Übertragungsverfahren miteinander.
+    Dabei können Sie auf allen Schichten des OSI-Schichtenmodells arbeiten.
+    Grundsätzlich geht man von zwei verschiedene Ansätzen aus. Einmal von
+Medien-konvertierenden Gateways, die bei gleichen
+Übertragungsverfahren zwischen zwei verschiedenen Protokollen der
+OSI-Schichten 1 und 2 verbinden. Dann gibt es noch die Protokoll-
+konvertierenden Gateways, die unterschiedliche Protokolle auf den OSI-
+Schichten 3 und 4 miteinander verbinden.
+Und dann gibt es noch Anwendungs-konvertierende Gateways, wobei es
+hier eher darum geht, Dateiformate zu konvertieren.
+Gateways haben die Aufgabe eine logische Verbindung herzustellen und
+einen Datenstrom zwischen Quelle und Ziel zu übermitteln. Beim
+Übergang zwischen zwei Netzen berücksichtigt das Gateway die
+spezifischen Bedingungen beider Übertragungssysteme und den
+<b>Übertragungsmedien:</b>
+<ul>
+<li>Protokolle</li>
+<li>Adressierung</li>
+<li>Übertragungsgeschwindigkeit</li>
+<li>physikalische Bedingungen</li>
+<li>Datenformate</li>
+</ul>
+</body>
+
+</html>
