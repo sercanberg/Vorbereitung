@@ -659,7 +659,170 @@
             Collision Detection (Kollisionserkennung): Wenn mehrere
             Stationen gleichzeitig senden, erkennen sie die Kollision.</li>
     </ul>
-    <b style="text-decoration: underline;">Ablauf von CSMA/CD:</b>
+    <b style="text-decoration: underline;">Funktionsweise von CSMA/CD:</b>
+    <br>
+    Sind an ein Übertragungsmedium wie einem Ethernet mehrere Stationen angeschlossen, muss sichergestellt sein, dass
+    alle Stationen die Signale auf dem Medium lesen können, aber nicht gleichzeitig senden. Das CSMA/CD Verfahren
+    arbeitet nach dem Grundsatz "erst abhören, dann senden". Hierfür lauschen alle Stationen ständig auf dem
+    Übertragungsmedium und erkennen, wenn es besetzt oder frei ist. Nur wenn das Medium frei ist, darf eine Station sein
+    Signal senden.
+    Senden zwei Stationen gleichzeitig, tritt eine so genannte Kollision auf und das Senden ist abzubrechen. Erst nach
+    einer bestimmten Wartezeit kann versucht werden, erneut zu senden. Wenn der komplette Sendevorgang ohne eine
+    Kollision beendet ist, gilt die Übertragung als erfolgreich. Folgender Ablauf ist beim CSMA/CD-Verfahren für das
+    Senden von Signalen <b>einzuhalten:</b>
+    <ul>
+        <li>abhören des Mediums und feststellen, ob es frei oder besetzt ist</li>
+        <li>ist das Medium eine bestimmte Zeit frei, kann das Senden beginnen</li>
+        <li>während des Sendens ist das Medium weiter zu überwachen</li>
+        <li>treten Kollisionen auf, muss das Senden eingestellt und ein definiertes Signal auf die Leitung gegeben
+            werden. Es signalisiert allen Teilnehmern, dass eine Kollision aufgetreten ist</li>
+        <li>der Sendevorgang muss solange wiederholt werden, bis eine vollständige Übertragung ohne Kollision
+            stattgefunden hat</li>
+        <li>wird eine maximale Anzahl von Sendeversuchen erreicht, ist der Übertragungsvorgang komplett abzubrechen und
+            den höheren Netzwerkebenen eine Fehlermeldung zu schicken</li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Kollisionen</h2>
+    Grundsätzlich sind Kollisionen nicht als Störungen anzusehen.
+    Kollisionen gehören im Listen-before-Talk-Betrieb zum normalen
+    Betriebsablauf. Allerdings werden Kollisionen zu einem Problem, wenn
+    sie Überhand nehmen. Die Anzahl der Kollisionen steigt, je mehr
+    Stationen auf das Übertragungsmedium Zugriff haben wollen.
+    Durch lange Leitungen, sehr viele Stationen und Repeater
+    (Signalaufbereiter und -verstärker) entstehen je nach Ort der Einspeisung
+    unterschiedliche Signallaufzeiten. Sie führen dazu, dass eine Station ein
+    freies Übertragungsmedium feststellt und ihr Signal sendet, obwohl das
+    Signal einer anderen Station bereits unterwegs ist. Es kommt zur
+    Kollision, also der Überlagerung von zwei Signalen.
+    Durch CSMA/CD ergeben sich Grenzwerte für die maximale
+    Signallaufzeit und die Rahmengröße (Datenpaket bzw. Frame). Beides
+    darf nicht überschritten werden. Solange die Bandbreite von Ethernet
+    nicht mehr als 30% ausgereizt wird, machen sich Kollisionen kaum
+    bemerkbar. Mit steigender Belastung des Netzwerks nehmen aber auch
+    die Kollisionen zu. Hier hilft nur, die Anzahl der Stationen zu reduzieren
+    oder das gesamte Netzwerk in Teilnetz aufzuteilen.
+    Wegen der Kollisionen ist es nicht möglich, die theoretische
+    Übertragungskapazität voll auszuschöpfen. In der Praxis liegt die
+    Nominalleistung im günstigsten Fall bei etwa 70%. Unter ungünstigeren
+    Bedingungen sind es unter 30%. Deutlich darunter bricht das Netzwerk
+    praktisch zusammen. Die Ursache ist einfach: Je mehr Rechner in einem
+    Netzwerk aktiv sind, desto mehr Kollisionen treten auf. Und so sinkt der
+    erzielbare Datendurchsatz ständig ab.
+    <br>
+    <br>
+    <b style="text-decoration: underline;">Was ist eine Kollisionsdomäne?</b>
+    <br>
+    Die Kollisionsdomäne ist ein Begriff aus der Netzwerkwelt und bezeichnet den Netzwerkteil, in dem die einzelnen
+    Teilnehmer von auftretenden Kollisionen betroffen sind. Die Kollisionsdomäne kann sich über mehrere
+    Netzwerkkomponenten wie Hubs, Leitungen oder Verbindungselementen der Schicht 1 des OSI-Referenzmodells erstrecken.
+    Damit das CSMA/CD-Verfahren zuverlässig funktioniert, unterliegt die Kollisionsdomäne einigen Beschränkungen. Im
+    Ethernet dürfen nicht mehr als 1.023 Stationen an die Domäne angeschlossen sein. Darüber hinaus dürfen maximal fünf
+    Kabelsegmente verbunden sein, vier Repeater eingesetzt werden oder an drei Segmenten Stationen angeschlossen sein.
+    Switches oder Router trennen Kollisionsdomänen voneinander.
+    <br>
+    <br>
+    <img src="../bilder/kollisionsdom.png" class="center">
+    <br>
+    <b style="text-decoration: underline;">Wie kann man Kollisionen verhindern?</b>
+    <br>
+    <i>Grundsätzlich:</i> Je weniger Stationen sich in einer Kollisionsdomäne
+    befinden, desto weniger Kollisionen können auftreten.<br>
+    Um Kollisionen zu vermeiden und einen höheren Datendurchsatz zu
+    erreichen, wird ein Netz auf der Schicht 2 in mehrere Teilnetze aufgeteilt.
+    Bei der Zusammenstellung der Teilnetze ist es sinnvoll die Stationen in
+    einem Teilnetz zusammenzuschließen, die viel miteinander
+    kommunizieren.
+    <!---->
+    <h2 style="text-decoration: underline;">MAC-Adresse</h2>
+    Jeder Host in einem Ethernet-basierten Netzwerk hat eine eigene 48-Bit
+    lange Adresse. Diese Adresse soll den Host weltweit eindeutig
+    identifizieren. Diese Adresse wird als MAC-Adresse, Hardware-Adresse,
+    Ethernet-Adresse oder physikalische Adresse bezeichnet. Die
+    unterschiedlichen Bezeichnungen kommen daher, weil die MAC-Adresse
+    den physikalischen Anschluss bzw. den Netzzugriffspunkt eines Hosts
+    adressiert. Der physikalische Anschluss ist die Hardware. Zum Beispiel
+    eine Netzwerkkarte oder Netzwerkadapter. Die Bezeichnung Ethernet-
+    Adresse kommt daher, weil MAC-Adressen üblicherweise für Ethernet-
+    Netzwerkkarten, aber auch WLAN- und Bluetooth-Adapter vergeben
+    werden. Jede Netzwerkkarte besitzt eine eigene, individuelle MAC-
+    Adresse. Sie wird einmalig hardwareseitig vom Hersteller konfiguriert
+    und lässt sich im Regelfall nicht verändern.
+    <br>
+    <br>
+    In jedem Ethernet-Frame (Datenpaket) befinden sich die MAC-Adressen
+    von Sender (Quelle) und Empfänger (Ziel). Beim Empfang eines Frames
+    vergleicht die Empfangseinheit der empfangenden Station die MAC-
+    Zieladresse mit der eigenen MAC-Adresse. Erst wenn die Adressen
+    übereinstimmen, reicht die Empfangseinheit den Inhalt des Frames an die
+    höherliegende Schicht weiter. Wenn keine Übereinstimmung vorliegt,
+    dann wird das Frame verworfen.
+    <br>
+    <br>
+    <b style="text-decoration: underline;">Aufbau einer MAC-Adresse</b>
+    <br>
+    <img src="../bilder/mac.png" class="center">
+    <br>
+    Die ersten beiden Bit der MAC-Adresse kennzeichnen die Art der
+    Adresse. Das erste Bit hat eine besondere Bedeutung. Ist es gesetzt, dann
+    handelt es sich um eine Gruppe von Rechnern (Multicast). Eine Adresse,
+    bestehend aus lauter Einsen ist eine Broadcast-Adresse. Damit werden alle
+    Rechner angesprochen.
+    <ul>
+        <li>I/G = 0: Individual-Adresse (Unicast Address), Adresse für einen
+            Netzwerkadapter</li>
+        <li>I/G = 1: Gruppen-Adresse (Multicast Address), Ziel-Adresse für
+            eine Gruppe von Stationen</li>
+        <li>U/L = 0: universelle, weltweit eindeutige und unveränderbare
+            Adresse</li>
+        <li>U/L = 1: lokal veränderbare Adresse</li>
+    </ul>
+    Vom 3. bis zum 24. Bit wird der Hersteller der Netzwerkkarte
+    gekennzeichnet. Man bezeichnet diese Bitfolge als Organizationally
+    Unique Identifier (OUI). Da bei universellen Individual-Adressen die
+    ersten beiden Bit auf "0" stehen, werden sie häufig in den OUI mit
+    einbezogen <br>
+    IEEE vergibt die Adressbereiche der ersten 24 Bit an anfragende
+    Organisationen. Zum Beispiel Hersteller von Hardware.
+    <br>
+    Die hinteren 24 Bit, also vom 25. bis zum 48. Bit, bezeichnet man als
+    Organizationally Unique Address (OUA). Die darf der Hersteller an seine
+    produzierten Geräten vergeben. Er muss nur dafür sorgen, dass er jede
+    MAC-Adresse nur einmal vergibt.
+    <br>
+    <br>
+    <b style="text-decoration: underline;">Darstellung einer MAC-Adresse</b>
+    <br>
+    Die 48 Bit der MAC-Adresse lässt sich als Bitfolge oder in kanonischer
+    Form darstellen. Weil die Darstellung als Bitfolge zu lang ist, teilt man die
+    48 in 6 Oktette (jeweils 8 Bit) auf. Jedes Oktett wird dann als eine
+    zweistellige hexadezimale Zahl dargestellt. <b>Wichtig ist, vor der
+        Umformung der dualen in die hexadezimale Darstellung wird das Oktett
+        umgedreht (gespiegelt).</b>
+    <br>
+    <br>
+    <i style="text-decoration: underline;">Beispiel für eine Umformung:</i>
+    <br>
+    <img src="../bilder/bspUmformung.png">
+    <br>
+    <b style="text-decoration: underline;">MAC-Multicast- und MAC-Broadcast-Adressen</b>
+    <br>
+    Gelegentlich kommt es vor, dass ein Ethernet-Frame an mehrere Stationen
+    (Multicast) oder alle Stationen (Broadcast) eines Netzwerks gesendet
+    werden soll. Für diesen Zweck gibt es eine entsprechende Multicast- und
+    Broadcast-Adressen. Sie existieren nur als Ziel-Adressen. Für spezielle
+    Anwendungen gibt es standardisierte Multicast-Adressen. Für Broadcasts
+    (Ethernet-Frames an alle Stationen) gibt es aber nur eine einzige Adresse.
+    Sie lautet:
+    <br>
+    <img src="../bilder/macbroadcast.png">
+    <br>
+    Broadcasts können ein Netz sehr stark belasten, da in diesem Fall das
+    ganze Netz für einen Augenblick mit einem einzigen Datenpaket belegt
+    ist. Bei einem Broadcast-Sturm kann ein Netz sogar ganz zum Erliegen
+    kommen. Nach Möglichkeit vermeidet man Broadcasts über Netzgrenzen
+    hinweg.
+    <!---->
+    <h2 style="text-decoration: underline;">IEEE 802.11 / WLAN-Grundlagen</h2>
 </body>
 
 </html>
