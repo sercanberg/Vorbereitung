@@ -27,6 +27,7 @@
     <br>
     <a style="text-decoration: none;" href="#TCPIP">TCP/IP</a>
     <br>
+    <a style="text-decoration: none;" href="#AuD">Anwednungen und Dienste</a>
     <!---->
     <a name="AlgNetz">
         <h1 style="text-decoration: underline;">Allgemeines zu Netzwerktechnik</h1>
@@ -1062,6 +1063,723 @@
     <br>
     <b>Aufgaben und Funktionen von TCP/IP:</b>
     <br>
+    Die zentrale Aufgabe von TCP/IP ist dafür Sorgen zu tragen, dass
+    Datenpakete innerhalb eines dezentralen Netzwerks beim Empfänger
+    ankommen. Dafür stellt TCP/IP die folgenden zentralen Funktionen
+    bereit.
+    <ul>
+        <li>Logische Adressierung / Logical Addressing (IP)
+        </li>
+        <li>
+            Wegfindung / Routing (IP)
+        </li>
+        <li>
+            Fehlerbehandlung und Flussteuerung / Error Control and Flow
+            Control (TCP)
+        </li>
+        <li>
+            Anwendungsunterstützung / Application Support (TCP)
+        </li>
+        <li>
+            Namensauflösung / Name Resolution (DNS)</li>
+    </ul>
+    <b>Logische Adressierung / Logical Addressing (IP)</b>
+    <br>
+    In einem einfachen, lokalen Netzwerk empfängt jeder Netzwerk-Adapter
+    jedes Datenpaket. Das ist dann der Fall, wenn sich prinzipbedingt alle
+    Netzwerk-Teilnehmer das Übertragungsmedium teilen müssen (z. B. bei
+    WLAN oder Ethernet). Bei Netzwerken mit wenigen Teilnehmern ist das
+    eine praktikable Lösung. Doch in einem Netzwerk mit vielen Tausend
+    oder sogar Millionen Teilnehmern ist das wenig sinnvoll. Ob ein
+    Datenpaket seinen richtigen Empfänger erreicht, wäre dann dem Zufall
+    überlassen.
+    Deshalb bedarf es einer Möglichkeit das Netzwerk physikalisch
+    (Topologie) und logisch (Adressierung) zu strukturieren. Innerhalb von
+    TCP/IP übernimmt IP die logische Adressierung von Netzwerken und
+    deren Teilnehmern. Dabei gelangen Datenpakete nur in das Netz, in das
+    sie gehören. Die Verfahren der Adressierung sind zum Beispiel fest
+    definierte Netzklassen, Subnetting und CIDR.
+    <br>
+    <br>
+    <b>Wegfindung / Routing (IP)</b>
+    <br>
+    Während die logische Adressierung durch IP dafür sorgt, dass ein großes
+    Netzwerk in Segmente geteilt wird, sorgt Routing als eine Art
+    Wegfindung dafür, dass ein Datenpaket sein Ziel über die einzelnen
+    Netzwerk-Segmente erreicht. Für jedes einzelne Datenpaket wird in jedem
+    Netzknoten auf dem Weg vom Sender zum Empfänger, der nächste
+    Netzknoten ermittelt. Auf diese Weise findet ein Datenpaket den Weg zu
+    seinem Empfänger, auch wenn der in einem unbekannten Netzwerk-
+    Segment liegt.
+    <br>
+    <br>
+    <b>Fehlerbehandlung und Flussteuerung / Error and Flow Control
+        (TCP)</b>
+    <br>
+    Durch TCP stehen Sender und Empfänger ständig in Kontakt zueinander
+    (Verbindungsmanagement). Obwohl es sich eher um eine virtuelle
+    Verbindung handelt, werden während der Datenübertragung ständig
+    Kontrollmeldungen ausgetauscht, weshalb man von einer
+    verbindungsorientierten Kommunikation spricht. Wird ein Fehler
+    festgestellt, wird das betreffende Datenpaket erneut übertragen.
+    Zusätzlich ist eine Daten-Flusssteuerung notwendig, um die verfügbare
+    Übertragungsgeschwindigkeit auszunutzen. Weil es im Internet für eine
+    Ende-zu-Ende-Verbindung keinen exklusiven Kanal mit fester
+    Übertragungsgeschwindigkeit gibt, bedarf es hier einer automatischen
+    Anpassung.
+    <br>
+    <br>
+    <b>Anwendungsunterstützung / Application Support (TCP)</b>
+    <br>
+    Ähnlich wie Rechner mit IP-Adressen in Netzwerken adressiert werden,
+    bedarf es einer Unterscheidung der Kommunikationsverbindungen
+    zwischen spezifischen Anwendungen, die gemeinsam auf einem Rechner
+    laufen. TCP- und UDP-Ports (Nummern) bilden eine Software-
+    Abstraktion, um spezifische Anwendungen und deren
+    Kommunikationsverbindungen voneinander unterscheiden zu können.
+    <br>
+    <br>
+    <b>Namensauflösung / Name Resolution (DNS)</b>
+    <br>
+    In einem TCP/IP-Netzwerk werden Verbindungen zwischen den
+    Netzwerk-Teilnehmern mit IP-Adressen aufgebaut. Eine IP-Adresse hat
+    ursprünglich die binären Form bzw. Schreibweise und ist damit eine Folge
+    von 1en und 0en, mit denen elektronische Schaltungen und digitale
+    Programme arbeiten. Zur besseren Lesbarkeit werden IP-Adressen in der
+    dezimalen (IPv4) oder hexadezimalen (IPv6) Schreibweise dargestellt.
+    Doch weder die Bitfolge, noch eine andere Schreibweise sind für das
+    menschliche Gehirn einfach zu erfassen und zu merken. Der Mensch
+    verwendet lieber Namen um eine Sache zu benennen und zu
+    identifizieren. Deshalb werden statt IP-Adressen eher Namen zur
+    Adressierung auf der Anwendungsebene verwendet. Damit eine
+    Verbindung auf IP-Ebene möglich ist, ist eine Namensauflösung
+    notwendig. Gemeint ist, dass zu einem Computer- oder Domain-Namen
+    eine zugehörige IP-Adresse ermittelt werden muss. Man bezeichnet das
+    als Namensauflösung.
+    <br>
+    <br>
+    <b>Vorteil und Nachteil TCP/IP</b>
+    <ul>
+        <li><i style="text-decoration: underline;">Vorteil:</i><br>
+            TCP/IP hat mehrere entscheidende Vorteile. Jede Anwendung ist mit
+            TCP/IP in der Lage über jedes Netzwerk Daten zu übertragen und
+            auszutauschen. Dabei ist es egal, wo sich die Kommunikationspartner
+            befinden. Das Internet Protocol (IP) sorgt dafür, dass das Datenpaket sein
+            Ziel erreicht und das Transmission Control Protocol (TCP) steuert die
+            Datenübertragung und sorgt für die Zuordnung von Datenstrom und
+            Anwendung.
+        </li>
+        <li><i style="text-decoration: underline;">Nachteil:</i><br>
+            TCP/IP hat mehrere entscheidende Vorteile. Jede Anwendung ist mit
+            TCP/IP in der Lage über jedes Netzwerk Daten zu übertragen und
+            auszutauschen. Dabei ist es egal, wo sich die Kommunikationspartner
+            befinden. Das Internet Protocol (IP) sorgt dafür, dass das Datenpaket sein
+            Ziel erreicht und das Transmission Control Protocol (TCP) steuert die
+            Datenübertragung und sorgt für die Zuordnung von Datenstrom und
+            Anwendung.
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">IPv4 - Internet Protocol Version 4</h2>
+    Das Internet Protocol, kurz IP, wird im Rahmen der Protokollfamilie
+    TCP/IP zur Vermittlung von Datenpaketen verwendet. Es arbeitet auf der
+    Schicht 3 des OSI-Schichtenmodells und hat maßgeblich die Aufgabe,
+    Datenpakete zu adressieren und in einem dezentralen, verbindungslosen
+    und paketorientierten Netzwerk zu übertragen. Dazu haben alle Netzwerk-
+    Teilnehmer eine eigene IP-Adresse im Netzwerk. Sie dient nicht nur zur
+    Identifikation eines Hosts, sondern auch des Netzes, in dem sich der
+    jeweilige Host befindet.
+    <br>
+    <br>
+    <b>Aufgaben und Funktionen von IPv4</b>
+    <ul>
+        <li>Logische Adressierung (IPv4-Adresse)
+        </li>
+        <li>
+            IPv4-Konfiguration
+        </li>
+        <li>
+            IPv4-Header
+        </li>
+        <li>
+            IP-Routing
+        </li>
+        <li>
+            Namensauflösung</li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">IPv4-Adressen</h2>
+    Die wichtigste Aufgabe von IP (Internet Protocol) ist, dass jeder Host in
+    einem dezentralen TCP/IP-Netzwerk gefunden werden kann. Dazu wird
+    jedem Hardware-Interface (Netzwerkkarte oder -adapter) eine logische
+    IPv4-Adresse zugeteilt.
+    Die IPv4-Adresse ist mit den Angaben zu Straße, Hausnummer und Ort
+    einer Anschrift vergleichbar.
+    <br>
+    <br>
+    <b>Aufbau einer IPv4-Adresse</b>
+    <br>
+    Damit die IPv4-Adresse von Hardware und Software einfach verarbeitet
+    werden kann, liegt sie in einem Bitcode bzw. einer Bitfolge aus Einsen (1)
+    und Nullen (0) vor. Sie ist somit maschinenlesbar. Die Bitfolge hat 32
+    Stellen bzw. ist 4 Byte (32 Bit) groß.
+    <img src="../bilder/ipv4schreib.png" class="center">
+    <br>
+    <b>Struktur im IPv4-Adressraum</b>
+    <br>
+    Der IPv4-Adressraum umfasst 32 Bit und reicht von 0.0.0.0 bis
+    255.255.255.255. Rein rechnerisch ergibt sich aus einer 32-Bit-Adresse
+    eine Anzahl von 2 hoch 32 Adressen. Das entspricht über 4 Milliarden
+    Adressen. Als man den Adressraum definierte, entsprach das damals
+    ungefähr der Weltbevölkerung. Damals war es undenkbar, dass jeder
+    Mensch irgendwann mal eine IPv4-Adresse brauchen, geschweige denn,
+    dass jemand ein persönliches Endgerät (Smartphone) mit einer IPv4-
+    Adresse mit sich herumtrage würde.
+    <br>
+    <br>
+    <img src="../bilder/ipv4adresse.png" class="center">
+    <br>
+    Jede IPv4-Adresse
+    besteht im Prinzip aus zwei Teilen. Dem Netz (Subnetz) bzw. der
+    Netzadresse (Netz-ID) und dem Host bzw. der Hostadresse (Host-ID).
+    Beide Teile werden in der IP-Adresse abgebildet.
+    Für das IP-Routing ist nur die Netzadresse wichtig. Und die Hostadresse
+    ist nur für den Router wichtig, in dessen Netz sich der Host befindet.
+    Bei einer IPv4-Adresse ist der vordere Teil die Netzadresse und der
+    hintere Teil die Hostadresse. Die Teilung findet typischerweise an einem
+    Punkt (".") statt. Aber nicht immer. An welcher Stelle genau die IPv4-
+    Adresse in Netz und Host geteilt wird, dass entscheidet die Netzklasse, die
+    Subnetzmaske oder das CIDR-Suffix.
+    Durch die Strukturierung entstanden jedoch Lücken im Adressraum, der
+    nicht genutzt wird und der im Prinzip auch nie genutzt werden kann. Das
+    Entstehen von Lücken nennt man Fragmentierung des IPv4-Adressraums.
+    Das hat dazu geführt, dass ein Teil des Adressraums nicht nutzbar ist.
+    Dazu gehört zum Beispiel der Adressbereich von 0.0.0.0 bis
+    0.255.255.255.
+    In den nutzbaren Adressbereichen ist die erste und letzte Adresse eines
+    Subnetzes immer durch das ganze Netz (".0") und die Broadcast-Adresse
+    (".255") belegt. Welche das genau sind, hängt von der Aufteilung der
+    Subnetze ab. Beispielsweise sind bei einem /28-Netz mit insgesamt 16
+    IPv4-Adressen (2 hoch 4 gleich 16) deshalb nur 14 IPv4-Adressen
+    nutzbar. Im kleinsten Netz (/30) mit vier IPv4-Adressen sind sogar nur
+    zwei IPv4-Adressen nutzbar. Die anderen zwei sind durch die
+    Strukturierung (Netz- und Broadcast-Adresse) verschwendet.
+    <br>
+    <br>
+    <b>Subnetting und Supernetting</b>
+    <br>
+    Durch Subnetting kann man große IPv4-Adressbereiche, die ehemals
+    einer Netzklasse fest zugewiesen gewesen sind (Netzklasse bestimmt die
+    Größe eines Netzwerks), in mehrere kleine IPv4-Adressbereiche aufteilen.
+    Supernetting macht es genau umgekehrt. Durch Supernetting kann man
+    mehrere kleine IPv4-Adressbereiche, in einen größeren IPv4-
+    Adressbereich umwandeln.
+    Jede IPv4-Adresse besteht aus zwei Teilen. Jeder Teil hat eine bestimmte
+    Bedeutung. Der vordere Teil ist die Adresse für das Netzwerk, indem sich
+    der Host befindet. Der hintere Teil ist die Adresse für den Host. Wo sich
+    die IPv4-Adresse teilt, wird beim Subnetting von der Subnetzmaske bzw.
+    Subnetmask (engl.) bestimmt. Die Subnetzmaske besteht ebenso wie die
+    IPv4-Adresse aus 32 Bit. Die Darstellung der Subnetzmaske entspricht
+    jedoch einer geschlossenen Kette beginnend mit Einsen und
+    abschließenden Nullen. Ein Beispiel: 11111111 11111111 11111111
+    00000000. Das entspricht in der Dezimaldarstellung 255.255.255.0. Legt
+    man die Subnetzmaske wie eine Maske über die IP-Adresse ergibt sich die
+    Teilung in Netzadresse und Hostadresse an der Stelle, wo sich der
+    Wechsel von "1" auf "0" befindet.
+    <br>
+    <br>
+    <b>CIDR - Classless Inter-Domain Routing</b>
+    <br>
+    CIDR (Classless Inter-Domain Routing) ist trotz der Namensgebung kein
+    Routing-Protokoll, sondern ein Verfahren, um den IPv4-Adressraum
+    effizienter zu nutzen. CIDR wurde 1993 eingeführt, um das Konzept der
+    Netzklassen abzulösen. Mit CIDR fällt die feste Zuordnung zwischen
+    IPv4-Adresse und einer bestimmten Netzklasse weg. Vor CIDR hat die
+    Netzklasse definiert, welcher Teil der Netzteil und welcher der Hostteil
+    einer IPv4-Adresse ist. Mit CIDR steckt diese Information in einem
+    Suffix.
+    Vereinfacht ausgedrückt ist das Suffix eine Schreibweise, die die
+    Subnetzmaske abkürzt. Das Suffix gibt die Anzahl der aufeinander
+    folgenden 1er Bits in der Subnetzmaske an.
+    <img src="../bilder/cidrschreibwei.png" class="center">
+    <br>
+    <br>
+    <b>Reservierte Subnetze und nicht verfügbare IPv4-Adressen
+        (Reserved IP Adresses)</b>
+    <br>
+    Im theoretisch möglichen Adressbereich von 0.0.0.0 bis 255.255.255.255
+    sind bestimmte Adressen und Subnetze für spezielle Anwendungen
+    reserviert oder gesperrt. Die Kenntnis über diese Adressen oder
+    Adressbereiche ist deshalb wichtig, um eine fehlerhafte IPv4-
+    Konfiguration zu vermeiden oder zu erkennen.
+    <ul>
+        <li><i style="text-decoration: underline;">Die erste und letzte IPv4-Adresse eines Subnetzes sind reserviert
+            </i><br>
+            - x.x.x.0: Netz- oder Subnetz-Adresse
+            <br>
+            - x.x.x.255: Broadcast-Adresse
+        </li>
+        <li><i style="text-decoration: underline;">Nicht routbare IPv4-Adressen
+            </i><br>
+            - 0.0.0.0/8 (0.0.0.0 bis 0.255.255.255): Standard- bzw.
+            Default-Route im Subnetz (Current Network). <br>
+            - 127.0.0.0/8 (127.0.0.0 bis 127.255.255.255): Reserviert
+            für den Local Loop bzw. Loopback.</li>
+        <li><i style="text-decoration: underline;">Private IPv4-Adressen</i> <br>
+            - 10.0.0.0/8 (10.0.0.0 bis 10.255.255.255): Reserviert für
+            die Nutzung in privaten Netzwerken. Nicht im Internet
+            routbar.<br>
+            - 172.16.0.0/12 (172.16.0.0 bis 172.31.255.255): Reserviert
+            für die Nutzung in privaten Netzwerken. Nicht im
+            Internet routbar.<br>
+            - 192.168.0.0/16 (192.168.0.0 bis 192.168.255.255):
+            Reserviert für die Nutzung in privaten Netzwerken. Nicht
+            im Internet routbar.<br>
+            - 169.254.0.0/16 (169.254.0.0 bis 169.254.255.255): Link-
+            local Adresses für IPv4LL.</li>
+        <li><i style="text-decoration: underline;">Class D (Multicast)</i><br>
+            - 224.0.0.0 bis 239.255.255.255: Nicht im Internet, sondern
+            nur lokal in den eigenen Netzen routbar.</li>
+        <li><i style="text-decoration: underline;">Class E (reservierte Adressen)</i><br>
+            - 240.0.0.0 bis 255.255.255.255: Alte IPv4-Stacks, die nur
+            mit Netzklassen arbeiten, kommen damit nicht klar.</li>
+    </ul>
+    <br>
+    <br>
+    <b>Localhost oder Local Loop</b>
+    <br>
+    Der gesamte Adressbereich von 127.0.0.0 bis 127.255.255.255 ist für den
+    Local Loop bzw. Loopback reserviert.
+    Die IPv4-Adresse 127.0.0.1 hat jeder IPv4-Host. Diese IPv4-Adresse wird
+    auch als Localhost (Namensauflösung: localhost) bezeichnet. Es handelt
+    sich dabei um ein virtuelles Interface. Das aber keiner Hardware
+    zugeordnet ist. Dieses virtuelle Interface wird von Anwendungen
+    verwendet, die über das Netzwerk kommunizieren wollen/müssen, dabei
+    aber nicht das lokale Netzwerk in Anspruch nehmen können/wollen.
+    Wird ein Datenpaket mit der Ziel-Adresse 127.0.0.1 verschickt, so wird
+    sie an den Absender selber verschickt. Diese IPv4-Adresse kann zum
+    Testen verwendet werden. Zum Beispiel, ob TCP/IP oder eine darüber
+    erreichbare Anwendung korrekt installiert und konfiguriert ist.
+    <br>
+    <br>
+    <b>Netz-Adressen und Broadcast-Adressen</b>
+    <br>
+    Eine IPv4-Adresse, deren letzte Stelle eine "0" ist, ist keine gültige IPv4-
+    Adresse (z. B. 127.0.0.0). Es handelt sich dabei um die Adresse eines
+    ganzen Subnetzes, nicht eines einzelnen Hosts.
+    Eine IPv4-Adresse, deren letzte Stelle eine "255" ist (z. B. 127.0.0.255),
+    ist ebenso keine gültige IPv4-Adresse. Es ist eine Broadcast-Adresse für
+    das Netz 127.0.0.0. Die Datenpakete mit dieser Zieladresse werden in
+    diesem Netz an alle Hosts geschickt und nicht an einen einzelnen Host.
+    Eine Broadcast-Adresse innerhalb eines Netzwerkes dient dazu, eine
+    Nachricht an alle Hosts innerhalb des Netzwerks zu schicken.
+    Beispielsweise um Dienste im Netzwerk aufzuspüren. Zum Beispiel
+    DHCP für die IPv4-Konfiguration, Datei- und Druckerfreigaben oder
+    einen Gaming-Server.
+    Hinweis: Durch die Einschränkung von 0 bis 255 hat ein Klasse-C-
+    Subnetz bzw. 24er CIDR-Suffix zwar 256 Adressen (von .0 bis .255), aber
+    abzüglich der Netz-Adresse x.x.x.0 und der Broadcast-Adresse x.x.x.255
+    nur maximal 254 adressierbare Host-Adressen.
+    <!---->
+    <h2 style="text-decoration: underline;">IP-Routing</h2>
+    Das Internet Protocol (IP) ist ein routingfähiges Protokoll und sorgt dafür,
+    dass Datenpakete über Netzgrenzen hinweg einen Weg zu anderen Hosts
+    finden. Es kann die Daten über jede Art von physikalischer Verbindung
+    oder Übertragungssystem vermitteln. Der hohen Flexibilität steht ein
+    hohes Maß an Komplexität bei der Wegfindung vom Sender zum
+    Empfänger gegenüber. Der Vorgang der Wegfindung wird Routing
+    genannt.
+    Das Routing ist ein Vorgang, der den Weg zur nächsten Station eines
+    Datenpakets bestimmt. Im Vordergrund steht die Wahl der Route aus den
+    verfügbaren Routen, die in einer Routing-Tabelle gespeichert sind
+    <br>
+    <br>
+    <b>Parameter und Kriterien für Routing</b>
+    <br>
+    Verschiedene Parameter und Kriterien können für die Wahl einer Route
+    von Bedeutung sein:
+    <ul>
+        <li>Verbindungskosten</li>
+        <li>notwendige Bandbreite</li>
+        <li>Ziel-Adresse</li>
+        <li>Subnetz</li>
+        <li>Verbindungsart</li>
+        <li>Verbindungsinformationen</li>
+        <li>bekannte Netzwerkadressen</li>
+    </ul>
+    <b>Warum ist Routing notwendig?</b>
+    <br>
+    Das grundlegende Verbindungselement in einem Ethernet-Netzwerk ist
+    der Hub oder Switch. Daran sind alle Netzwerk-Teilnehmer
+    angeschlossen. Wenn ein Host Datenpakete verschickt, dann werden die
+    Pakete im Hub an alle Stationen verschickt und von diesen angenommen.
+    Jedoch verarbeitet nur der adressierte Host die Pakete weiter. Das
+    bedeutet aber auch, dass sich alle Hosts die Gesamtbandbreite dieses Hubs
+    teilen müssen (z. B. 10 MBit oder 100 MBit). Obwohl die physikalische
+    Struktur und Verkabelung des Hubs ein Stern mit Punkt-zu-Punkt-
+    Verbindungen ist, entspricht die logische Struktur einem Bus. Also eine
+    einzige Leitung, an der alle Netzwerk-Teilnehmer angeschlossen sind.
+    Wollen nun zwei oder mehr Hosts gleichzeitig senden, kommt es zu einer
+    Kollision, die zu einer allgemeinen Sendepause auf dem Bus führt.
+    Danach versuchen die Hosts erneut zu senden, bis die Übertragung
+    erfolgreich war. Dieses Verfahren nennt man CSMA/CD. Die maximale
+    Anzahl von Hosts an einem Ethernet-Bus ist 1.023. Je mehr Hosts an
+    einem Hub angeschlossen sind, desto häufiger kommen Kollisionen vor,
+    die das Netz überlasten.
+    <!---->
+    <h2 style="text-decoration: underline;">DHCP - Dynamic Host Configuration Protocol</h2>
+    DHCP ist ein Protokoll, um IP-Adressen in einem TCP/IP-Netzwerk zu
+    verwalten und an die anfragenden Hosts zu verteilen. Mit DHCP ist jeder
+    Netzwerk-Teilnehmer in der Lage sich selber automatisch zu
+    konfigurieren.
+    <br>
+    <br>
+    <b>Warum DHCP?</b>
+    <br>
+    Um ein Netzwerk per TCP/IP aufzubauen ist es notwendig an jedem Host
+    eine IP-Konfiguration vorzunehmen. Für ein TCP/IP-Netzwerk müssen
+    folgende Einstellungen an jedem Host vorgenommen werden:
+    <ul>
+        <li>Vergabe einer eindeutigen IP-Adresse</li>
+        <li>Zuweisen einer Subnetzmaske (Subnetmask)</li>
+        <li>Zuweisen des zuständigen Default- bzw. Standard-Gateways</li>
+        <li>Zuweisen des zuständigen DNS-Servers</li>
+    </ul>
+    <br>
+    <br>
+    <b>Funktionsweise von DHCP</b>
+    <img src="../bilder/dhcp.png" class="center">
+    <ol>
+        <li><b>DHCP-Discover:</b> Der DHCP-Client verschickt ein UDP-Paket mit der
+            Ziel-Adresse 255.255.255.255 und der Quell-Adresse 0.0.0.0. Dieser
+            Broadcast dient als Adressanforderung an alle verfügbaren DHCP-Server.
+            Im Optimalfall gibt es nur einen DHCP-Server. So vermeidet man
+            Konflikte bei der Adressvergabe.</li>
+        <li><b>DHCP-Offer:</b> Der DHCP-Server antwortet auf den Broadcast mit einer
+            freien IP-Adresse und weiteren Parametern, um die IP-Konfiguration zu
+            vervollständigen. Jeder angesprochene DHCP-Server schickt ein UDP-
+            Paket mit folgenden Daten zurück:<br>
+            - MAC-Adresse des Clients,<br>
+            - mögliche IP-Adresse,<br>
+            - Laufzeit der IP-Adresse/-Konfiguration (Lease-Time)
+            - Subnetzmaske,<br>
+            - IP-Adresse des DHCP-Servers / Server-ID</li>
+        <li><b>DHCP-Request:</b> Aus der Auswahl von evt. mehreren DHCP-Servern
+            sucht sich der DHCP-Client eine IP-Adresse heraus. Daraufhin verschickt
+            er eine positive Meldung an den betreffenden DHCP-Server. Alle anderen
+            Server erhalten die Meldung ebenso und gehen von der Annahme der IP-
+            Adresse zugunsten eines anderen Servers aus.</li>
+        <li><b>DHCP-Acknowledgement:</b> Anschließend muss die Vergabe der IP-
+            Adresse vom DHCP-Server bestätigt werden. Doch nicht nur die Daten
+            zum TCP/IP-Netzwerk kann DHCP an den Client vergeben. Sofern der
+            DHCP-Client weitere Angaben auswerten kann, übermittelt der DHCP-
+            Server weitere Optionen.</li>
+    </ol>
+    <!---->
+    <h2 style="text-decoration: underline;">NAT - Network Address Translation</h2>
+    NAT (Network Address Translation) ist ein Verfahren, dass in IP-Routern
+    eingesetzt wird, die lokale Netzwerke mit dem Internet verbinden. Weil
+    Internet-Zugänge in der Regel nur über eine einzige öffentliche und damit
+    routbare IPv4-Adresse verfügen, müssen sich alle anderen Hosts im
+    lokalen Netzwerk mit privaten IPv4-Adressen begnügen. Private IP-
+    Adressen dürfen zwar mehrfach verwendet werden, aber besitzen in
+    öffentlichen Netzen keine Gültigkeit. Hosts mit einer privaten IPv4-
+    Adresse können somit nicht mit Hosts außerhalb des lokalen Netzwerks
+    kommunizieren.
+    Damit trotzdem alle Computer mit privater IPv4-Adresse Zugang zum
+    Internet bekommen können, muss der Internet-Zugangs-Router in allen
+    ausgehenden Datenpaketen die private IPv4-Adresse der lokalen Hosts
+    durch seine eigene, öffentliche IPv4-Adresse ersetzen. Damit die
+    eingehenden Datenpakete dem lokalen Host zugeordnet werden können,
+    speichert der Router zusätzliche die Port-Nummern der TCP-
+    Verbindungen in einer sogenannten NAT-Tabelle.
+    <!---->
+    <h2 style="text-decoration: underline;">ARP - Address Resolution Protocol</h2>
+    Das Address Resolution Protocol (ARP) arbeitet auf der Schicht 2, der
+    Sicherungsschicht, des OSI-Schichtenmodells und setzt IP-Adressen in
+    Hardware- und MAC-Adressen um. Alle Netzwerktypen und -topologien
+    benutzen Hardware-Adressen um die Datenpakete zu adressieren. Damit
+    ein IP-Paket innerhalb eines lokalen Netzwerks zugestellt werden kann,
+    muss die Hardware-Adresse des Ziels bekannt sein.
+    Jede Netzwerk-Adapter besitzt eine einzigartige und eindeutige
+    Hardware-Adresse, die fest auf dem Adapter eingestellt ist.
+    Bevor nun ein Datenpaket verschickt werden kann, muss durch ARP eine
+    Adressauflösung erfolgen. Dazu sendet der Host einen ARP-Request mit
+    der MAC-Adresse "FF-FF-FF-FF-FF-FF". Das ist ein MAC-Broadcast an
+    alle Systeme im Netzwerk. Diese Meldung wird von jedem Netzwerk-
+    Interface entgegengenommen und ausgewertet. Das Ethernet-Frame
+    enthält die IP-Adresse des gesuchten Hosts. Fühlt sich ein Host mit dieser
+    IP-Adresse angesprochen, schickt er ein ARP-Reply an den Sender
+    zurück. Die gemeldete MAC-Adresse wird dann im lokalen ARP-Cache
+    des Senders gespeichert. Dieser Cache dient zur schnelleren ARP-
+    Adressauflösung.
+    Eine Variante von ARP ist das RARP-Protokoll. Das wird verwendet,
+    wenn die MAC-Adresse bekannt ist und die IP-Adresse gesucht wird.
+    <!---->
+    <h2 style="text-decoration: underline;">ICMP - Internet Control Message Protocol</h2>
+    Das Internet Control Message Protocol (ICMP) ist Bestandteil des Internet
+    Protocols (IP). Es wird aber als eigenständiges Protokoll behandelt, das
+    zur Übermittlung von Meldungen über IP dient. Hauptaufgabe von ICMP
+    ist die Übertragung von Statusinformationen und Fehlermeldungen der
+    Protokolle IP, TCP und UDP. Die ICMP-Meldungen werden zwischen
+    Rechnern und aktiven Netzknoten, z. B. Routern, benutzt, um sich
+    gegenseitig Probleme mit Datenpaketen mitzuteilen. Ziel ist, die
+    Übertragungsqualität zu verbessert.
+    Hinweis: Die Übertragung über IP ist unsicher. Gehen Meldungen von
+    ICMP verloren, dann löst das keine Fehlermeldung aus. Von diesem
+    Paketverlust bekommt niemand etwas mit.
+    <!---->
+    <h2 style="text-decoration: underline;">IPv6 - Internet Protocol Version 6</h2>
+    IPv6 ist als Internet Protocol (Version 6) für die Vermittlung von
+    Datenpaketen durch ein paketvermittelndes Netz, die Adressierung von
+    Netzknoten und -stationen, sowie die Weiterleitung von Datenpaketen
+    zwischen Teilnetzen zuständig. Mit diesen Aufgaben ist IPv6 der Schicht
+    3 des OSI-Schichtenmodells zugeordnet.
+    Die Aufgabe des Internet-Protokolls besteht im Wesentlichen darin,
+    Datenpakete von einem System über verschiedene Netzwerke hinweg zu
+    einem anderen System zu vermitteln (Routing).
+    IPv6 ist der direkte Nachfolger von IPv4 und Teil der Protokollfamilie
+    TCP/IP. Seit Dezember 1998 steht IPv6 bereit und wurde hauptsächlich
+    wegen der Adressknappheit und verschiedener Unzulänglichkeiten von
+    IPv4 entwickelt spezifiziert. Da weltweit immer mehr Menschen,
+    Maschinen und Geräte an das Internet mit einer eindeutigen Adresse
+    angeschlossen werden sollen, reichen die 4 Milliarden IPv4-Adressen
+    nicht mehr aus.
+    <br>
+    <br>
+    <b>Vorteile von IPv6</b>
+    <br>
+    Für viele ist IPv6 einfach nur ein IPv4 mit längeren Adressen. Doch diese
+    Ansicht ist völlig falsch. IPv6 ist ein Protokoll mit vielen neuen
+    Funktionen. Die Erfahrungen, die jemand aus der IPv4-Welt mitbringt,
+    lassen sich nur bedingt auf IPv6 übertragen.
+    <ul>
+        <li>längere Adressen und dadurch ein größerer Adressraum</li>
+        <li>mehrere IPv6-Adressen pro Host mit unterschiedlichen
+            Gültigkeitsbereichen</li>
+        <li>Autokonfiguration der IPv6-Adressen möglich</li>
+        <li>Multicast durch spezielle Adressen</li>
+        <li>schnelleres Routing</li>
+        <li>Punkt-zu-Punkt-Verschlüsselung mit IPsec</li>
+        <li>Quality of Service</li>
+        <li>Datenpakete bis 4 GByte (Jumbograms)</li>
+    </ul>
+    <br>
+    <br>
+    <b>Multicast</b>
+    <br>
+    IPv6 fasst Netzwerkknoten, Router, Zeit-Server und andere Dienste bzw.
+    Dienste-Anbieter in Multicast-Gruppen zusammen. Jede Gruppe ist über
+    eine eigene Adresse erreichbar. Das bedeutet, man kann in einem lokalen
+    Netzwerk einen zentralen Dienst ansprechen, ohne die IPv6-Adresse des
+    Hosts zu wissen. Ein beliebiger Host kann sich einer Multicast-Gruppe
+    zugewiesen fühlen und Pakete an eine Multicast-Adresse verarbeiten.
+    <br>
+    <br>
+    <b>IPsec</b>
+    <br>
+    IPsec ist eine Erweiterung des Internet-Protokolls (IP) um
+    Verschlüsselungs- und Authentifizierungsmechanismen. Damit erhält das
+    Internet-Protokoll die Fähigkeit IP-Pakete kryptografisch gesichert über
+    öffentliche und unsichere Netze zu transportieren.
+    IPsec wurde von der Internet Engineering Task Force (IETF) als
+    Bestandteil von IPv6 entwickelt und später auch für IPv4 spezifiziert.
+    <!---->
+    <h2 style="text-decoration: underline;">IPv6-Adressen</h2>
+    Grob unterscheidet man zwischen verbindungslokalen und
+    globalen IPv6-Adressen. Die verbindungslokale IPv6-Adresse ist nur im
+    lokalen Netzwerk gültig und wird nicht geroutet. Die globale IPv6-
+    Adresse ist über das lokale Netzwerk hinaus im Internet gültig.
+    Eine IPv6-Adresse hat eine Länge von 128 Bit. Diese Adresslänge erlaubt
+    eine unvorstellbare Menge von 2 128 oder 3,4 x 10 38 IPv6-Adressen. Das
+    sind 340.282.366.900.000.000.000.000.000.000.000.000.000 IPv6-
+    Adressen, also rund 340 Sextillionen Adressen. Bei IPv4 spricht man von
+    rund 4,3 Milliarden Adressen.
+    <br>
+    <br>
+    <b>Segmentierung</b>
+    <br>
+    Einer der Gründe für den Wechsel von IPv4 auf IPv6 ist der größere
+    Adressbereich von IPv6. Doch warum gleich 128 Bit Adressbreite? Der
+    Grund ist der, dass die IP-Adressen lang genug sein sollten, um den
+    gesamten Adressraum großzügig segmentieren bzw. aufteilen zu können.
+    Es sollen möglichst alle Netzwerk-Topologien berücksichtigt werden
+    können. Gleichzeitig soll das Routing vereinfacht werden.
+    <br>
+    <br>
+    <b>IPv6-Adresse im Detail</b>
+    <img src="../bilder/ipv6.png" class="center">
+    <br>
+    Eine IPv6-Adresse besteht aus 128 Bit. Wegen der unhandlichen Länge
+    werden die 128 Bit in 8 mal 16 Bit unterteilt. Je 4 Bit werden als eine
+    hexadezimale Zahl dargestellt. Je 4 Hexzahlen werden gruppiert und
+    durch einen Doppelpunkt (":") getrennt. Um die Schreibweise zu
+    vereinfachen lässt man führende Nullen in den Blöcken weg. Eine Folge
+    von 8 Nullen kann man durch zwei Doppelpunkte ("::") ersetzen.
+    Eine IPv6-Adresse besteht aus zwei Teilen. Dem Network Prefix (Präfix
+    oder Netz-ID) und dem Interface Identifier (Suffix, IID oder EUI).
+    Der Network Prefix kennzeichnet das Netz, Subnetz bzw. Adressbereich.
+    Der Interface Identifier kennzeichnet einen Host in diesem Netz. Er wird
+    aus der 48-Bit-MAC-Adresse des Interfaces gebildet und dabei in eine 64-
+    Bit-Adresse umgewandelt. Es handelt sich dabei um das Modified-EUI-
+    64-Format.
+    Auf diese Weise ist das Interface unabhängig vom Network Prefix
+    eindeutig identifizierbar.
+    <br>
+    <br>
+    <b>Schreibweise/Notation von IPv6-Adressen</b>
+    <br>
+    IPv6-Adressen bestehen aus insgesamt 128 Bit woraus sich eine Menge
+    von 2 128 möglichen Adressen ergibt. Die vorderen 64 Bit sind der Präfix
+    bzw. Network-ID. Vereinfacht ausgedrückt, ist das die IPv6-Adresse des
+    Subnetzes, in dem sich ein Host befindet.
+    Die hinteren 64 Bit werden als Interface Identifier (IID) bezeichnet. Das
+    ist der Host-Adressanteil einer IPv6-Adresse.
+    Wegen der unhandlichen Länge werden die 128 Bit in 8 mal 16 Bit (2
+    Byte) unterteilt. Je 4 Bit werden als eine hexadezimale Zahl dargestellt. Je
+    4 Hexzahlen werden gruppiert und durch einen Doppelpunkt (":")
+    voneinander getrennt.
+    <br>
+    <br>
+    <i style="text-decoration: underline;">Verbindliche Notationsregeln</i>
+    <ol>
+        <li>Alle alphabetischen Zeichen werden grundsätzlich klein
+            geschrieben.</li>
+        <li>Alle führenden Nullen eines Blocks werden grundsätzlich
+            weggelassen.</li>
+        <li>Ein einzelner 4er Nullerblock wird zu einer "0" zusammengefasst.</li>
+        <li>Aufeinanderfolgende 4er Nullerblöcke werden durch zwei
+            Doppelpunkte ("::") gekürzt.</li>
+        <li>Sind mehrere gleichwertige Kürzungen möglich, ist die erste von
+            Links beginnend zu wählen.</li>
+    </ol>
+    <img src="../bilder/ipv6bspnota.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">Übergangsverfahren (Transition Strategy)</h2>
+    IPv6 ist in aller Munde. Denn der weltweite IPv4-Adresspool ist seit
+    Anfang 2012 erschöpft. Wer öffentliche IP-Adressen braucht, der muss
+    sich einen IPv6-Präfix besorgen. Leider hat man damit das Problem nicht
+    gelöst. Mit der praktischen Umsetzung hapert es, weil es unmöglich ist
+    alle Netzwerk-Geräte auf einmal IPv6-fähig zu machen. Damit der
+    Wechsel leichter geht und Investitionen in alte IPv4-Technik nicht gleich
+    für die Tonne sind, gibt es verschiedene Übergangsverfahren, die ein Teil
+    einer "Transition Strategy" sein können.
+    <ul>
+        <li>Tunneling (z. B. Teredo, 6in4, 6to4, 6over4, DS Lite)
+        </li>
+        <li>
+            Parallelbetrieb (z. B. Dual-Stack)
+        </li>
+        <li>
+            Protokollübersetzung (z. B. NAT64)</li>
+    </ul>
+    <img src="../bilder/transitionstrat.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">TCP - Transmission Control Protocol</h2>
+    Das Transmission Control Protocol, kurz TCP, ist Teil der
+    Protokollfamilie TCP/IP. TCP ist ein verbindungsorientiertes Protokoll
+    und soll maßgeblich Datenverluste verhindern, Dateien und Datenströme
+    aufteilen und Datenpakete den Anwendungen zuordnen können.
+    <br>
+    <br>
+    <b>Aufgaben und Funktionen von TCP</b>
+    <ul>
+        <li>Segmentierung (Data Segmenting): Dateien oder Datenstrom in
+            Segmente teilen, Reihenfolge der Segmente wieder herstellen und
+            zu Dateien oder einem Datenstrom zusammensetzen</li>
+        <li>Verbindungsmanagement (Connection Establishment and
+            Termination): Verbindungsaufbau und Verbindungsabbau</li>
+        <li>Fehlerbehandlung (Error Detection): Bestätigung von
+            Datenpaketen und Zeitüberwachung</li>
+        <li>Flusssteuerung (Flow Control): Dynamische Auslastung der
+            Übertragungsstrecke</li>
+        <li>Anwendungsunterstützung (Application Support): Adressierung
+            spezifischer Anwendungen und Verbindungen durch Port-
+            Nummern</li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">UDP - User Datagram Protocol</h2>
+    UDP ist ein verbindungsloses Transport-Protokoll und arbeitet auf der
+    Schicht 4, der Transportschicht, des OSI-Schichtenmodells. Es hat damit
+    eine vergleichbare Aufgabe, wie das verbindungsorientierte TCP.
+    Allerdings arbeitet es verbindungslos und damit unsicher. Das bedeutet,
+    der Absender weiß nicht, ob seine verschickten Datenpakete angekommen
+    sind. Während TCP Bestätigungen beim Datenempfang sendet, verzichtet
+    UDP darauf. Das hat den Vorteil, dass der Paket-Header viel kleiner ist
+    und die Übertragungsstrecke keine Bestätigungen übertragen muss.
+    Typischerweise wird UDP bei DNS-Anfragen, VPN-Verbindungen,
+    Audio- und Video-Streaming verwendet.
+    <br>
+    <br>
+    <b>Funktionsweise von UDP</b>
+    <br>
+    UDP hat die selbe Aufgabe wie TCP, nur das nahezu alle
+    Kontrollfunktionen fehlen, dadurch schlanker und einfacher zu
+    verarbeiten ist.
+    So besitzt UDP keinerlei Methoden die sicherstellen, dass ein Datenpaket
+    beim Empfänger ankommt. Ebenso entfällt die Nummerierung der
+    Datenpakete. UDP ist nicht in der Lage die Datenpakete in der richtigen
+    Reihenfolge zusammenzusetzen. Statt dessen werden die UDP-Pakete
+    direkt an die Anwendung weitergeleitet. Für eine sichere
+    Datenübertragung ist deshalb die Anwendung zuständig.
+    In der Regel wird UDP für Anwendungen und Dienste verwendet, die mit
+    Paketverlusten umgehen können oder sich selber um das
+    Verbindungsmanagement kümmern. UDP eignet sich auch für
+    Anwendungen, die nur einzelne, nicht zusammenhängende Datenpakete
+    transportieren müssen.
+    <!---->
+    <h2 style="text-decoration: underline;">TCP- und UDP-Ports</h2>
+    TCP- und UDP-Ports sind eine Software-Abstraktion, um parallele
+    Kommunikationsverbindungen einer oder mehreren Anwendungen
+    voneinander unterscheiden zu können. Ähnlich wie IP-Adressen zur
+    Adressierung von Rechnern in Netzwerken dienen, adressieren Ports
+    spezifische Anwendungen und ihre Verbindungen, die auf einem Rechner
+    laufen.
+    <br>
+    <br>
+    <b>Well Known Ports (0 - 1.023):</b> Diese Port-Nummern sind einem Dienst
+    oder einem Anwendungsprotokoll fest zugeordnet. Jeder Dienst hört
+    standardmäßig auf einen solchen Port. Man bezeichnet sie auch als
+    Standard- oder Default-Ports (Destination-Port). Um Fehler und die damit
+    einhergehende Fehlersuche zu vermeiden sollte diese Zuordnung nicht
+    verändert werden. <br> <br>
+    <b>Registered Ports (1.024 - 49.151):</b> Diese Port-Nummern sind zur
+    Registrierung freigegeben. Im Prinzip kann sich jeder einen Port bei der
+    IANA/ICANN für seine Anwendung reservieren, wenn er es begründen
+    kann. Es ist durchaus möglich, dass diese Ports mehrfach belegt sind.<br><br>
+    <b>Dynamically Allocated Ports (49.152 - 65.535):</b> Die darüberliegenden
+    Port-Nummern, ab 49.152, können frei belegt werden bzw. werden
+    dynamisch zugewiesen. Typischerweise nutzen Client diese Ports für
+    ausgehende Verbindungen (Source-Port).
+    <br>
+    <br>
+    <b>Port-Zustände</b>
+    <br>
+    <ul>
+        <li>Open / Offen</li>
+        <li>Closed / Geschlossen</li>
+        <li>Filtered / Gefiltert (Blocked / Geblockt)</li>
+    </ul>
+    <img src="../bilder/bspports.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">RTP - Realtime Transport Protocol</h2>
+    RTP (Realtime Transport Protocol) ist wie TCP und UDP ein Transport-
+    Protokoll. RTP wurde von der IETF entworfen und gewährleistet einen
+    durchgängigen Transport von Daten in Echtzeit. Speziell für Audio- und
+    Video-Daten, bei denen je nach Codec 1 bis 20% Paketverlust tolerierbar
+    sind. Allerdings garantiert RTP nicht die Dienstqualität der Übertragung
+    (Quality of Service).
+    Bei RTP geht es darum, dass Paketverluste bis zu einem bestimmten Grad
+    akzeptabel sind. UDP hat dazu leider keine Funktionen, um Paketverluste
+    festzustellen. Und bei TCP muss jedes verlorene Paket erneut gesendet
+    werden. RTP baut auf UDP auf, damit der Empfänger wenigstens die
+    Möglichkeit hat, Paketverluste festzustellen.
+    <!---->
+    <a name="AuD">
+        <h1 style="text-decoration: underline;">Anwendungen und Dienste</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">WWW - World Wide Web</h2>
 </body>
 
 </html>
