@@ -28,6 +28,8 @@
     <a style="text-decoration: none;" href="#TCPIP">TCP/IP</a>
     <br>
     <a style="text-decoration: none;" href="#AuD">Anwednungen und Dienste</a>
+    <br>
+    <a style="text-decoration: none;" href="#NetzS">Netzwerk-Sicherheit</a>
     <!---->
     <a name="AlgNetz">
         <h1 style="text-decoration: underline;">Allgemeines zu Netzwerktechnik</h1>
@@ -1780,6 +1782,336 @@
     </a>
     <!---->
     <h2 style="text-decoration: underline;">WWW - World Wide Web</h2>
+    Das World Wide Web, kurz WWW oder Web, ist eine Sammlung von
+    Servern, auf denen Informationen abgelegt sind. Auf die Informationen in
+    Form von Text, Bild, Audio und Video greift man mit Hilfe eines
+    Software-Clients (Browser) zu. Um die verfügbaren Informationen
+    zugänglich zu machen, werden sie miteinander verknüpft. Man bezeichnet
+    das als Verlinken.
+    Neben E-Mail und File-Transfer (FTP) ist das World Wide Web (WWW)
+    der meistgenutzte Dienst des Internets. Aus diesem Grund wird der
+    Begriff Internet synonym für WWW verwendet. Für den Zugriff auf das
+    WWW ist ein Internet-Anschluss erforderlich. Im Gegensatz zum Internet,
+    ist das World Wide Web erst seit 1992 öffentlich freigegeben.
+    <br>
+    <br>
+    <b>Wie funktioniert das World Wide Web (WWW)?</b>
+    <br>
+    Die Kommunikation im World Wide Web basiert auf HTTP, dem
+    Hypertext Transfer Protocol. Auf dem HTTP-Server, den man allgemein
+    als Webserver bezeichnet liegen Dateien in Text, Bild, Audio oder Video.
+    Diese ruft man mit einem HTTP-Client ab, den man allgemein als
+    Webbrowser oder auch nur als Browser bezeichnet. Die Informationen
+    werden mit URLs adressiert und werden durch Eingabe in die Browser-
+    Adresszeile oder per Klick auf einen Hyperlink (Link) vom HTTP-Server,
+    auf dem die Ressource liegt, mit einem HTTP-Request abgerufen. Der
+    HTTP-Server liefert dann die aufgerufenen Dateien an den Browser mit
+    einem HTTP-Response aus. Der Browser kümmert sich um die
+    Darstellung und das Nachladen weiterer Ressourcen. Zum Beispiel Bilder,
+    die ebenfalls dargestellt werden.
+    <img src="../bilder/wwwkommu.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">E-Mail</h2>
+    E-Mail ist die Abkürzung für Electronic Mail, was "Elektronische Post"
+    oder "Elektronischer Brief" bedeutet. Bei einer E-Mail erfolgt das
+    Erstellen, Versenden und Darstellen ausschließlich in elektronischer bzw.
+    digitaler Form. E-Mail ist neben dem Telefon und Messaging ein zentrales
+    Kommunikationsmittel in unserer Gesellschaft. Nachrichten,
+    Diskussionen und Austausch von Dokumenten, das alles ist mit E-Mail
+    möglich.
+    <br>
+    <br>
+    <b>Ablauf der E-Mail-Kommunikation mit Postausgang und
+        Posteingang</b>
+    <br>
+    Die E-Mail-Kommunikation erfolgt über einen Client und einen Server.
+    Hier unterscheidet man zwischen dem Posteingangsserver und dem
+    Postausgangsserver, wobei es sich um unterschiedliche Server handeln
+    kann. Der Ablauf der Kommunikation zwischen den Clients und Servern
+    erfolgt nach dem Client-Server-Prinzip.
+    Die Unterscheidung zwischen Posteingang und Postausgang liegt daran,
+    weil man bei E-Mail davon ausgeht, dass der Nutzer nicht ständig online
+    ist. Beispielsweise, weil der PC ausgeschaltet ist oder weil der Internet-
+    Zugang über einen Dialup-Zugang hergestellt wird und dann eben nur
+    zeitweise eine Verbindung besteht.
+    <br>
+    <br>
+    <b>SMTP - Simple Mail Transfer Protocol</b>
+    <br>
+    Das SMTP-Protokoll ist für die Übertragung von E-Mails vom SMTP-
+    Client des Absenders zum SMTP-Server (Postausgang) und von dort
+    wiederum zum SMTP-Server des Empfängers zuständig. Dazu kontaktiert
+    der E-Mail-Client des Absenders seinen eigenen SMTP-Server
+    (Postausgangsserver) und übergibt ihm die E-Mails, die zum Versand
+    anstehen.
+    <ul>
+        <li><b>POP - Post Office Protocol:</b><br>
+            Da E-Mail-Nutzer in der Regel nicht ständig online sind, um immer E-
+            Mails empfangen zu können, werden alle eingehenden Nachrichten
+            zwischengespeichert. Um die E-Mails abzuholen kontaktiert der
+            Empfänger seinen Posteingangsserver mit POP.
+            POP ist für den Zugriff von mehreren Geräten auf ein E-Mail-Postfach
+            nicht geeignet, weil es die E-Mails aus dem Posteingang (Inbox) laden
+            und löschen kann. Das Verwalten von E-Mails (Verschieben, Kopieren,
+            Löschen) in Ordnerstrukturen kennt POP nicht. Außerdem kann der Client
+            die Verbindung zum Server nicht aufrecht erhalten (Idle-Funktion), um
+            neue eingehende Mails zum Client zu "pushen". Das geht nur mit IMAP.
+        </li>
+        <li><b>IMAP - Internet Mail Access Protocol:</b><br>
+            IMAP hat vom Prinzip die selbe Aufgabe wie POP. Es bietet jedoch
+            mehrere Vorteile. IMAP definiert Methoden zum Erstellen, Löschen und
+            Umbenennen einer Mailbox sowie zum Prüfen, ob neue Nachrichten
+            eingetroffen sind. Außerdem erlaubt IMAP das auszugsweise Laden einer
+            E-Mail und Verzeichnisdienste innerhalb der Mailbox.
+            Im Gegensatz zu POP kann der Benutzer selber wählen, welche E-Mails
+            er zum Lesen herunterladen will. Das ist vor allem bei der Benutzung
+            einer Verbindung mit geringer Bandbreite ein Vorteil.
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">DNS - Domain Name System</h2>
+    Das Domain Name System, kurz DNS, wird auch als "Telefonbuch des
+    Internets" bezeichnet. Ähnlich wie man in einem Telefonverzeichnis nach
+    einem Namen sucht, um die Telefonnummer heraus zu bekommen, schaut
+    man im DNS nach einem Computernamen, um die dazugehörige IP-
+    Adresse zu bekommen. Die IP-Adresse wird benötigt, um eine
+    Verbindung zu einem Server aufbauen zu können, über den nur der
+    Computername bekannt ist.<br><br>
+    Das Domain Name System ist ein System zur Auflösung von
+    Computernamen in IP-Adressen und umgekehrt. DNS kennt keine
+    zentrale Datenbank. Die Informationen sind auf vielen tausend
+    Nameservern (DNS-Server) verteilt.
+    Möchte man zum Beispiel die Webseite www.elektronik-kompendium.de
+    besuchen, dann fragt der Browser einen DNS-Server, der in der IP-
+    Konfiguration hinterlegt ist. Das ist in der Regel der Router des Internet-
+    Zugangs. Je nach dem, ob die DNS-Anfrage beantwortet werden kann
+    oder nicht, wird eine Kette weiterer DNS-Server befragt, bis die Anfrage
+    positiv beantwortet und eine IP-Adresse an den Browser zurück geliefert
+    werden kann.<br><br>
+    Wenn ein Computername oder Domain-Name nicht aufgelöst werden
+    kann, dann kann auch keine Verbindung zu dem betreffenden Host
+    aufgebaut werden. Es sei denn, der Nutzer verfügt über das Wissen der IP-
+    Adresse. Das bedeutet, ohne DNS ist die Kommunikation im Netzwerk
+    und im Internet praktisch nicht möglich. Deshalb existieren viele tausend
+    DNS-Server auf der ganzen Welt, die zusätzlich hierarchisch angeordnet
+    sind und sich gegenseitig über Änderungen informieren.
+    <br>
+    <br>
+    <b>Aufgabenteilung im DNS</b>
+    <br>
+    Eine Aufgabe im Domain Name System ist die Namensauflösung. Eine
+    weitere Aufgabe ist die Verwaltung der DNS-Zonen. An der Spitze stehen
+    die sogenannten Root-Server, die Informationen zu den Top-Level-
+    Domains (TLD) speichern.
+    Auf den Ebenen darunter tummeln sich weitere Nameserver, die für
+    Domains oder Subdomains zuständig und autoritativ auskunftsberechtigt
+    sind.
+    Und dann gibt es DNS-Server, die sich nur mit der Namensauflösung
+    beschäftigen und Anfragen weiterleiten und die Antworten erfolgreicher
+    Anfragen zwischenspeichern.
+    Oder um es anders auszudrücken, ein DNS-Server ist nicht gleich DNS-
+    Server. Jeder hat im DNS eine andere Aufgabe und Zuständigkeit.
+    <!---->
+    <h2 style="text-decoration: underline;">URL - Uniform Resource Locator</h2>
+    Der URL ist ein wichtiger Bestandteil vieler Protokolle des Internets.
+    URL gehört, wie HTTP und HTML, zum World Wide Web (WWW).
+    Nahezu alle Programme, die auf Internet-Ressourcen zugreifen verwenden
+    dazu URLs.
+    Obwohl es im eigentlichen Sprachgebrauch gerne als "die" URL
+    bezeichnet wird, heißt es korrekterweise "der" URL, von "der" Uniform
+    Resource Locator.
+    <br>
+    <br>
+    <b>Aufbau eines URL</b>
+    <br>
+    <i style="color:darkgreen">Ressourcentyp://User:Passwort@Host.Domain.TLD:Port/Pfad/Datei?Parameter</i>
+    <ul>
+        <li><b>Ressourcentyp://</b><br>
+            Der Ressourcentyp bezeichnet das Protokoll auf der Anwendungsebene.
+            Mit diesem Protokoll wird die Ressource angesprochen. Protokolle wären
+            z. B. HTTP, NNTP, FTP, etc.
+            Dem Protokoll folgt ein Doppelpunkt, der den Ressourcentyp vom
+            restlichen Ressourcenzeiger trennt. Der Doppel-Slash (Schrägstriche)
+            deutet auf eine nicht lokale Ressource hin, also außerhalb der eigenen
+            Station (http://www.elektronik-kompendium.de/). Eine lokale Ressource
+            führt meist zum Ausführen einer Aktion oder einer Anwendung. Z. B.
+            wird bei mailto:kontakt@das-ELKO.de der E-Mail-Client aufgerufen.
+            Keine Ausnahme bildet der Ressourcentyp file: (z. B. file:///c:/windows/).
+            Der Dritte Slash ist kein Fehler, sondern gehört bereits zum
+            Ressourcenzeiger und kennzeichnet die höchste Ebene, über den
+            Laufwerken, des Dateisystems.
+        </li>
+        <li><b>User:Passwort@</b><br>
+            Beide Werte enthalten einen Benutzername und Passwort, die durch einen
+            Doppelpunkt voneinander getrennt sind. Diese Angaben sind erforderlich,
+            wenn eine Ressource eine Authentifizierung erwartet. Selbige
+            Schreibweise ist auch ohne Passwort möglich. Das führt dann zur
+            Schreibweise einer E-Mail-Adresse, welche schon lange Zeit vor der URL
+            bekannt war.
+            Alle weitere Angaben werden durch einen Klammeraffen (at, @)
+            voneinander getrennt.
+            Vorsicht: Benutzername und Passwort werden in Klartext übertragen,
+            wenn das Anwendungsprotokoll keine Verschlüsselung vorsieht.
+        </li>
+        <li><b>Host.Domain.TLD</b><br>
+            Dieser Teil besteht aus dem Host, der Domain und der Top-Level-Domain
+            (TLD), die mit einem Punkt voneinander getrennt werden. Es handelt sich
+            dabei um die Adresse des Computers, auf der sich die Ressource befindet.
+            Alternativ ist hier auch die Angabe einer IP-Adresse möglich. Damit wird
+            DNS umgangen.
+        </li>
+        <li><b>:Port</b><br>
+            Hierbei ist der Port von UDP und TCP gemeint. In der Regel ist jedem
+            Kommunikationsprotokoll ein Port fest zugewiesen. Über diese Ports
+            stellen die Protokolle die Verbindung her.
+            Wird der Port weggelassen, verwendet die Anwendung den Standard-Port
+            des Ressourcentyps (Protokoll).
+        </li>
+        <li><b>/Pfad/Datei</b><br>
+            Diese Angabe verweist auf den Standort der Ressource des adressierten
+            Zielsystems. Üblicherweise wird darin die teilweise identische
+            Verzeichnisstruktur abgebildet.
+        </li>
+        <li><b>Parameter</b><br>
+            Enthält die Ressource ausführbare Bestandteile, so können diese mit
+            Parametern gefüttert oder gesteuert werden. Auf diese Weise werden
+            Benutzereingaben übermittelt, verarbeitet und sogar gespeichert. Die
+            Parameter werden durch ein Fragezeichen (?) vom Rest der URL getrennt.
+            Nicht jeder Ressourcentyp kennt Parameter. Außerdem gibt es
+            unterschiedliche Verfahren und nicht alle Parameter sind für das entfernte
+            Zielsystem bestimmt.
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">HTTP - Hypertext Transfer Protocol</h2>
+    <img src="../bilder/http.png" class="center">
+    <b>HTTP-Request</b>
+    <br>
+    Der HTTP-Request ist die Anfrage des HTTP-Clients an den HTTP-
+    Server. Ein HTTP-Request besteht aus den Angaben Methode, URL und
+    dem Request-Header. Die häufigste Methoden sind GET und POST.
+    Dahinter folgt durch ein Leerzeichen getrennt der URL und die
+    verwendete HTTP-Version. In weiteren Zeilen folgt der Header und bei
+    der Methode POST durch eine Leerzeile (!) getrennt die Formular-Daten.
+    <br>
+    <br>
+    <b>HTTP-Methoden</b>
+    <br>
+    Jeder HTTP-Request durch den Client wird durch die Angabe einer
+    Methode eingeleitet. Die Methode weißt den Server an, was er mit dem
+    Request machen soll. Die HTTP Version 1.1 sieht die folgenden
+    Methoden vor: <br>
+    - GET<br>
+    - POST<br>
+    - HEAD<br>
+    - PUT<br>
+    - OPTIONS<br>
+    - DELETE<br>
+    - TRACE<br>
+    - CONNECT<br>
+    <br>
+    <br>
+    <b>HTTP-Response-Codes / HTTP-Status-Codes</b>
+    <br>
+    Die Antwort des HTTP-Servers an den HTTP-Client enthält in der ersten
+    Zeile den Status-Code und die Klartext-Meldung des HTTP-Responses,
+    verursacht durch den HTTP-Request. Der Status-Code ist eine 3stellige
+    Nummer, die dem HTTP-Client Informationen über die Verfügbarkeit der
+    angeforderten Daten mitteilt. Z. B. wird über den Status-Code eine
+    Fehlermeldung übermittelt.
+    Die Status-Codes sind in 5 Gruppen unterteilt, die über den HTTP-
+    Response eine Grundaussage treffen.
+    <img src="../bilder/http-status-codes.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">FTP - File Transfer Protocol</h2>
+    FTP ist ein Kommunikationsprotokoll, um Dateien zwischen
+    unterschiedlichen Computersystemen zu übertragen. Die Übertragung
+    findet nach dem Client-Server-Prinzip statt. Ein FTP-Server stellt dem
+    FTP-Client Dateien zur Verfügung. Der FTP-Client kann Dateien auf dem
+    FTP-Server ablegen, löschen oder herunterladen. Mit einem komfortablen
+    FTP-Client arbeitet man ähnlich, wie mit einem Dateimanager.
+    <br>
+    <br>
+    <b>Wie funktioniert FTP?</b>
+    <br>
+    <img src="../bilder/ftp.png" class="center">
+    Die Kommunikation findet nach dem Client-Server-Prinzip statt. Wobei
+    FTP zwischen Client und Server zwei logische Verbindungen herstellt.
+    Eine Verbindung ist der Steuerkanal (command channel) über den TCP-
+    Port 21. Dieser Kanal dient ausschließlich zur Übertragung von FTP-
+    Kommandos und deren Antworten. Die zweite Verbindung ist der
+    Datenkanal (data channel) über den TCP-Port 20. Dieser Kanal dient
+    ausschließlich zur Übertragung von Daten. Über den Steuerkanal tauschen
+    Client und Server Kommandos aus, die eine Datenübertragung über den
+    Datenkanal einleiten und beenden.
+    Der FTP-Verbindungsaufbau sieht vor, dass der Steuerkanal vom FTP-
+    Client zum FTP-Server aufgebaut wird. Steht der Steuerkanal wird der
+    Datenkanal vom FTP-Server zum FTP-Client initiiert (aktives FTP).
+    Befindet sich der FTP-Client hinter einem NAT-Router oder einer
+    Firewall und verfügt parallel dazu nur über eine private IPv4-Adresse,
+    dann kommt die Verbindung nicht zustande. Die Verbindungsanforderung
+    vom Server an den Client wird von der Firewall bzw. dem Router
+    abgeblockt, bzw. kann wegen der privaten IPv4-Adresse gar nicht
+    geroutet werden. Für diesen Fall gibt es das passive FTP, bei dem auch
+    der Client den Datenkanal initiiert.
+    <!---->
+    <h2 style="text-decoration: underline;">NTP - Network Time Protocol</h2>
+    In Netzwerken und in Computern mit zeitkritischen Aufgaben ist eine
+    genaue Zeit unerlässlich. Schon deshalb wurden sehr früh Mechanismen
+    entwickelt, wie vernetzte Computer die Zeit untereinander austauschen
+    können. NTP ist ein hierarchisches Protokoll über das Zeit-Server
+    untereinander eine gemeinsame Zeit ermitteln können. Als Port wird 123
+    verwendet.
+    Auf Port 13 kann ein Server mittels "daytime" seine Zeit als ASCII-
+    Klartext zur Verfügung stellen. Eine andere Möglichkeit ist der Port 37
+    über "time". Dieser liefert die verstrichenen Sekunden seit 1.1.1900 0 Uhr
+    als 32-Bit-Binärwert zurück. Dieser Wert ist allerdings nur
+    sekundengenau.
+    Diese beiden simplen Verfahren haben jedoch noch einen weiteren großen
+    Nachteil. Sie berücksichtigen nicht die Datenpaketlaufzeit zum Ziel. Bis
+    die Angabe der Zeit beim Empfänger "eintrifft" ist sie veraltet. Außerhalb
+    von LANs sind diese Verfahren deshalb ungeeignet.
+    Die Mängel von "time" und "daytime" führten zur Entwicklung von NTP,
+    das Paketlaufzeiten im Netz misst und ausgleicht. Der NTP-Dienst
+    arbeitet parallel zur System-Uhr als eigenständige Uhr.
+    <!---->
+    <h2 style="text-decoration: underline;">LDAP - Lightweight Directory Access Protocol</h2>
+    LDAP ist ein Protokoll, das für die Kommunikation zwischen einem
+    Client und einem X.500-Verzeichnisdienst gedacht ist. X.500 ist ein
+    Standard für DAP-Datenbanken bzw. Verzeichnisdienste. Leider gestaltet
+    sich die Implementierung über verschiedene Systeme hinweg als sehr
+    aufwendig. Deshalb wurde LDAP im Jahre 1993 entwickelt, um den
+    Zugriff auf DAP-Datenbanken bzw. X.500-Verzeichnisdienste über
+    TCP/IP zu erleichtern.
+    Ursprünglich war es nur ein Protokoll, das als Proxy für den Zugriff auf
+    eine DAP-Datenbank diente, um zwischen X.500 und den verschiedenen
+    Systemen zu vermitteln. Erst später wurde aus LDAP ein eigenständiger
+    Verzeichnisdienst. LDAP bekam ein eigenes Datenbank-Backend, um
+    unabhängig von einem DAP-Server zu arbeiten. Somit kann man mit
+    einem LDAP-Server einen Verzeichnisdienst betreiben.
+    <br>
+    <br>
+    <b>Wie funktioniert LDAP?</b>
+    <img src="../bilder/ldap.png" class="center">
+    <br>
+    Der LDAP-Client greift über TCP/IP auf den LDAP-Server zu. Der
+    LDAP-Server ist Teil eines LDAP-Gateways, in dem sich ein X.500-
+    Client befindet, der über den OSI-Protokoll-Stack auf den X.500-Server
+    zugreift.
+    <!---->
+    <a name="NetzS">
+        <h1 style="text-decoration: underline;">Netzwerk-Sicherheit</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">Maßnahmen für die Netzwerk-Sicherheit</h2>
+    Ein Netzwerk auf Basis von TCP/IP teilt sich grob gesehen in die
+    Anwendungsschicht, die Netzwerkschicht und Übertragungsschicht. Auf
+    allen Schichten lassen sich Maßnahmen zur Verbesserung der Sicherheit
+    einsetzen.
+    Sicherheitsverfahren auf den niederen Schichten sind flexibler einsetzbar,
+    aber unsicherer. Sicherheitsverfahren auf den höheren Schichten sind an
+    die Anwendung gebunden, aber sicherer und schneller umsetzbar.
+    <img src="../bilder/netzsicherheit.png" class="center">
 </body>
 
 </html>
