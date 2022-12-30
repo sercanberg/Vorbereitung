@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/img.css">
     <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/titel.css">
 </head>
 
 <body>
@@ -19,11 +20,20 @@
         <a href="sociale.html">Social Engineering</a>
         <a href="sql.html">SQL</a>
     </div>
+    <h3 style="color: brown;">Kapitel:</h3>
+    <a style="text-decoration: none;" href="#AlgNetz"">Allgemeines zu Netzwerktechnik</a>
+    <br>
+    <a style=" text-decoration: none;" href="#Ueber">Übertragungstechnik</a>
+    <br>
+    <a style="text-decoration: none;" href="#TCPIP">TCP/IP</a>
+    <br>
     <!---->
-    <h1 style="text-decoration: underline; color:red">Allgemeines zu Netzwerktechnik</h1>
+    <a name="AlgNetz">
+        <h1 style="text-decoration: underline;">Allgemeines zu Netzwerktechnik</h1>
+    </a>
     <!---->
     <h2 style="text-decoration: underline;">Grundbegriffe Netzwerktechnik</h2>
-    <a href="netzBegriff.html">Hier stehen die Begriffe erklärt.</a>
+    <a style="text-decoration: none;" href="netzBegriff.html">Hier stehen die Begriffe erklärt.</a>
     <!---->
     <h2 style="text-decoration: underline;">Grundlagen der Netzwerktechnik</h2>
     <ul>
@@ -613,7 +623,9 @@
         <li>Datenformate</li>
     </ul>
     <!---->
-    <h1 style="text-decoration: underline; color:red">Übertragungstechnik</h1>
+    <a name="Ueber">
+        <h1 style="text-decoration: underline;">Übertragungstechnik</h1>
+    </a>
     <!---->
     <h2 style="text-decoration: underline;">IEEE 802</h2>
     802 ist die Nummer für eine Projektgruppe des IEEE (Institute of
@@ -823,6 +835,233 @@
     hinweg.
     <!---->
     <h2 style="text-decoration: underline;">IEEE 802.11 / WLAN-Grundlagen</h2>
+    IEEE 802.11 ist eine Gruppe von Standards für ein Funknetzwerk auf
+    Basis von Ethernet. Damit ist IEEE 802.11 das am weitesten verbreitete
+    drahtlose Netzwerk bzw. Technik für ein Wireless Local Area Network
+    (WLAN).
+    <br>
+    <br>
+    <b style="text-decoration: underline;">WLAN (Wireless LAN) oder IEEE 802.11?</b>
+    <br>
+    Gelegentlich wird die Bezeichnung "Wireless LAN" und der Standard
+    "IEEE 802.11" durcheinander geworfen. Der Unterschied ist dabei ganz
+    einfach. "Wireless LAN" ist die allgemeine Bezeichnung für ein
+    schnurloses lokales Netzwerk (Wireless Local Area Network). "IEEE
+    802.11" dagegen ist ein Standard für eine technische Lösung, die den
+    Aufbau eines Wireless LAN ermöglicht.
+    <br>
+    <img src="../bilder/uebertragunsgeschwind.png" class="center" height="750px" width="100px">
+    <figcaption>Wichtig: Die Werte sind nur theoretisch. In der Praxis sieht das ganze anders aus!!!!</figcaption>
+    <br>
+    <b style="text-decoration: underline;">WLAN-Sicherheit und Verschlüsselung</b>
+    <br>
+    Funksignale bewegen sich im freien Raum. Das bedeutet, jeder kann die
+    gesendeten Daten abhören oder stören. Um zumindest das Abhören zu
+    verhindern, werden WLANs mit Authentifizierung und Verschlüsselung
+    betrieben. Deshalb sollte die Verschlüsselung immer aktiviert sein.
+    Vorzugsweise WPA2. Die älteren Verschlüsselungsverfahren WPA und
+    WEP sollte man nicht mehr verwenden. WLAN-Geräte, die WPA2 nicht
+    beherrschen, sollte man dringend austauschen.
+    <ul>
+        <li>WEP (unsicher und veraltet)
+        </li>
+        <li>
+            WPA (sicher und veraltet)
+        </li>
+        <li>
+            WPA2 (sicher und aktuell)
+        </li>
+        <li>
+            WPS (unsicher und aktuell)</li>
+    </ul>
+    <br>
+    <br>
+    <b style="text-decoration: underline;">WLAN-Authentifizierung</b>
+    <br>
+    Nicht jeder soll ein WLAN nutzen dürfen. Zwar kann der Zugriff auf ein
+    WLAN durch ein Passwort eingeschränkt werden. Doch ist das Passwort
+    erst einmal bekannt, dann ist damit nicht nur der Zugriff, sondern auch die
+    Verschlüsselung ungesichert.
+    Zusätzlich zur Verschlüsselung kann bei größeren WLANs mit vielen
+    Nutzern eine zusätzliche Authentifizierung mit dem Protokoll IEEE
+    802.1x integriert werden, bei der jeder Nutzer eigene Zugangsdaten
+    benötigt (Benutzername und Passwort). An einer zentralen Stelle kann der
+    Zugriff auf einfache Art und Weise freigegeben oder eingeschränkt
+    werden.
+    Die Entsprechenden Einstellungen stehen häufig im begrifflichen
+    Zusammenhang mit WPA2-Enterprise oder WPA2-RADIUS.
+    <!---->
+    <h2 style="text-decoration: underline;">CSMA/CA - Carrier Sense Multiple
+        Access/Collision Avoidance</h2>
+    CSMA ist ein grundlegendes Verfahren, das die Kommunikation von mehreren Teilnehmern auf einem gemeinsam genutzten
+    und dezentral organisierten Übertragungsmedium regelt. Inzwischen gibt es dies allerdings in drei verschiedenen
+    Varianten, die abhängig vom Übertragungsmedium sind. Während man CSMA/CA vor allem in Funknetzen einsetzt, ist
+    CSMA/CD für Ethernet entwickelt, und CSMA/CR kommt in Controller Area Networks (CAN) zum Einsatz, die man vor allem
+    in Autos und Maschinen verwendet.
+    Um zu verstehen, was genau hinter Carrier Sense Multiple Access with Collision Avoidance steckt, ist es sinnvoll,
+    die <b>Bestandteile einzeln zu betrachten:</b>
+    <ul>
+        <li>Carrier Sense (CA): Ausgangsgedanke ist, dass Teilnehmer nur Daten über das Netz versenden dürfen, wenn das
+            Übertragungsmedium frei ist. Die Trägerzustandserkennung überprüft daher jederzeit den Kanal. Erst wenn
+            dieser frei
+            ist, werden Daten versendet.</li>
+        <li>Multiple Access (MA): Mehrere Stationen teilen sich ein Übertragungsmedium. Dabei ist es entscheidend für
+            eine
+            funktionierende Kommunikation, dass sich alle an ein verbindliches Protokoll halten.</li>
+        <li>Collision Avoidance (CA): Ein komplexer Ablaufplan versucht dafür zu sorgen, dass zwei oder mehr Teilnehmer
+            nicht
+            gleichzeitig eine Übertragung beginnen. So werden Kollisionen vermieden. Sollten dennoch Überlagerungen
+            auftreten,
+            wird dies erkannt und die Übertragung erneut versucht.</li>
+    </ul>
+    <b style="text-decoration: underline;">Was ist CSMA/CA und wofür braucht man es?</b>
+    <br>
+    In einem Local Area Network (LAN) teilen sich alle Netzwerkteilnehmer ein Übertragungsmedium - ein Kabel, den
+    sogenannten Bus. Drahtlose Netzwerke kennen naturgemäß keine Kabel, doch auch im WLAN senden und empfangen alle
+    beteiligten Geräte über nur ein Übertragungsmedium, nämlich einen bestimmten Funkbereich. Insofern ist WLAN (IEEE
+    802.11) mit den frühen Halbduplex-Ethernet-Netzen vergleichbar. Somit muss auch für ein drahtloses Netz ein
+    Protokoll bestehen, das die Nutzung des Mediums regelt.
+    <br>
+    Die wichtigste Regel, das kennt man auch von anderen Kommunikationssituationen mit mehreren Teilnehmern (etwa einem
+    Gespräch mit der Familie am Esstisch), lautet: Es darf immer nur eine Person gleichzeitig senden. Wenn alle
+    durcheinander sprechen, kann niemand mehr die Wortbeiträge verstehen. Auch in Netzwerken können sich die Beiträge,
+    in diesem Fall in Form von Datenpaketen, überlagern. Dies nennt man eine Kollision: Die Datenpakete treffen
+    aufeinander und verfremden so ihre Inhalte.
+    <br>
+    CSMA/CA versucht die Häufigkeit solcher Kollisionen zu verringern und gibt gleichzeitig einen Plan vor, wie im Falle
+    einer Kollision vorgegangen werden soll. Das Protokoll ist auch deshalb wichtig, weil in den drahtlosen Netzen die
+    Sendungen aufgrund der verwendeten Technik nicht so geordnet ablaufen können wie bei einem Kabel. In einem
+    dezentralen Netz ist es notwendig, dass alle Teilnehmer gemeinsam einem Regelwerk folgen und so untereinander die
+    Kommunikation organisieren.
+    <br>
+    <br>
+    <b style="text-decoration: underline;">Die Funktionsweise von CSMA/CA
+    </b>
+    <br>
+    Grundidee hinter CSMA/CA ist das Prinzip „Listen before Talk“. Das heißt, dass zunächst überprüft werden muss, ob
+    die Leitung frei („idle“) ist, bevor die Station mit einer Übertragung beginnen darf. Doch dies ist nur der erste
+    Schritt. Weitere Funktionen innerhalb des Verfahrens sorgen dafür, dass Kollisionen zu einem großen Teil vermieden
+    werden können.
+    <!---->
+    <h2 style="text-decoration: underline;">WLAN-Topologie</h2>
+    Eine WLAN-Topologie besteht im wesentlichen aus den drahtlosen
+    Netzteilnehmern, die als WLAN-Clients bezeichnet werden und
+    mindestens einer WLAN-Basisstation, die als Wireless Access Point
+    (WAP) oder einfache nur Access Point (AP) bezeichnet wird. Ein Access
+    Point ist innerhalb eines WLANs das einzige aktive Schicht-2-Element.
+    Vergleichbar mit einer Bridge verbindet der Access Point zwei Netzwerke
+    mit unterschiedlichen physikalischen Schichten. Bspw. das Wireless LAN
+    mit dem drahtgebundenen Ethernet.
+    <br>
+    <br>
+    <i style="text-decoration: underline;">Verschiedene Topologien:</i>
+    <ul>
+        <li>IBSS - Independent Basic Service Set (Ad-hoc)
+            <img src="../bilder/ibss.png" class="center" height="200" width="200">
+        </li>
+        <li>BSS - Basic Service Set
+            <img src="../bilder/bss.png" class="center" height="200" width="200">
+        </li>
+        <li>ESS - Extended Service Set / IEEE 802.11c / Wireless Bridging
+            <img src="../bilder/ess.png" class="center" height="200" width="200">
+        </li>
+        <li>WDS - Wireless Distribution System (WLAN-Repeater)
+            <img src="../bilder/wds.png" class="center" height="200" width="200">
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">WPA - WiFi Protected Access</h2>
+    WPA basiert auf WEP-Hardware (RC4, XOR, ...) damit ein einfaches
+    Software-Update einen Wireless Access Point von WEP auf WPA
+    aktualisiert werden kann. WPA verwendet für die Verschlüsselung TKIP.
+    <br>
+    <br>
+    <b>Sicherheitskonzept von WPA:</b>
+    <ul>
+        <li>Benutzer-Authentifizierung</li>
+        <li>Nachrichten-Verschlüsselung</li>
+        <li>Integritätssicherung</li>
+        <li>Schlüssel-Management</li>
+        <li>Schlüssel werden regelmäßig neu erstellt</li>
+        <li>verschiedene Schlüssel für verschiedene Anwendungen</li>
+        <li>Master Key bildet nur die Grundlagen für die Schlüsselerzeugung</li>
+    </ul>
+    <b>Schwachstellen von WPA:</b>
+    <ul>
+        <li>TKIP basiert auf RC4, was gegen Known-Plaintext-Angriffe
+            anfällig ist.</li>
+        <li>ARP-Spoofing möglich.</li>
+        <li>Passwort kann per Wörterbuchangriff erraten werden (Dictionary
+            Attack). Deshalb sind schwache Passwörter, die zu kurz, zu
+            einfach und zu wenig unterschiedliche Zeichen enthalten, nicht
+            sicher.</li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">WPA2 - WiFi Protected Access 2 / IEEE 802.11i</h2>
+    WPA2 (WiFi Protected Access 2) bzw. IEEE 802.11i ist ein Standard aus
+    dem Jahr 2004 für die Authentifizierung und Verschlüsselung von
+    WLANs, die auf den IEEE-Spezifikationen 802.11 basieren. Der Entwurf
+    für ein standardisiertes Verschlüsselungsverfahren war deshalb
+    notwendig, weil die Verschlüsselung mit WEP nicht wirklich sicher war.
+    IEEE 802.11i sollte die groben Sicherheitsmängel von WEP beseitigen.
+    <br>
+    <br>
+    <b>Sicherheitskonzept von WPA2:</b>
+    <ul>
+        <li>Sicherheitskonzept von WPA übernommen und erweitert.</li>
+        <li>Verschlüsselung: AES statt TKIP (RC4).</li>
+        <li>Der wesentliche Unterschied zwischen WPA und WPA2 ist die
+            Verschlüsselungsmethode. Während WPA das weniger sichere TKIP
+            verwendet, kommt in WPA2 das sichere AES zum Einsatz.</li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">WPS - WiFi Protected Setup</h2>
+    WPS ist eine Spezifikation des Industriekonsortiums WiFi Alliance
+    (WFA) hinter der sich eine Konfigurationsautomatik verbirgt. WPS
+    erleichtert die WLAN-Konfiguration von WLAN-Clients. Die
+    Konfiguration erfolgt entweder per Knopfdruck (WPS-PBC) oder Pin-
+    Eingabe (WPS-PIN).
+    Die Hauptschwierigkeit bei der Konfiguration eines WLAN-Clients ist die
+    Eingabe des WLAN-Passworts (Pre-Shared-Key), welches im Access
+    Point hinterlegt ist. WPS vereinfacht und automatisiert diese
+    Umständlichkeit.
+    <br>
+    <br>
+    <b>Eigenschaften von WPS</b>
+    <ul>
+        <li>Authentifizierung des WLAN-Clients gegenüber dem WLAN-AP</li>
+        <li>Authentifizierung des WLAN-AP gegenüber dem WLAN-Client</li>
+        <li>Automatische Konfiguration des WLAN-Clients mit dem WLAN-
+            Passwort</li>
+    </ul>
+    <b>Wie sicher ist WPS?</b>
+    <br>
+    Die WPS-Pin-Methode könnte sicher sein, wenn die WLAN-Router-
+    Hersteller die WPS-Spezifikation richtig und vollständig implementieren
+    würden.
+    Die Spezifikation fordert unter anderem ein kleines Display am WLAN-
+    Router, dass eine einmal gültige WPS-Pin anzeigt. Und das auch nur bei
+    Bedarf. In der Praxis haben WLAN-Router kein solches Display, sondern
+    eine statische WPS-Pin, die im schlechtesten Fall auf der Rückseite des
+    Geräts im Typenschild zu finden ist. In der WPS-Spezifikation wird
+    jedoch von einer statischen WPS-Pin explizit abgeraten. Nur halten sich
+    die wenigsten Hersteller daran und das widerspricht sogar anerkannten
+    Sicherheitsstandards.
+    <!---->
+    <a name="TCPIP">
+        <h1 style="text-decoration: underline;">TCP/IP</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">TCP/IP</h2>
+    TCP/IP ist eine Protokoll-Familie für die Vermittlung und den Transport
+    von Datenpaketen in einem dezentral organisierten Netzwerk. Es wird im
+    LAN (Local Area Network) und im WAN (Wide Area Network)
+    verwendet. Die Abkürzung TCP/IP steht für die beiden Protokolle Transmission
+    Control Protocol (TCP) und Internet Protocol (IP).
+    <br>
+    <br>
+    <b>Aufgaben und Funktionen von TCP/IP:</b>
+    <br>
 </body>
 
 </html>
