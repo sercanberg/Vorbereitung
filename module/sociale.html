@@ -20,8 +20,11 @@
         <a class="active" href="sociale.html">Social Engineering</a>
         <a href="sql.html">SQL</a>
     </div>
+    <!---->
     <h3 style="color: brown;">Kapitel:</h3>
     <a style="text-decoration: none;" href="#AlgSocE">Allgemeines zu Social Engineering</a>
+    <br>
+    <a style="text-decoration: none;" href="#Angriff">Angriffsmechanismen</a>
     <br>
     <!---->
     <a name="AlgSocE">
@@ -61,7 +64,427 @@
         </li>
     </ul>
     <!---->
-    <h2 style="text-decoration: underline;">Angriffsmechanismen</h2>
+    <a name="Angriff">
+        <h1 style="text-decoration: underline;">Angriffsmechanismen</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">Grundlagen Angriffsmechanismen</h2>
+    <b>Vorurteile und Klischees</b>
+    <ul>
+        <li>
+            Denken ist der Feind des Social Engineerings
+        </li>
+        <li>
+            Schwangere Frauen: Inbegriff für Gutes
+        </li>
+        <li>
+            Personen mit irischem Akzent: gastfreundlich, lustig, gesellig
+        </li>
+    </ul>
+    <b>Einordnung von Charaktertypen</b>
+    <br>
+    Einschätzen von Charaktertypen und Wählen der richtigen Strategie<br>
+    Unterscheidung Kommunikationsstil: Rolle autoritär oder zurückhaltend wählen.<br>
+    <img src="../bilder/dsig.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">Social Engineering und die Psychologie</h2>
+    <img src="../bilder/psychologie.png" class="center">
+    <ul>
+        <li><i style="text-decoration: underline;">Reziprozität</i><br>
+            Gegenseitigkeit oder Wechselbezüglichkeit und stellt ein Grundprinzip menschlichen Handelns dar.
+            <br>
+            Prinzip:<ol>
+                <li>Person A erweist Person B eine Gefälligkeit</li>
+                <li>Anschließend verlangt Person B eine Gefälligkeit zurück</li>
+            </ol>
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Konsistenz</i><br>
+            Wenn Entscheidung bewusst getroffen wurde, treten intra- und interpsychische Vorgänge ein.
+            <ul>
+                <li>Motiv der Konsistenz so groß, dass etwaige Umentscheidung verworfen wird, um nach außen konsistent
+                    zu wirken.</li>
+            </ul>
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Soziale Bewährtheit</i><br>
+            Verhalten anderer wird als richtig angenommen und ggf. kopiert. Wirkt besonders stark, je mehr Unsicherheit
+            und Unklarheit involviert ist.
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Sympathie</i><br>
+            Attraktiven Menschen werden positive Eigenschaften zugeschrieben.
+            <ul>
+                <li>Gleiche Kleidung</li>
+                <li>Gleiche Herkunft</li>
+                <li>...</li>
+            </ul>
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Autorität</i><br>
+            Faktoren:<ul>
+                <li>Titel</li>
+                <li>Uniformen</li>
+                <li>Luxus</li>
+            </ul>
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Knappheit</i><br>
+            Einschränkung von Verfügbarkeit beinflusst Wahrnehmung von Qualität.
+            <br>
+            Knappheitsprinzip:, Möglichkeiten erscheinen umso wertvoller, je weniger erreichbar sie sind.
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Abschlussbemerkung</i><br>
+            Ziel ist es, andere dazu zu bringen, eine Entscheidung zu treffen, ohne nachzudenken.
+        </li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Biologische Grundlagen</h2>
+    <b>Alpha-/Beta-Modus</b>
+    <br>
+    Im Alpha-Modus arbeitet Gehirn mit 8 bis 13 cps (zyklen pro Sekunde) -> Tagträumen, enstspannen,
+    fokussierte Konzentration
+    <br>
+    Im Beta-Modus 14 bis 100 cps. Gehirn ist wach, aufmerksam, nimmt Dinge auf, die um uns herum passieren.
+    <br>
+    Social Engineering setzt auf Alpha-Modus. Handeln ohne großes Nachdenken von Vorteil.
+    <br>
+    Vom emotionalen Denken bis zum logischen Handeln dauert es etwa 30 Sekunden. Diese Zeit reicht häufig bereits aus,
+    um Social Engineering zu Nutze zu machen. Erst danach fällt Betroffenem auf, was er getan hat.
+    <br>
+    <br>
+    <b>Bindungstheorie</b>
+    <br>
+    Andauerndes affektives Bindungsverhältnis zu bestimmten Personen.<br>
+    Suchen nach körperlicher und psychischer Nähe.<br>
+    Bezugsperson hat damit hohen EInfluss auf Entscheidungsfindung einer Person.
+    <br>
+    <br>
+    <b>Oxytocin - The Molecule of Trust</b>
+    <br>
+    Kuschelhormon. Kann Eigenschaft des Vertrauens hervorrufen.
+    <br>
+    <br>
+    <b>Das Experiment rund ums Vertrauen</b>
+    <br>
+    Teilnehmern werden 10 Dollar versprochen<br>
+    Geld weiter senden wird verdreifacht<br>
+    empfangende Person sendet etwas davon zurück<br>
+    Je mehr Geld 2. Person erhält, desto mehr Oxytocin hatte diese Person im Blut<br>
+    Je mehr Oxytoci, desto mehr Geld wurde wieder weitergegeben<br>
+    <i style="color: darkgreen;">Oxytocin verbindet mit anderen, lässt fühlen, was andere fühlen und lässt Menschen
+        großzügiger werden.</i>
+    <br>
+    <br>
+    <b>Dopamin - The Molecule of More</b>
+    <br>
+    Wichtiger Neurotransmitter und "Botenstoff des Glücks".
+    <ol>
+        <li><i style="text-decoration: underline;">Assoziiert mit:</i><br>
+            Kreativität,
+            emotionaler Intelligenz,
+            Abenteuerlust,
+            Risikofreude,</li>
+    </ol>
+    Besonders Abenteuerlust und Risikofreude für Social Engineering von Vorteil.
+    <ul>
+        <li>
+            weniger Dopamin verbunden mit Introvertiertheit
+        </li>
+        <li>
+            Logisches und Faktenorientiertes Denken
+        </li>
+        <li>
+            Sprache oft monoton
+        </li>
+    </ul>
+    Introvertiertes Verhalten und langsames Sprechen kann als Klassifikation genutzt werden.
+    <!---->
+    <h2 style="text-decoration: underline;">Grundlagen der Kommunikation</h2>
+    <b>Non-verbale Kommunikation</b>
+    <br>
+    <ol>
+        <li><i style="text-decoration: underline;">Kinesik:</i><br>
+            Beziehung zwischen nicht-sprachlichen Körperbewegungen (Erröten, Zucken, Augenbewegungen) und der
+            Kommunikation -> Körpersprache und wie Körper EMmotionen verrät.
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Embleme:</i><br>
+            Non-verbale Bewegungen: Daumen Hoch
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Illustratoren</i><br>
+            Gesten, die das Gesagte verstärken (meistens peripher und unbewusst eingesetzt)
+        </li>
+        <br>
+        <li><i style="text-decoration: underline;">Manipulatoren</i><br>
+            Jede Bewegung, die Manipulation oder Pflege eines Körperteils oder Kleidungsstücks aufgrund von Nervosität.
+        </li>
+    </ol>
+    <b>RGLT</b>
+    <br>
+    Rhythmus, Geschwindigkeit, Lautstärke, Tonhöhe<br>
+    Bezieht sich auf alles, was das Gesagte umgibt.
+    <ul>
+        <li>
+            Ausdrücken von Gefühlen
+        </li>
+        <li>
+            Emotionen
+        </li>
+    </ul>
+    Mögliche Umsetzungen
+    <ul>
+        <li>Pronomen Wechsel: ich zu wir</li>
+        <li>Stottern: evtl. Angst</li>
+        <li>Veränderung Stimmlage: Emotionen zur Geltung bringen</li>
+        <li>Fragen ausweichen</li>
+        <li>Pausen machen</li>
+    </ul>
+    <b>Proxemik</b>
+    <br>
+    <i style="text-decoration: underline;">Nutzung des Raums</i>
+    <br>
+    - öffentlicher Raum: Abstand von 3,5 - 7,5 Meter als akzeptabel eingeschätzt<br>
+    - sozialer Raum: 1,2 - 3 Meter als angemessen eingeschätzt<br>
+    - persönlicher Raum: als akzeptabel eingeschätzter Raum bei Familie, Freunden oder in Warteschlangen: 0,6 bis 1,2
+    Meter<br>
+    - Intimer Raum: 30cm
+    <br>
+    <br>
+    <b>Berührung</b>
+    <br>
+    Integraler Bestandteil menschlicher Erfahrungen<br>
+    Umarmung zur Freisetzung von Oxytocin
+    <ul>
+        <li><i style="text-decoration: underline;">Beruhigungsgesten</i><br>
+            Folgen oft auf Situationen, in denen Unbehagen ausgelöst wird<br>
+            Häufig Berühren an Hals und Nacken ->
+            Oft Zeichen für Druck, Bedrohung, Unwohlsein, Unsicherheit, Nervosität<br>
+            Durch Berührung werden beruhigende Endorphine im Gehirn ausgeschüttet und man entspannt sich in Folge
+        </li><br>
+        <li><i style="text-decoration: underline;">Laszive Geste</i><br>
+            Werden eingesetzt um:<br>
+            Aufmerksamkeit,
+            Interesse,
+            Nähe,
+            Hoffnung,<br>
+            zu symbolisieren.<br><br>
+            Beispiele:
+            Selbstberührung in Gesicht, Haaren und Armen,
+            Spielen mit Kleidung,
+            Schulterzucken,
+            Klimpern mit Wimpern,
+        </li><br>
+        <li><i style="text-decoration: underline;">Authentizität von non-verbalen Signalen</i><br>
+            Beine und Füße wichtiger Faktor<br>
+            Authentizität nimmt von unten nach oben am Körper ab<br>
+            Verkreuzte Beine stehen für Wohlfühlen ->
+            limbisches System erlaubt diese Geste nur, wenn das Gefühl von Sicherheit anherrscht<br>
+            Gespräch zwischen 2 Personen, O berkörper zeigen zueinander, Füße jedoch in eine andere Richtung, Indiz für
+            Wunsch, an einem anderen ort zu sein
+        </li><br>
+    </ul>
+    <b>Augenkontakt</b>
+    <br>
+    <i style="text-decoration: underline;">Ausruck verschiedener Bedeutungen:</i>
+    <br>
+    - Lügen<br>
+    - Dominanz<br>
+    - Flirten<br>
+    - Unbehagen
+    <br>
+    <br>
+    <b>Geruchsstoffe</b>
+    <br>
+    Assoziation mit Emotionen und Gefühlen.<br>
+    Mögliche hervorzurufende Emotionen:
+    <br>
+    Ekel,
+    Angst
+    <br>
+    Social Engineering niemals Körpergeruch aussetzen, außer Vorwand lässt dies zu.
+    <br>
+    <br>
+    <b>Musik</b>
+    <br>
+    Musik kann Auslöser starker Emotionen und Gefühlen sein<br>
+    Außerdem können Lieder an bestimmte Situationen erinnern<br>
+    Forscher konnten erhöhte Dopamin Ausschüttung nachweisen<br>
+    Gezieltes Einsetzen von Musik kann das Verhalten einer Person beeinflussen
+    <br>
+    <br>
+    <b>Verkleidung</b>
+    <br>
+    Kleidungsstücke oder Namensschilder, die Eindruck auf Leigimität der Handlung/Bitte bewirken sollen<br>
+    Kann Schlussfolgerungen verursachen
+    -> Arztkittel,
+    Malerkittel
+    <br>
+    <br>
+    <b>Gesichtsausdrücke</b>
+    <br>
+    Menschliches Gesicht enthält viele Informationen zu Gefühlen der Personen.
+    <img src="../bilder/gesicht.png" class="center">
+    Furcht, Freude, Trauer und Überraschung (von links nach rechts)
+    <br>
+    Emotionen erzeugen neben inneren Signalen auch von Außen sichtbare Veränderungen -> Mimik
+    <br>
+    Microexpressions Kurze und subtile Mimik zu verstehen, die dauert normalerweise 1/25 bis 1/5 einer Sekunde und
+    offenbart eine Emotion, die eine Person zu verbergen versucht.
+    <!---->
+    <h2 style="text-decoration: underline;">Methoden des Social Engineerings</h2>
+    <ol>
+        <li><b>Human-Based </b><br>
+
+            Erolgt mithilfe von sozialer Interaktion und sozialen Beziehungen
+
+        </li>
+        <br>
+        <li><b>Computer-Based</b><br>
+
+            Erfolgt durch technische Hilfsmittel. E-Mail Anhänge oder manipulierte Inernetseiten
+
+        </li>
+        <br>
+        <li><b>Reverse Social Engineering</b><br>
+
+            Opfer wird dazu gebracht freiwillig und aktiv gewünschten Informationen zu übermitteln
+
+        </li>
+    </ol>
+    <b>Angriffspyramide:</b>
+    <img src="../bilder/angriffspyramide.png" class="center">
+    <b>Open Source Intelligence (OSINT)</b>
+    <br>
+    OSINT nutzt freie, verfügbare, offene Quellen wie Printmedien und TV, Internet zur Sammlung von Informationen, die
+    anschließend zur Gewinnung von Erkenntnissen genutzt werden.
+    <br>
+    <br>
+    <b>Vorwandsentwicklung</b>
+    <br>
+    Basierend auf Erkenntnissen der OSINT-Phase sollen Vorwände geschaffen werden<br>
+    Auswahl der passenden Hilfsmittel und/oder Tools
+    <br>
+    <br>
+    <b>Angriffsplanung</b>
+    <br>
+    Planung zu:
+    <br>
+    - Was ist der Plan?<br>
+    - Wann ist der beste Zeitpunkt für den Angriff?<br>
+    - Wer muss für Unterstützung bereit stehen?
+    <br>
+    <br>
+    <b>Angriffsdurchführung</b>
+    <br>
+    Angriffs durchführen.
+    <br>
+    <br>
+    <b>Berichtsphase</b>
+    <br>
+    Ergebnisse dokumentieren
+    <!---->
+    <h2 style="text-decoration: underline;">Open Source Intelligence (OSINT)</h2>
+    Wichtiger Aspekt des Social Engineerings<br>
+    Ausgang und Stützpunkt jedes Social Engineering Angriffes<br>
+    Jede Art von Information hat einen Wert<br>
+    <br>
+    <b>Nicht technische Open Source Intelligence</b>
+    <ul>
+        <li>Physikalische Beschattung</li>
+        <li>Nachstellen</li>
+        <li>Beobachten</li>
+        <li>Belauschen</li>
+    </ul>
+    -> Auskundschaften von Routinen, Zeitplänen, Vorlieben, Abneigungen
+    <br>
+    <br>
+    <b>Zusammenfassung</b>
+    <ul>
+        <li>Daten größtes Kapital eines Social Engineers</li>
+        <li>Sammeln von Daten häufig mühselig</li>
+        <li>Entscheidend für die Angriffsplanung</li>
+        <li>Diskreter Ablauf</li>
+        <li>Profilerstellung</li>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Vorwandsentwicklung (Pretexting)</h2>
+    Schritt, sich als jemand Anderen auszugeben, um an private Informationen zu gelangen.<br>
+    Schaffung einer neuen Identität <b>oder</b> Annehmen einer anderen Identität.
+    <br>
+    <br>
+    <b>Prinzipien:</b>
+    <ol>
+        <li>Stets an Ziele denken<br>
+            - Wahl der richtigen Identität,
+            OSINT als Basis für richtige Wahl der Person
+        </li>
+        <li>Realität vs. Erfindung verstehen<br>
+            - Nicht in Details verlieren
+        </li>
+        <li>Grenzen kennen</li>
+        <li>Verlust des Kurzzeitgedächtnisses</li>
+        <li>Unterstützung für das Pretexting<br>
+            - Überlegen von Antworten im Vorhinein,
+            Im Vorhinein üben
+        </li>
+    </ol>
+    <!---->
+    <h2 style="text-decoration: underline;">Angriffsplanung</h2>
+    <b>Rapport</b>
+    <br>
+    Bezeichnet eine aktuell vertrauensvolle, von wechselseitiger empathischer Aufmerksamkeit getragene Beziehung, d.h.
+    „guten Kontakt“ zwischen zwei Menschen.
+    <br>
+    <br>
+    <b>Prinzipiehn beim Aufbau von Rapport</b>
+    <ol>
+        <li>Künstliche Zeitbeschränkungen<br>
+            <ul>
+                <li>Zeitspanne kurz halten, um zeitlichen Druck zu erzeugen</li>
+                <li>Fluchtweg Konversation zu beenden</li>
+            </ul>
+
+        </li><br>
+        <li>Die non-verbale Kommunikation anpassen<br>
+            <ul>
+                <li>
+                    Non-Verbale Körpersprache an Situation anpassen
+                </li>
+            </ul>
+            
+        </li><br>
+        <li>Herabgesetzte Sprechgeschwindigkeit
+            
+        </li><br>
+        <li>Sympathie- oder Hilfethemen
+            
+        </li><br>
+        <li>Das Ego beiseitestellen<br>
+            <ul>
+                <li>Gedanken, Meinungen, ... anderer zu akzeptieren
+                    auch wenn sie nicht der eigenen entspricht</li>
+            </ul>
+            
+        </li><br>
+        <li>
+            
+        </li><br>
+        <li>
+            
+        </li><br>
+        <li>
+            
+        </li><br>
+        <li>
+            
+        </li><br>
+        <li>
+            
+        </li><br>
+    </ol>
 </body>
 
 </html>
