@@ -25,11 +25,14 @@
     <a style="text-decoration: none;" href="#BetriebGrund">Grundlagen der
         Betriebssysteme</a>
     <br>
+    <a style="text-decoration: none;" href="#Speicherverwaltung">Speicherverwaltung</a>
+    <br>
     <!---->
     <a name="BetriebGrund">
         <h1 style="text-decoration: underline;">Grundlagen der
             Betriebssysteme</h1>
     </a>
+    <!---->
     <b>Positionierung des Betriebssystems</b>
     <img src="../bilder/betriebsysalgemein.png" class="center">
     <!---->
@@ -108,8 +111,8 @@
             sourcen müssen mit Hilfe geeigneter Scheduling-Methoden möglichst gerecht verteilt werden. Die verschiedenen
             Benutzer müssen (durch Passwörter) identifiziert und Zugriffe auf
             Daten und Prozesse anderer Benutzer durch das Betriebssystem
-            verhindert werden. Beispiele für Betriebssysteme, die Mehrbe-
-            nutzerbetrieb ermöglichen, sind Linux und andere Unix-ähnliche
+            verhindert werden. Beispiele für Betriebssysteme, die Mehrbenutzerbetrieb
+            ermöglichen, sind Linux und andere Unix-ähnliche
             Systeme, Mac OS X, sowie die Server-Versionen der Microsoft
             Windows NT-Familie. Dazu gehören auch die Versionen Terminal
             Server und MultiPoint Server.
@@ -118,16 +121,161 @@
     <!---->
     <h2 style="text-decoration: underline;">8/16/32/64 Bit-Betriebssysteme</h2>
     Jedes Betriebssystem arbeitet intern mit Speicheradressen einer
-    bestimmten Länge. Moderne Betriebssysteme werden üblicher-
-    weise als 64 Bit-Betriebssysteme angeboten. Zahlreiche Linux-
-    Distributionen sowie mehrere Versionen von Microsoft Win-
-    dows sind speziell für ältere Hardware zusätzlich noch als
+    bestimmten Länge. Moderne Betriebssysteme werden üblicherweise
+    als 64 Bit-Betriebssysteme angeboten. Zahlreiche Linux-
+    Distributionen sowie mehrere Versionen von Microsoft Windows
+    sind speziell für ältere Hardware zusätzlich noch als
     32 Bit-Betriebssysteme verfügbar. Ein Betriebssystem kann nur so
     viele Speichereinheiten ansprechen, wie der Adressraum zulässt.
     Darum kann ein 64 Bit-Betriebssystem mehr Speicher ansprechen
     als ein 32 Bit-Betriebssystem. Die Größe des Adressraums hängt
     Hardwareseitig allerdings vom Adressbus ab.<br><br>
     <i>2^n wobei n für Bit-Betriebssystem steht -> So viele Speichereinheiten können adressiert werden</i>
+    <!---->
+    <h2 style="text-decoration: underline;">Echtzeitbetriebssysteme</h2>
+    Echtzeitbetriebssysteme sind Betriebssysteme die Mehrpro-
+    grammbetrieb mit zusätzlichen Echtzeit-Funktionen für die Einhaltung von Zeitbedingungen bieten. Wesentliche
+    Qualitätskriterien von Echtzeitbetriebssystemen sind die Reaktionszeit und die
+    Einhaltung von Zeitschranken (englisch: Deadlines).
+    Die existierenden Echtzeitbetriebssysteme können in die beiden
+    Gruppen harte Echtzeitbetriebssysteme und weiche Echtzeitbetriebssysteme unterschieden werden.
+    <img src="../bilder/echtzeitbetriebsys.png" class="center">
+    <figcaption>Architekturen von Echtzeitbetriebssystemen mit Thin-Kernel und
+        Nano-Kernel</figcaption>
+    <!---->
+    <h2 style="text-decoration: underline;">Verteilte Betriebssysteme</h2>
+    Ein verteiltes Betriebssystem ist ein verteiltes System, das die Prozesse
+    auf mehreren unabhängigen Computern steuert. Die einzelnen
+    Knoten bleiben den Benutzern und deren Prozessen verborgen.
+    Das System erscheint als ein einzelner großer
+    Computer. Dieses Prinzip ist im Bereich der verteilten Systeme
+    auch unter dem Fachbegriff des Single System Image bekannt.
+    <img src="../bilder/verteiltebetribsys.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">Architektur des Betriebssystemkerns</h2>
+    Der Betriebssystemkern (englisch: Kernel) enthält die grundlegenden
+    Funktionen des Betriebssystems. Er ist die Schnittstelle zur
+    Hardware des Computers.
+    Die grundlegenden Funktionalitäten sind bei allen Betriebssystemen
+    gleich. Zu diesen gehört die Bereitstellung von Systemaufrufen,
+    Funktionen zur Benutzerverwaltung und Prozessverwaltung
+    inklusive Festlegung der Ausführungsreihenfolge (englisch: Scheduling)
+    und Interprozesskommunikation, ein Prozessumschalter
+    (englisch: Dispatcher), die nötigen Gerätetreiber,
+    Funktionen zur Speicherverwaltung und Dateisysteme zur Verwaltung
+    von Dateien auf Speicherlaufwerken.
+    Jedes vollständige Betriebssystem muss die genannten Funktionalitäten
+    erbringen. Die Entwickler der Betriebssysteme haben
+    gewisse Freiheiten bei der Positionierung der entsprechenden
+    Funktionen. Diese können entweder vom Betriebssystemkern
+    selbst oder von Prozessen, die in diesem Kontext auch Dienst oder
+    Server heißen, außerhalb des Kerns erbracht werden. Dementsprechend
+    werden die drei Architekturen monolithischer Kern, minimaler
+    Kern und hybrider Kern unterschieden.
+    Eine konkrete Auswirkung der Positionierung ist, dass Funktionen,
+    die sich im Betriebssystemkerns befinden, vollen Hardwarezugriff
+    haben. Sie laufen im Adressraum des Kerns, dem sogenannten
+    Kernelmodus. Wird eine Funktion hingegen
+    außerhalb des Adressraums des Kerns ausgeführt, kann diese nur
+    auf ihren virtuellen Speicher, den sogenannten Benutzermodus,
+    zugreifen.
+    <!---->
+    <h2 style="text-decoration: underline;">Schichtenmodell</h2>
+    In der Literatur ist es ein etabliertes
+    Verfahren, die Komponenten von Betriebssystemen mit Schichtenmodellen
+    zu visualisieren. Dabei werden die Betriebssysteme mit
+    ineinander liegenden Schichten logisch strukturiert. Die Schichten
+    umschließen sich gegenseitig und enthalten von innen nach außen
+    immer abstraktere Funktione.
+    <img src="../bilder/schichtenmodel.png" class="center">
+    <!---->
+    <a name="Speicherverwaltung">
+        <h1 style="text-decoration: underline;">Speicherverwaltung</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">Konzepte zur Speicherverwaltung</h2>
+    <ol>
+        <li><b>Statische Partitionierung</b><br>
+            Bei diesem Konzept der Speicherverwaltung wird der Hauptspeicher
+            in Partitionen gleicher oder unterschiedlicher Größe unterteilt.
+            Ein Nachteil dieses Verfahrens ist, dass zwangsläufig
+            interne Fragmentierung entsteht. Diese Form der Speicherverwaltung
+            ist somit ineffizient. Dieses Problem ist bei Partitionen
+            unterschiedlicher Größe weniger stark ausgeprägt, aber keinesfalls
+            gelöst. Ein weiterer Nachteil ist, dass die Anzahl der Partitionen
+            die Anzahl möglicher Prozesse limitiert.
+            Im Idealfall erhalten Prozesse eine möglichst passgenaue Partition,
+            um möglichst wenig interne Fragmentierung zu verursachen.
+            Werden Partitionen unterschiedlicher Größe verwendet, gibt
+            es zwei Möglichkeiten, um Prozessen Partitionen zuzuweisen. Entweder
+            verwaltet das Betriebssystem eine eigene Prozesswarteschlange
+            für jede Partition oder es verwaltet eine einzelne Warteschlange
+            für alle Partitionen. Ein Nachteil mehrerer Warteschlangen ist,
+            dass bestimmte Partitionen seltener oder eventuell sogar
+            nie verwendet werden.
+        </li><br>
+        <li><b>Dynamische Partitionierung</b><br>
+            Bei diesem Konzept der Speicherverwaltung weist das Betriebssystem
+            jedem Prozess eine zusammenhängende Partition mit exakt
+            der benötigen Größe zu. Dabei kommt es zwangsläufig zu externer
+            Fragmentierung. Die Lösung dieses Problem ist
+            eine regelmäßige Defragmentierung des Speichers. Dieses ist aber
+            nur dann möglich, wenn die Partitionen verschiebbar sind. Verweise
+            in Prozessen dürfen durch ein Verschieben von Partitionen
+            nicht ungültig werden.
+        </li><br>
+        <li><b>Buddy-Speicherverwaltung</b><br>
+            Bei der Buddy-Speicherverwaltung gibt es zu Beginn nur einen
+            Bereich, der den gesamten Speicher abdeckt. Fordert ein Prozess
+            einen Speicherbereich an, wird dessen Speicherkapazität zur
+            nächsthöheren Zweierpotenz aufgerundet und ein entsprechender,
+            freier Bereich gesucht. Existiert kein Bereich dieser Größe, sucht
+            das Betriebssystem nach einem Bereich doppelter Größe und unterteilt
+            diesen in zwei Hälften, sogenannte Buddies. Eine Hälfte wird
+            daraufhin dem anfordernden Prozess zugewiesen. Existiert auch
+            kein Bereich doppelter Größe, sucht das Betriebssystem einen
+            Bereich vierfacher Größe, usw.
+            Wird ein Speicherbereich freigegeben, prüft das Betriebssystem,
+            ob sich zwei Hälften gleicher Größe wieder zu einem größeren
+            Speicherbereich zusammenfassen lassen. Es werden aber nur
+            zuvor vorgenommene Unterteilungen rückgängig gemacht.
+        </li><br>
+    </ol>
+    <!---->
+    <h2 style="text-decoration: underline;">Speicheradressierung in der Praxis</h2>
+    Eine der Aufgaben eines Betriebssystems ist,
+    die Zugriffe der Prozesse auf den Speicher zu organisieren.
+    Zwei Konzepte der Speicheradressierung - Real Mode und Protected Mode
+    sind in der Praxis etabliert.
+    <ol>
+        <li><b>Real Mode</b><br>
+            Der Real Mode, der auch Real Address Mode heißt, ist eine von
+            zwei möglichen Betriebsarten x86-kompatibler Prozessoren. Dieses
+            Konzept der Speicheradressierung realisiert einen direkten
+            Zugriff auf die Speicheradressen des Hauptspeichers durch die
+            Prozesse. Da der Real Mode keinen Zugriffsschutz
+            bietet, kann jeder Prozess auf den gesamten adressierbaren Speicher
+            zugreifen. Darum ist dieses einfache Konzept ungeeignet für
+            Betriebssysteme mit Mehrprogrammbetrieb.
+            Zudem wäre das Konzept ungeeignet, um einen für die Prozesse
+            transparenten Auslagerungsspeicher (englisch: Swap ) zu realisieren.
+            Ein weiterer Grund, warum der Real Mode für moderne
+            Betriebssysteme ungeeignet ist, ist die Beschränkung des adressierbaren
+            Hauptspeichers auf maximal 1 MB. Diese Einschränkung
+            geht zurück auf den maximaler Speicherausbau eines Intel
+            8086 Prozessors, dessen Adressbus nur 20 Busleitungen umfasst.
+        </li><br>
+        <li><b>Protected Mode und virtueller Speicher</b><br>
+
+        </li><br>
+        <li><b>Seitenorientierter Speicher (Paging)</b><br>
+
+        </li><br>
+        <li><b>Segmentorientierter Speicher
+                (Segmentierung)</b><br>
+
+        </li><br>
+    </ol>
 </body>
 
 </html>
