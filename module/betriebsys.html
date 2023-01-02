@@ -266,7 +266,14 @@
             8086 Prozessors, dessen Adressbus nur 20 Busleitungen umfasst.
         </li><br>
         <li><b>Protected Mode und virtueller Speicher</b><br>
-
+            Im Protected Mode verwenden die Prozesse keine physischen
+            Hauptspeicheradressen, sondern einen virtuellen Speicher, der
+            unabhängig von der verwendeten Speichertechnologie und den
+            gegebenen Ausbaumöglichkeiten ist. Er besteht aus logischen
+            Speicheradressen, die von der Adresse 0 aufwärts durchnummeriert
+            sind. Jeder Prozess läuft ausschließlich in seiner eigenen, von
+            anderen Prozessen abgeschotteten Kopie des physischen Adress-
+            raums und jeder Prozess darf nur auf seinen eigenen virtuellen
         </li><br>
         <li><b>Seitenorientierter Speicher (Paging)</b><br>
 
