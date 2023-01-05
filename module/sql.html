@@ -54,15 +54,62 @@
     <h2 style="text-decoration: underline;">Normalisierung</h2>
     <ol>
         <li>Normalform<br>
-        
+            Eine Tabelle ist in erster Normalform (1NF), wenn in jeder Tabellenposition immer nur ein Wert steht,
+            niemals eine Liste von Werten<br>
+            <img src="../bilder/1nf.png" height="200" width="500">
         </li><br>
         <li>Normalform<br>
-        
+            Eine Tabelle ist in zweiter Normalform (2NF), wenn sie in erster Normalform ist und jedes Nicht -
+            Schlüsselattribut vom Primärschlüssel voll funktional abhängig ist.<br>
+            <img src="../bilder/2nf.png" height="200" width="500">
+
         </li><br>
         <li>Normalform<br>
-        
+            Eine Tabelle ist in dritter Normalform (3NF), wenn sie in zweiter Normalform ist und jedes Nicht
+            Schlüsselattribut nicht transitiv ist, also direkt vom Primärschlüssel abhängt.<br>
+            <img src="../bilder/3nf.png" height="200" width="500">
         </li><br>
     </ol>
+    <!---->
+    <h2 style="text-decoration: underline;">Beziehungen</h2>
+    <img src="../bilder/1zu1.png" class="center" height="350" width="400">
+    <img src="../bilder/1zuN.png" class="center" height="350" width="400">
+    <img src="../bilder/NzuN.png" class="center" height="350" width="400">
+    <!---->
+    <h2 style="text-decoration: underline;">ER - Modellierung</h2>
+    <b>Begriffe</b>
+    <ul>
+        <li><i style="text-decoration: underline;">Entität</i><br>
+            Eine Entität ist ein individuelles und identifizierbares Exemplar von Dingen, Personen oder Begriffen der
+            realen oder Vorstellungswelt und wird durch Eigenschaften beschrieben.<br>
+            Eine Entitätsmenge oder Entitätstyp ist eine Zusammenfassung von Entitäten mit gleichen Eigenschaften unter
+            einem eindeutigen gemeinsamen Oberbegriff
+        </li><br>
+        <li><i style="text-decoration: underline;">Attribut</i><br>
+            Ein Attribut beschreibt eine fachliche Eigenschaft, die allen Entitäten einer Entitätsmenge gemeinsam ist.
+            Es darf für eine Entität zu jedem Zeitpunkt immer nur einen Wert annehmen und dieser Wert darf nur von der
+            Entität selbst abhängig sein.
+        </li><br>
+        <li><i style="text-decoration: underline;">Primärschlüssel</i><br>
+            Ein Primärschlüssel ist eine minimale, identifizierende Attributkombination einer Entität.
+        </li><br>
+        <li><i style="text-decoration: underline;">Assoziation</i><br>
+            Wechselwirkungen und Abhängigkeiten zwischen Entitäten werden durch Beziehungen (Relationen) dargestellt.
+            Die Zusammenfassung gleichartiger Beziehungen wird Beziehungsmengen (Assoziationen) genannt.
+        </li><br>
+    </ul>
+    <b>Vom Modell zur Tabellenstruktur</b>
+    <br>
+    Entitäten umwandeln<br>
+    - Jede Entität wird zu einer Tabelle
+    <br><br>
+    Attribute umwandeln<br>
+    - Jedes Attribut wird zu einer Spalte der Tabelle
+    <br><br>
+    Relationen umwandeln<br>
+    - 1:1 Aus den beiden Tabellen wird eine Tabelle<br>
+    - 1:N Der Primärschlüssel der einen Tabelle wird als Fremdschlüssel in die andere Tabelle aufgenommen<br>
+    - N:N Es wird eine zusätzliche Zuordnungstabelle erstellt
 </body>
 
 </html>
