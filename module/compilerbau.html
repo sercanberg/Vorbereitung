@@ -23,6 +23,8 @@
     </div>
     <!---->
     <h3 style="color: brown;">Kapitel:</h3>
+    <a style="text-decoration: none;" href="#Automat">Automat</a>
+    <br>
     <a style="text-decoration: none;" href="#Compiler">Was ist ein Compiler?</a>
     <br>
     <a style="text-decoration: none;" href="#Compilationsprozess">Compilationsprozess</a>
@@ -37,6 +39,68 @@
     <br>
     <a style="text-decoration: none;" href="#LaufCode">Laufzeitsystem</a>
     <br>
+    <!---->
+    <a name="Automat">
+        <h1 style="text-decoration: underline;">Automat</h1>
+    </a>
+    Ein Automat oder eine abstrakte Maschine ist in der Informatik, speziell in der Automatentheorie, das Modell eines
+    digitalen, zeitdiskreten Rechners.
+    <!---->
+    <h2 style="text-decoration: underline;">Verhalten eines Automaten</h2>
+    Das grundsätzliche Verhalten eines Automaten ist immer gleich: Dem Automaten wird von außen eine Eingabe als Folge
+    von Zeichen vorgelegt. Der Automat befindet sich in einem bestimmten Zustand. Jedes Mal, wenn ein Eingabezeichen
+    eintrifft, kann sich abhängig vom Eingabezeichen und dem gegenwärtigen Zustand ein neuer Zustand, der Folgezustand,
+    einstellen (Zustandsübergang oder Transition). Man kann die Menge der möglichen Zustandsübergänge, die das Verhalten
+    des Automaten definiert, als das Programm des Automaten verstehen.
+    <!---->
+    <h2 style="text-decoration: underline;">Deterministische und nichtdeterministische Automaten</h2>
+    Wenn der Folgezustand durch den gegenwärtigen Zustand und das Eingabezeichen immer eindeutig gegeben ist, dann
+    spricht man von einem deterministischen Automaten. Allgemein aber kann man auch einen Spielraum (Freiheitsgrade) für
+    die Zustandsübergänge zulassen. Der Automat darf dann auf dasselbe Paar von Zustand und Eingabezeichen unter
+    mehreren möglichen Kandidaten einen Folgezustand willkürlich wählen. Dann spricht man von einem
+    nichtdeterministischen Automaten. Der Nichtdeterminismus ist dann willkommen, wenn man das Verhalten der Umgebung
+    modellieren möchte, das man nicht völlig genau kennt (don't know), oder wenn man Möglichkeiten für verschiedene
+    Implementierungen offenlassen möchte (don't care).
+    <!---->
+    <h2 style="text-decoration: underline;">Automaten mit und ohne Ausgabe</h2>
+    Automaten, die nur ihre Zustandsübergänge abwickeln, nennt man auch Transitionssysteme.
+    <br>
+    Daneben gibt es auch Automaten, die eine gewisse Teilmenge ihrer Zustände als Endzustände auszeichnen. Wenn ein
+    Eingabewort den Automaten von einem ausgezeichneten Zustand, dem Startzustand, in einen der Endzustände führt, dann
+    sagt man, der Automat akzeptiert das Eingabewort. Einen solchen Automaten nennt man deswegen einen Akzeptor. Ein
+    Akzeptor eignet sich dazu, eine formale Sprache zu definieren, nämlich die Menge aller endlichen Wörter, die der
+    Automat akzeptiert.
+    <br>
+    Schließlich gibt es noch Automaten mit Ausgabe, sogenannte Transduktoren. Sie ordnen entweder jedem Zustand
+    (Moore-Automaten) oder jedem Paar aus Zustand und Eingabezeichen (Mealy-Automaten) ein Ausgabezeichen zu. Auf diese
+    Weise bildet ein Automat eine Verarbeitungseinheit.
+    <!---->
+    <h2 style="text-decoration: underline;">Klassen von Automaten</h2>
+    <ul>
+        <li><b>Turingmaschinen (DTM/NTM)</b><br>
+            Eine Turingmaschine hat neben dem inneren Zustand auch Zugriff auf ein unendliches Band, auf das ein
+            beweglicher Schreib-/Lesekopf Zeichen schreiben und später lesen kann. Beide Klassen akzeptieren die
+            Typ-0-Sprachen (Rekursiv aufzählbare Sprache). Durch die Turingmaschine wird außerdem der Begriff der
+            Berechenbarkeit definiert.
+        </li><br>
+        <li><b>Linear beschränkte Automaten (DLBA/LBA)</b><br>
+            Die linear beschränkten Automaten unterscheiden sich von den Turingmaschinen nur dadurch, dass der
+            zugängliche Teil des Bandes durch die Größe der Eingabe beschränkt ist. Nichtdeterministische LBA
+            akzeptieren genau die Typ-1-Sprachen (kontextsensitive Sprachen); die Frage, ob das auch auf
+            deterministische LBA zutrifft, ist ein noch offenes Problem.
+        </li><br>
+        <li><b>Kellerautomaten (DPDA/PDA)</b><br>
+            Ein Kellerautomat hat neben einem von endlich vielen inneren Zuständen auch Zugriff zum Keller, einem
+            Stapel, auf dem Zeichen zur späteren Verarbeitung zwischengespeichert werden können. Die PDAs akzeptieren
+            die Typ-2-Sprachen (Kontextfreie Sprachen). Die DPDAs akzeptieren die deterministisch kontextfreien
+            Sprachen.
+        </li><br>
+        <li><b>Endliche Automaten (DFA/NFA)</b><br>
+            Ein endlicher Automat kennt nur endlich viele Zustände. Beide Klassen akzeptieren die Typ-3-Sprachen
+            (Reguläre Sprachen).
+        </li><br>
+    </ul>
+    <img src="../bilder/automat.png" class="center" height="1000" width="300">
     <!---->
     <a name="Compiler">
         <h1 style="text-decoration: underline;">Was ist ein Compiler?</h1>
