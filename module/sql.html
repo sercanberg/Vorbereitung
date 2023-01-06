@@ -21,11 +21,21 @@
         <a class="active" href="sql.html">SQL</a>
     </div>
     <h3 style="color: brown;">Kapitel:</h3>
-    <a style="text-decoration: none;" href="#Grund">Datenbank Grundlagen</a>
+    <a style="text-decoration: none;" href="#DM">Datenmodellierung</a>
+    <br>
+    <a style="text-decoration: none;" href="#AR">Architektur</a>
+    <br>
+    <a style="text-decoration: none;" href="#DT">Datentypen</a>
+    <br>
+    <a style="text-decoration: none;" href="#DDL">SQL-DDL</a>
+    <br>
+    <a style="text-decoration: none;" href="#DML">SQL-DML</a>
+    <br>
+    <a style="text-decoration: none;" href="#FUNC">SQL-Functions</a>
     <br>
     <!---->
-    <a name="Grund">
-        <h1 style="text-decoration: underline;">Datenbank Grundlagen</h1>
+    <a name="DM">
+        <h1 style="text-decoration: underline;">Datenmodellierung</h1>
     </a>
     <!---->
     <h2 style="text-decoration: underline;">Anforderung</h2>
@@ -110,6 +120,302 @@
     - 1:1 Aus den beiden Tabellen wird eine Tabelle<br>
     - 1:N Der Primärschlüssel der einen Tabelle wird als Fremdschlüssel in die andere Tabelle aufgenommen<br>
     - N:N Es wird eine zusätzliche Zuordnungstabelle erstellt
+    <br>
+    <br>
+    <img src="../bilder/sqlAuf1.png" class="center">
+    <img src="../bilder/sqlLos1.png" class="center">
+    <br>
+    <br>
+    <img src="../bilder/sqlAuf2.png" class="center">
+    <img src="../bilder/sqlLos2.png" class="center">
+    <!---->
+    <a name="AR">
+        <h1 style="text-decoration: underline;">Architektur</h1>
+    </a>
+    <img src="../bilder/archdb.png" class="center" height="400" width="500">
+    <!---->
+    <h2 style="text-decoration: underline;">Datenbank-Managementsystem</h2>
+    Ein Datenbank-Managementsystem (DBMS) ist eine Software, die es ermöglicht, Daten in einer Datenbank zu speichern,
+    zu organisieren und abzufragen. Sie bietet Funktionen zum Erstellen, Bearbeiten und Verwalten von Datenbanken und
+    bietet Benutzern und Anwendungen Zugriff auf die darin enthaltenen Daten. Ein DBMS hilft dabei, die Integrität der
+    Daten in der Datenbank zu gewährleisten und sie vor unerwünschtem Zugriff oder Veränderungen zu schützen. Es gibt
+    verschiedene Arten von DBMS, wie relationale Datenbanken, NoSQL-Datenbanken und objektorientierte Datenbanken, die
+    je nach Anwendungsfall verwendet werden können.
+    <!---->
+    <h2 style="text-decoration: underline;">Datenbank</h2>
+    Eine Datenbank ist ein System zur speicherung und Verwaltung von Daten. Es gibt verschiedene Arten von Datenbanken,
+    wie zum Beispiel relationale Datenbanken, NoSQL-Datenbanken und objektorientierte Datenbanken. Eine Datenbank
+    besteht in der Regel aus mehreren Tabellen, die Daten speichern, und ist in der Lage, diese Daten schnell und
+    effizient abzufragen und zu bearbeiten. Die Verwendung von Datenbanken ermöglicht es, Daten zu organisieren und zu
+    strukturieren, um sie leichter abrufen und verarbeiten zu können.
+    <!---->
+    <h2 style="text-decoration: underline;">Datenbanksystem</h2>
+    Ein Datenbanksystem ist eine Software, die dafür sorgt, dass Daten auf einem Computer oder in einem Netzwerk
+    organisiert und gespeichert werden. Es ermöglicht es Benutzern, Daten zu speichern, zu bearbeiten und abzufragen.
+    Ein Datenbanksystem verwendet eine spezielle Datenbank-Sprache, um Anfragen zu verarbeiten, und bietet meist auch
+    eine grafische Benutzeroberfläche, um die Interaktion mit der Datenbank zu erleichtern. Datenbanksysteme sind
+    wichtig, weil sie es ermöglichen, große Mengen an Daten zu speichern und zu verwalten, und weil sie schnelle und
+    zuverlässige Abfragen ermöglichen, die für viele Anwendungen erforderlich sind.
+    <!---->
+    <h2 style="text-decoration: underline;">OLTP & OLAP</h2>
+    <ul>
+        <li><b>OLTP</b><br>
+            OLTP steht für "Online Transaction Processing", was bedeutet, dass es sich um ein System zur Verarbeitung
+            von Transaktionen in Echtzeit handelt. Im Gegensatz zu OLAP (Online Analytical Processing), das auf die
+            Analyse von Daten ausgerichtet ist, ist OLTP darauf ausgelegt, eine hohe Anzahl von kurzen Transaktionen
+            schnell und zuverlässig zu verarbeiten. Beispiele für OLTP-Anwendungen sind die Buchung von Flügen oder
+            Hotels über das Internet, die Bearbeitung von Kreditkartenabrechnungen oder die Verarbeitung von
+            Bestellungen in einem E-Commerce-Shop. OLTP-Systeme müssen in der Regel sehr schnell sein, da sie oft von
+            vielen Benutzern gleichzeitig genutzt werden und jede Transaktion innerhalb weniger Sekunden abgeschlossen
+            werden muss.
+        </li><br>
+        <li><b>OLAP</b><br>
+            OLAP steht für "Online Analytical Processing". Es handelt sich um eine Klasse von Software-Tools, die es
+            ermöglichen, große Mengen von Daten zu analysieren und zu manipulieren, um daraus Erkenntnisse zu gewinnen
+            und Entscheidungen zu treffen. Im Gegensatz zu OLTP (Online Transaction Processing), das auf die schnelle
+            Verarbeitung von Transaktionen ausgerichtet ist, ist OLAP darauf ausgelegt, komplexe Analysen von Daten
+            durchzuführen, die möglicherweise aus verschiedenen Quellen stammen. Beispiele für OLAP-Anwendungen sind die
+            Analyse von Verkaufsdaten, die Überwachung von Finanzkennzahlen oder die Analyse von Kundenverhaltensmuster.
+            OLAP-Systeme verwenden in der Regel spezielle Datenbanken, die als "OLAP-Cube" bezeichnet werden und die es
+            ermöglichen, Daten auf verschiedene Arten zu gruppieren und zu analysieren.
+        </li><br>
+    </ul>
+    <img src="../bilder/OLTPOLAP.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">Data Warehouse</h2>
+    Ein Data Warehouse ist eine spezielle Art von Datenbank, die für das Sammeln und Verarbeiten von großen Mengen von
+    Daten aus verschiedenen Quellen entwickelt wurde. Es wird verwendet, um Unternehmensdaten zu integrieren und zu
+    analysieren, um bessere Geschäftsentscheidungen zu treffen. Ein Data Warehouse enthält in der Regel historische
+    Daten, die für längere Zeiträume aufbewahrt werden, und wird häufig von BI- (Business Intelligence) -Tools und
+    -Anwendungen verwendet, um Berichte und Analysefunktionen zu erstellen. Im Gegensatz zu herkömmlichen Datenbanken,
+    die für Transaktionen und die Verarbeitung von aktuellen Daten optimiert sind, ist ein Data Warehouse für die
+    Analyse von historischen Daten ausgelegt und wird daher häufig als "passiv" betrachtet, da keine Schreibvorgänge
+    stattfinden.
+    <!---->
+    <h2 style="text-decoration: underline;">DataMart</h2>
+    Ein DataMart ist eine Art von Datenbank, die speziell für das Berichtswesen und die Analyse von Daten entwickelt
+    wurde. Es ist in der Regel ein Teil eines größeren Data Warehouse-Systems und ist auf die Bedürfnisse einer
+    bestimmten Abteilung oder eines Geschäftsbereichs ausgerichtet. DataMarts enthalten oft eine Unterselektion der
+    Daten aus dem Data Warehouse und sind für die schnellere Abfrage von Daten optimiert. Sie werden häufig verwendet,
+    um spezifische Anforderungen von Benutzern oder Anwendungen innerhalb einer Organisation zu unterstützen.
+    <br>
+    <br>
+    - Bessere Performance <br>
+    - Sicht der Benutzer nur auf eigene Daten<br>
+    - Evt. Spezielle Datenstrukturen
+    <!---->
+    <h2 style="text-decoration: underline;">ETL System-User der ORACLE-Datenbank</h2>
+    ETL steht für "Extract, Transform, Load" und bezieht sich auf die Prozesse, die bei der Integration von Daten aus
+    verschiedenen Quellen in ein Data Warehouse oder eine andere Datenbank verwendet werden. ETL-Systeme sind spezielle
+    Anwendungen oder Tools, die entwickelt wurden, um diese Prozesse automatisch durchzuführen.
+    <br><br>
+    Ein ETL-System-User der ORACLE-Datenbank ist eine Person, die mit dem ETL-System arbeitet, um Daten aus der
+    ORACLE-Datenbank zu extrahieren, zu transformieren und in ein Data Warehouse oder eine andere Zieldatenbank zu
+    laden. Diese Person ist für die Konfiguration und den Betrieb des ETL-Systems verantwortlich und arbeitet
+    möglicherweise auch an der Gestaltung der ETL-Prozesse und -Workflows.
+    <!---->
+    <h2 style="text-decoration: underline;">Speicherstruktur</h2>
+    <img src="../bilder/speicherstruk.png" class="center">
+    <br>
+    Jeder Benutzer erhält einen logischen Speicherbereich in dem er Objekte
+    erzeugen kann.
+    <br><br>
+    In der Datenbank werden logische Einheiten angelegt, die als TABLESPACE
+    bezeichnet werden. Jeder Tablespace kann aus mehreren Dateien bestehen.
+    In diesen Tablespaces werden die erzeugten Objekte (z.B. Tabellen) gespeichert.
+    <br><br>
+    Jedes erzeugte Objekt z.B. eine Tabelle belegt ein Segment innerhalb eines
+    Tablespaces. Das Segment kann Platz in mehreren Dateien belegen.
+    <br><br>
+    Jedes Segment kann aus mehreren Extends bestehen. Jedes Extend ist ein
+    Speicherbereich innerhalb einer einzigen Datei. Ein Extend besteht aus
+    mehreren Datenblöcken
+    <br><br>
+    Inhalt von Datenfiles<br>
+    - Tabellen, Indizes<br>
+    - Data Dictionary<br>
+    - Sequences, stored Procedures/Functions<br>
+    - Temporary Segment<br>
+    - Rollback Segment<br>
+    - LOB Segment
+    <!---->
+    <a name="DT">
+        <h1 style="text-decoration: underline;">Datentypen</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">Wichtigste Datentypen</h2>
+    <ul>
+        <li><b>NUMBER</b><br>
+            NUMBER ist der Datentyp für numerische Werte. NUMBER kann für ganze Zahlen oder Dezimalwerte verwendet
+            werden
+            und kann eine feste oder variable Anzahl von Dezimalstellen haben.<br>
+            Syntax: NUMBER [(p[,s])]<br>
+            p {1..38} gesamte Stellen s {-84..127} Nachkommastellen<br>
+            max Speicherbedarf 22 Bytes
+        </li><br>
+        <li><b>VARCHAR2</b><br>
+            VARCHAR2 der Datentyp für Zeichenketten (strings). VARCHAR2 kann verwendet werden, um Textdaten jeglicher
+            Länge zu speichern, und hat eine maximale Länge von 4.000 Zeichen.<br>
+            Syntax: VARCHAR2( size )<br>
+            max(size)=4000<br>
+            oder 32767 wenn MAX_STRING_SIZE=EXTENDED
+        </li><br>
+        <li><b>CLOB</b><br>
+            CLOB ist ein Datentyp, der zur Speicherung von großen Zeichenfolgen, sogenannten CLOBs (Character
+            Large OBjects), verwendet wird. CLOBs können Zeichenfolgen mit einer Länge von bis zu 128 Terabyte
+            speichern. Sie werden häufig verwendet, um große Mengen von Text, wie zum Beispiel Artikel oder Dokumente,
+            in einer Datenbank zu speichern. Der CLOB-Datentyp ist in der Regel besser geeignet als der
+            VARCHAR2-Datentyp, wenn es darum geht, große Mengen von Text zu speichern, da er eine größere
+            Speicherkapazität hat.<br>
+            Syntax: CLOB<br>
+            max. Grösse (4GB-1)*(database block size)
+        </li><br>
+        <li><b>DATE</b><br>
+            DATE ein Datentyp, der zur Speicherung von Datums- und Uhrzeitangaben verwendet wird. Der DATE-Datentyp
+            enthält das Jahr, den Monat, den Tag, die Stunde, die Minute und die Sekunde.<br>
+            Syntax: DATE<br>
+            interne Darstellung als Zahl. Länge maximal 7 Bytes<br>
+            von 1.1.4712 BC bis 31.12.9999 AD<br>
+            enthält Tag,Monat,Jahr,Stunde,Minute,Sekunde
+        </li><br>
+        <li><b>TIMESTAMP</b><br>
+            TIMESTAMP ist ein Datentyp, der Datum und Uhrzeit speichern kann. Er hat eine höhere
+            Genauigkeit als der Datentyp DATE, da er neben dem Datum auch die Uhrzeit bis auf die Sekunden präzise
+            speichern kann.<br>
+            Syntax: TIMESTAMP [(fractional_seconds_precision)]<br>
+            fractional_seconds_precision {0..9}
+        </li><br>
+    </ul>
+    <!---->
+    <h2 style="text-decoration: underline;">Formatierung Datentyp NUMBER</h2>
+    <img src="../bilder/formatN1.png" class="center">
+    <img src="../bilder/formatN2.png" class="center">
+    <img src="../bilder/formatN3.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">Formatierung Datentyp DATE und TIMESTAMP</h2>
+    <img src="../bilder/formatDT1.png" class="center">
+    <img src="../bilder/formatDT2.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">Übungsaufgaben zur Formatierung</h2>
+    <b style="font-size: 100px;">KOMMT NOCH</b>
+    <!---->
+    <a name="DDL">
+        <h1 style="text-decoration: underline;">SQL-DDL</h1>
+    </a>
+    <img src="../bilder/sqldll2.png" class="center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="../bilder/sqldll.png" class="center">
+    <!---->
+    <a name="DML">
+        <h1 style="text-decoration: underline;">SQL-DML</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">SELECT</h2>
+    Die SELECT-Anweisung wird verwendet, um Datensätze aus einer oder mehreren Tabellen in einer Oracle-Datenbank
+    abzurufen.<br><br>
+    <b>Syntax</b><br>
+    SELECT expressions
+    <br>
+    FROM tables
+    <br>
+    [WHERE conditions];
+    <br><br>
+    <b>Beispiel</b>
+    <img src="../bilder/bspSelect.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">INSERT</h2>
+    Die Oracle-Anweisung INSERT wird verwendet, um einen einzelnen Datensatz oder mehrere Datensätze in eine Tabelle in
+    Oracle einzufügen.<br><br>
+    <b>Syntax</b><br>
+    INSERT INTO table
+    <br>
+    (column1, column2, ... column_n )
+    <br>
+    VALUES
+    <br>
+    (expression1, expression2, ... expression_n );
+    <br><br>
+    <b>Beispiel</b>
+    <img src="../bilder/sqlinsert.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">UPDATE</h2>
+    Mit der Oracle UPDATE-Anweisung werden vorhandene Datensätze in einer Tabelle in einer Oracle-Datenbank
+    aktualisiert. Es gibt zwei Syntaxen für eine Aktualisierungsabfrage in Oracle, je nachdem, ob Sie eine herkömmliche
+    Aktualisierung durchführen oder eine Tabelle mit Daten aus einer anderen Tabelle aktualisieren.<br><br>
+    <b>Syntax</b><br>
+    UPDATE table
+    <br>
+    SET column1 = expression1,
+    <br>
+    column2 = expression2,
+    <br>
+    ...
+    <br>
+    column_n = expression_n
+    <br>
+    [WHERE conditions];
+    <br><br>
+    <b>Beispiel</b>
+    <img src="../bilder/sqlupdate.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">DELETE</h2>
+    Die Oracle-Anweisung DELETE wird zum Löschen eines einzelnen Datensatzes oder mehrerer Datensätze aus einer Tabelle
+    in Oracle verwendet.<br><br>
+    <b>Syntax</b><br>
+    DELETE FROM table
+    <br>
+    [WHERE conditions];
+    <br><br>
+    <b>Beispiel</b>
+    <img src="../bilder/sqldelete.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">TRUNCATE</h2>
+    Mit der SQL-Anweisung TRUNCATE TABLE werden alle Datensätze aus einer Tabelle entfernt. Es hat die gleiche Funktion
+    wie eine DELETE Anweisung ohne eine WHERE-Klausel.
+    <br>
+    Warnung: Wenn Sie eine Tabelle abschneiden, kann die Anweisung TRUNCATE TABLE in einigen Datenbanken nicht
+    zurückgerollt werden.<br><br>
+    <b>Syntax</b><br>
+    TRUNCATE TABLE Tabelle_name;
+    <br><br>
+    <b>Beispiel</b>
+    <img src="../bilder/sqltruncate.png" class="center">
+    <!---->
+    <h2 style="text-decoration: underline;">GROUP BY</h2>
+    Die SQL GROUP BY Klausel kann in einer SELECT-Anweisung verwendet werden, um Daten über mehrere Datensätze hinweg zu
+    erfassen und die Ergebnisse nach einer oder mehreren Spalten zu gruppieren.<br><br>
+    <b>Syntax</b><br>
+    SELECT Ausdruck1, Ausdruck2, ... Ausdruck_n,
+    <br>
+    Aggregatfunktion (Aggregat_Ausdruck)
+    <br>
+    FROM Tabellen
+    <br>
+    [WHERE Bedingungen]
+    <br>
+    GROUP BY Ausdruck1, Ausdruck2, ... Ausdruck_n
+    <br>
+    [ORDER BY Ausdruck [ ASC | DESC ]];
+    <br>
+    <img src="../bilder/groupbyerk.png" class="center">
+    <br>
+    HAVING bedingung
+    Dies ist eine weitere Bedingung, die nur auf die aggregierten Ergebnisse angewendet wird, um die Gruppen der
+    zurückgegebenen Zeilen einzuschränken. Nur die Gruppen, deren Bedingung TRUE ergibt, werden in die Ergebnismenge
+    aufgenommen.
+    <br>
+    <br>
+    Gibt auch noch IS NULL & IS NOT NULL.
+    <br><br>
+    <b>Beispiel</b>
+    <img src="../bilder/sqlgroupby.png" class="center">
+     <!---->
+     <a name="FUNC">
+        <h1 style="text-decoration: underline;">SQL-Functions</h1>
+    </a>
 </body>
 
 </html>
