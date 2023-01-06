@@ -33,6 +33,8 @@
     <br>
     <a style="text-decoration: none;" href="#FUNC">SQL-Functions</a>
     <br>
+    <a style="text-decoration: none;" href="#DICT">Data Dictionary</a>
+    <br>
     <!---->
     <a name="DM">
         <h1 style="text-decoration: underline;">Datenmodellierung</h1>
@@ -412,10 +414,144 @@
     <br><br>
     <b>Beispiel</b>
     <img src="../bilder/sqlgroupby.png" class="center">
-     <!---->
-     <a name="FUNC">
+    <!---->
+    <a name="FUNC">
         <h1 style="text-decoration: underline;">SQL-Functions</h1>
     </a>
+    <ul>
+        <li><b>DECODE()</b><br>
+            Die DECODE-Funktion hat die Funktionalität einer IF-THEN-ELSE-Anweisung.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            DECODE( expression , search , result [, search , result]... [, default] )
+        </li><br>
+        <li><b>TRUNC(Number)</b><br>
+            Die TRUNC-FOR-NUMBER-Funktion gibt eine Zahl zurück, die auf eine bestimmte Anzahl von
+            Dezimalstellen abgeschnitten ist.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            TRUNC( number, [ decimal_places ] )
+        </li><br>
+        <li><b>TRUNC(Date)</b><br>
+            Die TRUNC-FOR-DATE-Funktion gibt ein Datum zurück, das auf eine bestimmte Maßeinheit gekürzt
+            wurde.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            TRUNC ( date, [ format ] )
+        </li><br>
+        <li><b>ROUND()</b><br>
+            Die ROUND-FOR-NUMBER-Funktion gibt eine auf eine bestimmte Anzahl von Dezimalstellen gerundete
+            Zahl zurück.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            ROUND( number, [ decimal_places ] )
+        </li><br>
+        <li><b>LENGTH()</b><br>
+            Die LENGTH-Funktion gibt die Länge der angegebenen Zeichenfolge zurück.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            LENGTH( string1 )
+        </li><br>
+        <li><b>SUBSTR()</b><br>
+            Die SUBSTR-Funktion können Sie eine Teilzeichenfolge aus einer Zeichenfolge extrahieren.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            SUBSTR( string, start_position, [ length ] )
+        </li><br>
+        <li><b>INSTR()</b><br>
+            Die INSTR-Funktion gibt den Speicherort einer Teilzeichenfolge in einer Zeichenfolge zurück.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            INSTR( string, substring [, start_position [, nth_appearance ] ] )
+        </li><br>
+        <li><b>TRIM()</b><br>
+            Die TRIM-Funktion entfernt alle angegebenen Zeichen entweder am Anfang oder am Ende einer
+            Zeichenfolge.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            TRIM( [ [ LEADING | TRAILING | BOTH ] trim_character FROM ] string1 )
+        </li><br>
+        <li><b>NVL()</b><br>
+            Die NVL-Funktion können Sie einen Wert ersetzen, wenn ein Nullwert auftritt. <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            NVL( string1, replace_with )
+        </li><br>
+        <li><b>REPLACE()</b><br>
+            Die REPLACE-Funktion ersetzt eine Zeichenfolge in einer Zeichenfolge durch eine andere Zeichenfolge.
+            <br>
+            <i style="text-decoration: underline;">Syntax:</i><br>
+            REPLACE( string1, string_to_replace, [ replacement_string ] )
+        </li><br>
+    </ul>
+    <!---->
+    <a name="DICT">
+        <h1 style="text-decoration: underline;">Data Dictionary</h1>
+    </a>
+    <!---->
+    <h2 style="text-decoration: underline;">USER_CONSTRAINTS</h2>
+    USER_CONSTRAINTS ist eine View in Oracle's PL/SQL, die Informationen über Constraints in den Tabellen im aktuellen
+    Benutzer-Schema enthält. Constraints sind Regeln, die in der Datenbank festgelegt werden, um sicherzustellen, dass
+    die Daten, die in den Tabellen gespeichert werden, korrekt und sinnvoll sind. Es gibt verschiedene Arten von
+    Constraints, wie zum Beispiel NOT NULL, UNIQUE und FOREIGN KEY.
+    <br><br>
+    Die USER_CONSTRAINTS View enthält mehrere Spalten, die Informationen über den Constraint enthalten, wie zum
+    Beispiel:<br>
+
+    - CONSTRAINT_NAME: Der Name des Constraints.<br>
+    - TABLE_NAME: Der Name der Tabelle, in der sich der Constraint befindet.<br>
+    - CONSTRAINT_TYPE: Der Typ des Constraints (z.B. NOT NULL, UNIQUE, FOREIGN KEY usw.).<br>
+    - SEARCH_CONDITION: Die Bedingung, die von dem Constraint verwendet wird, um sicherzustellen, dass die Daten, die in
+    die Tabelle eingefügt werden, korrekt sind.
+    <!---->
+    <h2 style="text-decoration: underline;">USER_CONS_COLUMNS</h2>
+    USER_CONS_COLUMNS ist eine View in Oracle's PL/SQL, die Informationen über Spalten in Tabellen enthält, die von den
+    Constraints in der aktuellen Benutzer-Schema abhängen. Die View enthält mehrere Spalten, die Informationen über den
+    Constraint und die abhängige Spalte enthalten. Sie können die View verwenden, um die Constraints in Ihrem Schema zu
+    überprüfen oder Informationen über abhängige Spalten in Ihren Tabellen zu erhalten.
+    <br><br>
+    Hier sind einige Beispiele für Spalten, die in der USER_CONS_COLUMNS View enthalten sein können:
+    <br>
+    - TABLE_NAME: Der Name der Tabelle, in der sich der Constraint befindet.<br>
+    - COLUMN_NAME: Der Name der Spalte, die von dem Constraint abhängt.<br>
+    - CONSTRAINT_NAME: Der Name des Constraints.<br>
+    - POSITION: Die Position der Spalte in dem Constraint.<br>
+    - DELETE_RULE: Die Regel, die angibt, was passieren soll, wenn ein Versuch unternommen wird, einen Eintrag mit dem
+    Constraint zu löschen.
+    <!---->
+    <h2 style="text-decoration: underline;">USER_TABLES</h2>
+    USER_TABLES ist eine View in Oracle's PL/SQL, die Informationen über die Tabellen enthält, die im aktuellen
+    Benutzer-Schema vorhanden sind. Die View enthält mehrere Spalten, die Informationen über die Tabellen enthalten, wie
+    zum Beispiel:
+    <br> <br>
+    - TABLE_NAME: Der Name der Tabelle. <br>
+    - TABLESPACE_NAME: Der Name des Tablespaces, in dem sich die Tabelle befindet. <br>
+    - CLUSTER_NAME: Der Name des Clusters, falls die Tabelle Teil eines Clusters ist. <br>
+    - STATUS: Der Status der Tabelle (z.B. VALID oder INVALID). <br>
+    - NUM_ROWS: Die Anzahl der Zeilen in der Tabelle.
+    <!---->
+    <h2 style="text-decoration: underline;">USER_TAB_COLUMNS</h2>
+    USER_TAB_COLUMNS ist eine View in Oracle's PL/SQL, die Informationen über die Spalten in den Tabellen im aktuellen
+    Benutzer-Schema enthält. Die View enthält mehrere Spalten, die Informationen über die Spalten enthalten, wie zum
+    Beispiel:
+    <br><br>
+    - TABLE_NAME: Der Name der Tabelle, in der sich die Spalte befindet.<br>
+    - COLUMN_NAME: Der Name der Spalte.<br>
+    - DATA_TYPE: Der Datentyp der Spalte (z.B. NUMBER, VARCHAR2, DATE usw.).<br>
+    - DATA_LENGTH: Die Länge des Datenfelds in Bytes.<br>
+    - NULLABLE: Gibt an, ob NULL-Werte in der Spalte zugelassen sind (YES oder NO).
+    <!---->
+    <h2 style="text-decoration: underline;">USER_SEQUENCES</h2>
+    USER_SEQUENCES ist eine View in Oracle's PL/SQL, die Informationen über Sequenzen im aktuellen Benutzer-Schema
+    enthält. Eine Sequenz ist ein Objekt in der Datenbank, das automatisch fortlaufende Ganzzahlen generiert, die als
+    Primärschlüssel oder als andere Art von Identifikatoren verwendet werden können.
+    <br><br>
+    Die USER_SEQUENCES View enthält mehrere Spalten, die Informationen über die Sequenzen enthalten, wie zum Beispiel:
+    <br>
+    - SEQUENCE_NAME: Der Name der Sequenz.<br>
+    - MIN_VALUE: Der kleinste Wert, der von der Sequenz generiert werden kann.<br>
+    - MAX_VALUE: Der größte Wert, der von der Sequenz generiert werden kann.<br>
+    - INCREMENT_BY: Der Wert, um den jeder nächste Wert in der Sequenz erhöht wird.<br>
+    - LAST_NUMBER: Der letzte Wert, der von der Sequenz generiert wurde.
 </body>
 
 </html>
