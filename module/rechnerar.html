@@ -23,13 +23,53 @@
     </div>
     <!---->
     <h3 style="color: brown;">Kapitel:</h3>
-    <a style="text-decoration: none;" href="#BetriebGrund">Grundlagen der
-        Betriebssysteme</a>
+    <a style="text-decoration: none;" href="#Flynn">Flynnsche Klassifikation</a>
+    <br>
+    <a style="text-decoration: none;" href="#VonNeu">Von-Neumann-Architektur</a>
     <br>
     <!---->
-    <a name="BetriebGrund">
-        <h1 style="text-decoration: underline;">Grundlagen der
-            Betriebssysteme</h1>
+    <a name="Flynn">
+        <h1 style="text-decoration: underline;">Flynnsche Klassifikation</h1>
+    </a>
+    <h2 style="text-decoration: underline;">Definition</h2>
+    Die flynnsche Klassifikation ist eine Unterteilung von
+    Rechnerarchitekturen. Dabei werden die Architekturen nach der
+    Anzahl der vorhandenen Befehls- (instruction streams) und Datenströme (data streams) unterteilt.
+    <ul>
+        <li>
+            <p style="text-decoration: underline;">SISD (Single Instruction, Single Data)</p>
+            Unter SISD-Rechnern versteht man traditionelle Einkernprozessor-Rechner, die ihre Aufgaben sequentiell
+            abarbeiten. SISD-Rechner sind z. B. Personal-Computer (PCs) oder Workstations, welche nach der Von-Neumann-
+            oder der Harvard-Architektur aufgebaut sind. Bei ersterer wird für Befehle und Daten die gleiche
+            Speicheranbindung verwendet, bei letzterer sind sie getrennt.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">SIMD (Single Instruction, Multiple Data)</p>
+            SIMD-Computer, auch bekannt als Array-Prozessoren oder Vektorprozessoren, dienen der schnellen Ausführung
+            gleichartiger Rechenoperationen auf mehrere gleichzeitig eintreffende oder zur Verfügung stehende
+            Eingangsdatenströme.
+            SIMD-fähige Prozessoren eignen sich beispielsweise gut für die Verarbeitung von Bild-, Ton- und Videodaten,
+            weil in diesen Bereichen die zu verarbeitenden Daten meist hochgradig parallelisierbar sind; so sind z. B.
+            bei einem Videoschnitt die Operationen für die vielen einzelnen Bildpunkte identisch.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">MISD (Multiple Instruction, Single Data)</p>
+            Eine Architektur von Großrechnern bzw. Supercomputern. Die Zuordnung von Systemen zu dieser Klasse ist
+            schwierig, sie ist deshalb umstritten. Viele sind der Meinung, dass es solche Systeme eigentlich nicht geben
+            dürfte. Man kann aber fehlertolerante Systeme, die redundante Berechnungen ausführen, in diese Klasse
+            einordnen. Ein Beispiel für dieses Prozessorsystem ist ein Schachcomputer.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;"> MIMD (Multiple Instruction, Multiple Data)</p>
+            Eine Architektur von Großrechnern bzw. Supercomputern. MIMD-Computer führen gleichzeitig verschiedene
+            Operationen auf verschieden gearteten Eingangsdatenströmen durch, wobei die Verteilung der Aufgaben an die
+            zur Verfügung stehenden Ressourcen, meistens durch einen oder mehrere Prozessoren des Prozessorverbandes,
+            selbst zur Laufzeit durchgeführt wird. Jeder Prozessor hat Zugriff auf die Daten anderer Prozessoren.
+        </li><br>
+    </ul>
+    <!---->
+    <a name="VonNeu">
+        <h1 style="text-decoration: underline;">Von-Neumann-Architektur</h1>
     </a>
 
 
