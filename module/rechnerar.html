@@ -27,6 +27,12 @@
     <br>
     <a style="text-decoration: none;" href="#VonNeu">Von-Neumann-Architektur</a>
     <br>
+    <a style="text-decoration: none;" href="#Harvard">Harvard-Architektur</a>
+    <br>
+    <a style="text-decoration: none;" href="#EinAus">Ein-/Ausgabegeräte</a>
+    <br>
+    <a style="text-decoration: none;" href="#Raid">Raid</a>
+    <br>
     <!---->
     <a name="Flynn">
         <h1 style="text-decoration: underline;">Flynnsche Klassifikation</h1>
@@ -71,16 +77,274 @@
     <a name="VonNeu">
         <h1 style="text-decoration: underline;">Von-Neumann-Architektur</h1>
     </a>
-
-
-
-
-
-
-
-
-
-
-
-
+    <h2 style="text-decoration: underline;">Definition</h2>
+    Die Von-Neumann-Architektur (VNA) ist ein Referenzmodell für Computer, wonach ein gemeinsamer Speicher sowohl
+    Computerprogrammbefehle als auch Daten hält. Von-Neumann-Systeme gehören nach der Flynnschen Klassifikation zur
+    Klasse der SISD-Architekturen (Single Instruction, Single Data), im Unterschied zur Parallelverarbeitung.
+    <h2 style="text-decoration: underline;">Komponenten</h2>
+    Ein Von-Neumann-Rechner beruht auf folgenden Komponenten, die bis heute in Computern verwendet werden:
+    <ul>
+        <li>
+            <p style="text-decoration: underline;">ALU (Arithmetic Logic Unit) Rechenwerk</p>
+            Führt Rechenoperationen und boolesche Verknüpfungen aus.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Control Unit Steuerwerk</p>
+            Interpretiert die Anweisungen eines Programms und verschaltet dementsprechend Datenquelle, -senke und
+            notwendige ALU-Komponenten; das Steuerwerk regelt auch die Befehlsabfolge.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">BUS Bus System</p>
+            Dient zur Kommunikation zwischen den einzelnen Komponenten (Steuerbus, Adressbus, Datenbus)
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Memory - (RAM/Arbeitsspeicher) Speicherwerk</p>
+            Speichert sowohl Programme als auch Daten, welche für das Rechenwerk zugänglich sind.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">I/O Unit - Eingabe-/Ausgabewerk</p>
+            Steuert die Ein- und Ausgabe von Daten, zum Anwender (Tastatur, Bildschirm) oder zu anderen Systemen
+            (Schnittstellen).
+        </li><br>
+    </ul>
+    <img src="../bilder/vonneuma.png" class="center" height="500" width="500">
+    <!---->
+    <a name="Harvard">
+        <h1 style="text-decoration: underline;">Harvard-Architektur</h1>
+    </a>
+    <h2 style="text-decoration: underline;">Definition</h2>
+    Die Harvard-Architektur bezeichnet in der Informatik ein Schaltungskonzept, bei dem der Befehlsspeicher logisch und
+    physisch vom Datenspeicher getrennt ist. Die logische Trennung ergibt sich aus verschiedenen Adressräumen und
+    verschiedenen Maschinenbefehlen zum Zugriff auf Befehl- und Datenspeicher. Die physische Trennung ist mit zwei
+    getrennten Speichern realisiert, auf die der Zugriff über je einen eigenen Bus erfolgt. Bei einer weniger strikten
+    Trennung von Befehls- und Datenspeichern spricht man von einer modifizierten Harvard-Architektur.
+    <br>
+    <br>
+    Der Vorteil dieser Architektur besteht darin, dass Befehle und Daten gleichzeitig geladen bzw. geschrieben werden
+    können. Bei einer klassischen Von-Neumann-Architektur sind hierzu mindestens zwei aufeinander folgende Buszyklen
+    notwendig.
+    Zudem sorgt die physische Trennung von Daten und Programm dafür, dass eine Zugriffsrechtetrennung und Speicherschutz
+    einfach realisierbar sind. Um z. B. zu verhindern, dass bei Softwarefehlern Programmcode überschrieben wird, kann
+    Programmcode auf einem im Betrieb nur lesbaren Speicher liegen, Daten auf auch schreibbaren
+    Speicher.
+    <br>
+    <img src="../bilder/Harvard-architektur.png" class="center" height="500" width="500">
+    <!---->
+    <a name="EinAus">
+        <h1 style="text-decoration: underline;">Ein-/Ausgabegeräte</h1>
+    </a>
+    Geräte an Computersystemen werden bezüglich der kleinsten
+    Übertragungseinheit in <b>zeichenorientierte</b> und <b>blockorientierte</b>
+    Geräte unterschieden.
+    <b>Zeichenorientierte</b> Geräte kommunizieren bei Ankunft bzw.
+    Anforderung jedes einzelnes Zeichens immer mit dem Prozessor.
+    Beispiele für solche Geräte sind Maus, Tastatur, Drucker,
+    Terminal und Magnetband. Bei <b>blockorientierten</b> Geräten findet
+    Datenübertragung erst dann statt, wenn ein vollständiger Block
+    (z. B. 1-4 kB) vorliegt. Beispiele für solche Geräte sind Festplatte,
+    SSD, CD-/DVD-Laufwerk und Disketten-Laufwerk. Die meisten
+    blockorientierten Geräte unterstützen Direct Memory Access, um
+    Daten ohne Beteiligung des Prozessors in den Hauptspeicher zu
+    übertragen.
+    <br>
+    <br>
+    Es gibt drei Konzepte, wie Prozesse im Computer Daten einlesen
+    können:
+    <ul>
+        <li>
+            <p style="text-decoration: underline;">Busy Waiting</p>
+            Der Gerätetreiber sendet die Anfrage an das Gerät und wartet in einer Endlosschleife,
+            bis der Controller anzeigt, dass die Daten bereit stehen.
+            Stehen die Daten bereit, werden sie in den Speicher geschrieben
+            und die Ausführung des Prozesses geht weiter. Ein Vorteil dieses
+            Konzepts ist es, dass keine zusätzliche Hardware nötig ist.
+            Ein Nachteil ist, dass es die gleichzeitige Abarbeitung mehrerer Prozesse
+            verlangsamt, weil der Prozessor regelmäßig prüfen muss,
+            ob die Daten bereit stehen.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Interrupt-gesteuert</p>
+            Der Treiber initialisiert die E/A-Aufgabe
+            und wartet auf einen Interrupt, also auf eine Unterbrechung
+            durch den Controller. Das bedeutet, dass der Treiber quasi
+            schläft. Der Prozessor ist während des Wartens auf den Interrupt
+            nicht blockiert und das Betriebssystem kann den Prozessor
+            einem anderen Prozess zuweisen. Kommt es zum Interrupt,
+            wird der Treiber dadurch geweckt und bekommt den Prozessor
+            zugewiesen. Im nächsten Schritt holt der Prozessor (auf Anweisung des
+            Gerätetreibers) die Daten vom Controller und legt diese
+            in den Hauptspeicher. Anschließend weist das Betriebssystem
+            den Prozessor dem unterbrochenen Prozess zu, der seine Abarbeitung fortsetzen kann.
+            Die Vorteile dieses Konzepts sind, dass der Prozessor nicht blockiert wird und dass die gleichzeitige
+            Abarbeitung mehrerer
+            Prozesse nicht verlangsamt wird. Nachteilig ist, dass zusätzliche
+            Hardware in Form eines Interrupt-Controllers und entsprechender Interrupt-Leitungen im Steuerbus für das
+            Senden der
+            Interrupts nötig sind.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Direct Memory Access (DMA)</p>
+            Bei diesem Konzept werden
+            Daten über einen DMA-Controller direkt zwischen Arbeitsspeicher
+            und E/A-Gerät übertragen. Nach der Datenübertragung
+            löst der DMA-Controller einen Interrupt aus. Typische
+            E/A-Geräte, bei denen DMA zum Datenaustausch verwendet
+            wird, sind SSD-Laufwerke, Festplatten, Soundkarten, Netzwerkkarten
+            und TV/DVB-Karten.
+            Ein Beispiel für ein Protokoll, das festlegt, wie Daten zwischen
+            DMA-Controller und Arbeitsspeicher übertragen werden, ist
+            Ultra-DMA (UDMA). Dabei handelt es sich um den Nachfolger
+            des PIO-Modus.
+            Ein Vorteil von DMA gegenüber den übrigen Konzepten ist, dass
+            der Prozessor vollständig entlastet und die gleichzeitige Abarbeitung
+            mehrerer Prozesse nicht verlangsamt wird.
+        </li><br>
+    </ul>
+    <!---->
+    <a name="Spei">
+        <h1 style="text-decoration: underline;">Speicherhierarchie</h1>
+    </a>
+    <img src="../bilder/speihiera.png" class="center">
+    <h2 style="text-decoration: underline;">Register</h2>
+    Die Register enthalten die Daten, auf die der Prozessor sofort
+    zugreifen kann. Sie sind genauso schnell getaktet wie der Prozessor
+    selbst. Einige für den Betrieb eines Computersystems relevanten
+    Register sind:
+    <ul>
+        <li>
+            <p style="text-decoration: underline;">Adressregister</p>
+            Die Adressregister dienen zur Speicherung der Speicheradressen
+            von Operanden und Befehlen.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Datenregister</p>
+            Die Datenregister, die auch Akkumulatoren heißen, speichern
+            Operanden für die ALU und deren Resultate.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Befehlszähler</p>
+            Der Befehlszähler, der auch Program Counter oder Instruction
+            Pointer heißt, enthält die Speicheradresse des nächsten Befehls.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Befehlsregister</p>
+            Das Befehlsregister, das auch Instruction Register heißt, speichert
+            den aktuellen Befehl
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">Stapelregister</p>
+            Das Stapelregister, das auch Stack Pointer heißt, enthält die
+            Speicheradresse am Ende des Stacks.
+        </li><br>
+    </ul>
+    <h2 style="text-decoration: underline;">Cache</h2>
+    Der Pufferspeicher (englisch: Cache) enthält Kopien von Teilen
+    des Arbeitsspeichers, um den Zugriff auf diese Daten zu beschleunigen.
+    Er ist üblicherweise in mehrere Ebenen unterteilt. Der First
+    Level Cache (L1-Cache) ist direkt in den Prozessor integriert.
+    Der Second Level Cache (L2-Cache) ist mit einer geringeren
+    Geschwindigkeit getaktet und befand sich ursprünglich außerhalb
+    des Prozessors. Seit den Jahren 1999/2000 integrieren die Hersteller
+    zunehmend den L2-Cache in die Prozessoren. Das führte zur
+    Etablierung einer weiteren Cache-Ebene, nämlich des Third Level
+    Cache (L3-Cache) als Prozessor-externen Cache.
+    Bei modernen Prozessoren (z. B. Intel Core-i-Serie und AMD
+    Phenom II) ist auch der L3-Cache in den Prozessor integriert (siehe
+    Abb. 4.3). Bei Mehrkernprozessoren mit integriertem L3-Cache
+    teilen sich die Kerne den L3-Cache, während jeder Kern einen
+    eigenen L1-Cache und L2-Cache hat.
+    Einige Prozessor-Architekturen (z. B. Intel Itanium 2 und einige
+    Intel Haswell CPUs) haben sogar einen Prozessor-externen Fourth
+    Level Cache (L4-Cache).
+    <h2 style="text-decoration: underline;">Hauptspeicher</h2>
+    Der Hauptspeicher, der auch Arbeitsspeicher oder Random Access
+    Memory (RAM) heißt, ist wie der Name es beschreibt, ein Speicher
+    mit wahlfreiem Zugriff. Eine weitere Besonderheit des Hauptspeichers
+    ist, dass er ein flüchtiger Speicher ist. Seine Kapazität auf
+    modernen Computersystemen ist üblicherweise mehrere Gigabyte.
+    Alle Anfragen des Hauptprozessors, die nicht vom Cache beantwortet
+    werden können, werden im nächsten Schritt an den Hauptspeicher gestellt.
+    <h2 style="text-decoration: underline;">Festplatten</h2>
+    Festplatten pro Bit etwa um Faktor 100 preisgünstiger als Hauptspeicher
+    und bieten etwa Faktor 100 mehr Kapazität. Ein Nachteil
+    dieses Datenspeichers ist jedoch, dass Zugriffe auf Festplatten im
+    Vergleich zum Hauptspeicher um ca. Faktor 1000 langsamer sind.
+    Der Grund für die geringere Zugriffsgeschwindigkeit ist, dass Festplatten mechanische Geräte sind.
+    <h2 style="text-decoration: underline;">Solid State Drives</h2>
+    Solid State Drives (SSD) enthalten ausschließlich Flash-Speicher
+    und damit im Gegensatz zu Festplatten keine beweglichen Teile.
+    Daraus ergeben sich verschiedene Vorteile gegenüber Festplattenspeicher.
+    Beispiele sind die kürzere Zugriffszeit, der geringere
+    Energieverbrauch, das geringere Gewicht und eine höhere mechanische
+    Robustheit. Zudem gibt es keine Geräuschentwicklung. Da
+    die Position der Daten im Halbleiter für die Zugriffsgeschwindigkeit
+    irrelevant ist, ist das Defragmentieren von
+    SSDs im Hinblick auf die Zugriffsgeschwindigkeit sinnlos. Zudem
+    würden die Schreibzugriffe beim Defragmentieren die Lebenszeit
+    der Speicherzellen unnötig reduzieren.
+    Nachteile von SSDs gegenüber Festplattenspeicher sind der
+    höhere Preis im Vergleich zu Festplatten gleicher Kapazität sowie
+    die Tatsache, dass ein sicheres Löschen bzw. Überschreiben von
+    Daten schwierig ist, da alle Schreibzugriffe vom internen Controller
+    des Laufwerks auf die vorhandenen Speicherzellen anhand
+    eines Wear Leveling-Algorithmus verteilt werden. Ein weiterer
+    Nachteil ist die bereits erwähnte, eingeschränkte Anzahl an
+    Schreib-/Löschzyklen.
+    In Flash-Speicher werden Daten als elekt
+    <!---->
+    <a name="Raid">
+        <h1 style="text-decoration: underline;">Raid</h1>
+    </a>
+    Ein Raid (Redundant Array of Independent Disks) bezeichnet eine Technologie zur Speicherung von Daten auf mehreren
+    Festplatten. Durch die Verteilung der Daten auf mehrere Festplatten kann die Zuverlässigkeit, Geschwindigkeit und
+    Kapazität des Speichersystems verbessert werden.
+    <br>
+    <br>
+    <ul>
+        <li>
+            <p style="text-decoration: underline;">RAID 0</p>
+            Daten werden in kleine Streifen (Stripes) auf zwei oder mehr Festplatten verteilt, um die Leistung zu
+            erhöhen. Allerdings bietet RAID 0 keine Redundanz, was bedeutet, dass bei Ausfall einer Festplatte alle
+            Daten verloren gehen können.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">RAID 1</p>
+            Daten werden auf zwei Festplatten gespiegelt, um die Zuverlässigkeit zu erhöhen. Dabei werden die Daten auf
+            beiden Festplatten gleichzeitig gespeichert. Wenn eine Festplatte ausfällt, können die Daten weiterhin von
+            der anderen Festplatte gelesen werden.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">RAID 2</p>
+            Daten werden in kleine Bits auf mehrere Festplatten verteilt und eine spezielle Festplatte, die als
+            Hamming-Code-Festplatte bezeichnet wird, speichert zusätzliche Paritätsinformationen, um die Integrität der
+            Daten zu überprüfen und wiederherzustellen. RAID 2 ist aufgrund seiner komplexen Hardware-Anforderungen und
+            des geringen Nutzens in der Praxis nicht mehr weit verbreitet.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">RAID 3</p>
+            Daten werden in kleine Streifen auf mehrere Festplatten verteilt, wobei eine spezielle Festplatte als
+            Paritätsfestplatte fungiert, um sicherzustellen, dass bei Ausfall einer Festplatte die Daten
+            wiederhergestellt werden können.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">RAID 4</p>
+            Daten werden ähnlich wie bei RAID 3 in Streifen auf mehrere Festplatten verteilt, jedoch wird die
+            Paritätsinformation auf einer dedizierten Festplatte gespeichert.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">RAID 5</p>
+            Daten werden in kleine Streifen auf drei oder mehr Festplatten verteilt, wobei eine Paritätsinformation
+            berechnet und auf den Festplatten gespeichert wird, um die Zuverlässigkeit zu erhöhen. Wenn eine Festplatte
+            ausfällt, können die Daten aus den verbleibenden Festplatten und der Paritätsinformation wiederhergestellt
+            werden.
+        </li><br>
+        <li>
+            <p style="text-decoration: underline;">RAID 6</p>
+            Ähnlich wie RAID 5, jedoch mit einer zusätzlichen Paritätsinformation, um den Ausfall von zwei Festplatten
+            zu ermöglichen und die Daten noch besser zu schützen.
+        </li><br>
+    </ul>
+    Es gibt noch weitere RAID-Level, wie z.B. RAID 10, die Kombination aus RAID 1 und RAID 0, die die Vorteile beider
+    Technologien kombinieren. Die Wahl des besten RAID-Levels hängt von den spezifischen Anforderungen der Anwendung ab,
+    z.B. benötigte Kapazität, Geschwindigkeit und Zuverlässigkeit.
 </body>
